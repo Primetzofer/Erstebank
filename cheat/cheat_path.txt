@@ -1,0 +1,55 @@
+############## ssh Connection strings to PROD & UAT
+
+Stephan: A96BWJA
+	ssh A96BWJA@J46Z013@atotiv01p.eb.lan.at@ssh.path.erste-group.net
+	ssh A96BWJA@J46Z013@atotiv01u.eb.lan.at@ssh.path.erste-group.net
+
+Alex: A960HFC
+	ssh A960HFC@J46Z013@atotiv01p.eb.lan.at@ssh.path.erste-group.net
+	ssh A960HFC@J46Z013@atotiv01p.eb.lan.at@ssh.path.erste-group.net
+
+
+############## DIRECT & FAST ssh from powershell into PROD/UAT via path-server, W/O AGORA!!
+https://conf.s-mxs.net/pages/viewpage.action?pageId=303816016
+
+# in powershell script directory, e.g.
+
+	C:\Users\A96BWJA\PycharmProjects\pyscripts
+
+(must be in 'Path' env. variable!!) place following files:
+
+	sshprod.ps1
+		$cs = 'A96BWJA@J46Z013@atotiv01p.eb.lan.at@ssh.path.erste-group.net'
+		ssh $cs
+	
+bzw.
+
+	sshuat.ps1
+		$cs = 'A96BWJA@J46Z013@atotiv01u.eb.lan.at@ssh.path.erste-group.net'
+		ssh $cs	
+
+Launch POWERSHELL, then simply enter:
+
+	sshuat.ps1 <enter>
+
+and login (vault password = SecureID/OTP bzw. RSA app am diensthandy)
+
+ps: über WSL und PUTTY gehts auch, immer der gleiche connection String!
+
+
+############## DIRECT WinScp into PROD/UAT via path-server, W/O AGORA!!!
+https://conf.s-mxs.net/display/ALG/08.+Configure+WinSCP+to+directly+connect+to+a+host
+
+Launch directly WinScp!
+Login -> Neues Verbindungsziel
+	Protokoll:	SFTP
+	Serveradresse:	ssh.path.erste-group.net
+	Port: 		22
+	Benutzername:	A96BWJA@J46Z013@atotiv01p.eb.lan.at	(PROD)
+			A96BWJA@J46Z013@atotiv01u.eb.lan.at	(UAT)
+Erweitert -> Shell: /bin/bash
+Speichern Als: "ATOTI_PROD" bzw. UAT
+
+
+
+

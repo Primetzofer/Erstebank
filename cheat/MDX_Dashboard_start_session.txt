@@ -1,0 +1,101 @@
+import time
+import os
+
+import atoti as tt
+from pydantic import AnyUrl
+from atoti_plus import ADVANCED_APP_EXTENSION
+from multiprocessing import Process
+
+from .config.base_config import BaseConfig
+from .config import get_config, MdxEmailConfig
+from .create_and_join_tables import create_and_join_tables
+from .create_cubes import create_cubes
+from .load_tables import load_tables, get_db_config_string
+from .optimizer.optimizer_endpoints import  create_optimizer_endpoints
+from .mp import mdx_email_process
+from email.message import EmailMessage
+import smtplib
+
+
+def create_session(configlogger, config: BaseConfig) -> tt.Session:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, "resources", "translations")
+    # log file in /$HOME/server.log
+    log_file_path = configlogger.backend_log_file_path   #os.path.join(os.path.expanduser("~"), "atoti_server.log")
+    return tt.Session(
+        logging=tt.LoggingConfig(destination=log_file_path),   #sys.stdout),
+        port=config.port,
+        i18n=tt.I18nConfig(default_locale="de-DE", translations=file_path),
+        app_extensions=dict([ADVANCED_APP_EXTENSION]),
+        user_content_storage=config.user_content_storage
+        and (
+            tt.UserContentStorageConfig(url=str(config.user_content_storage))
+            if isinstance(config.user_content_storage, AnyUrl)
+            else config.user_content_storage
+        ),
+    )
+
+
+def send_mail(logger):
+
+    environment = os.environ.get("APP_ENV", 'local')
+    if environment.casefold().startswith("local".casefold()):
+        logger.warning("Cannot send e-mail from local, returning ...")
+        return 0
+
+    msg = EmailMessage()
+    msg['Subject'] = "bubu"
+    msg['From'] = "ALTASupport@erstegroup.com"
+    msg['To'] = "stephan.untergrabner@erstegroup.com"
+    msg.set_content("test servas")
+
+    logger.info("Connecting to smtp host ...")
+    with smtplib.SMTP('smtpgw.eb.lan.at') as smtp:
+    # with smtplib.SMTP('c3po.s-mxs.net') as smtp:
+        try:
+            nop = smtp.noop()
+            logger.info("smtp.noop received:", nop)
+            logger.info("Sending mail ...")
+            smtp.send_message(msg)
+        except Exception as e:
+            logger.error("Send error:" + str(e))
+            return -1
+        # smtp.login(SENDER_EMAIL, APP_PASSWORD)
+    logger.info("SMTP all done & ok!")
+    return 1
+
+
+def start_mdx_email_mp(config, configlogger):
+    logger = configlogger.logger
+    mdxconfig = MdxEmailConfig()
+    configstr = get_db_config_string(config)
+    p = Process(target=mdx_email_process, args=(configstr, mdxconfig, ))
+    p.daemon = True
+    p.start()
+    logger.info("mp process started with PID:" + str(os.getpid()) + " / " + config.connection.server)
+    return p
+
+
+def start_session(configlogger, config: BaseConfig):
+    t0 = time.time()
+    logger = configlogger.logger
+    """Start the session, declare the data model and load the initial data."""
+    logger.info("-----------------------------------------------------------------")
+    logger.info("Starting Session: 0 sec")
+    session = create_session(configlogger, config=config)
+    #logger.info("Sending test mail ...")
+    #resmail = send_mail(logger)
+    #logger.info("test mail result:" + str(resmail))
+    logger.info("create_session done: " + str(round(time.time() - t0, 1)) + " sec")
+    create_optimizer_endpoints(session)
+    logger.info("create_cubes done: " + str(round(time.time() - t0, 1)) + " sec")
+    p = 0
+    #p = start_mdx_email_mp(get_config(), configlogger)
+    #logger.info("create_optimzer done: " + str(round(time.time() - t0, 1)) + " sec")
+    create_and_join_tables(session)
+    logger.info("create_and_join_tables done: " + str(round(time.time() - t0, 1)) + " sec")
+    load_tables(session)
+    logger.info("load tables done: " + str(round(time.time() - t0, 1)) + " sec")
+    create_cubes(session)
+    logger.info("start_mdxemail_mp done: " + str(round(time.time() - t0, 1)) + " sec")
+    return session, [p]

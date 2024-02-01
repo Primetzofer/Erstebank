@@ -1,0 +1,57 @@
+#### REACT ####
+
+# 1a. install create-react-app globally
+npm install -g create-react-app
+create-react-app my-app
+
+ODER (besser!?)
+
+# 1b. mit npx
+npx create-react-app my-app
+
+# 2. start
+cd my-app
+npm start				# oder yarn start
+
+# 2a. start on different port
+package.json > scripts / start: "start": "set PORT=3006 && react-scripts start
+	bzw. für atoti react:
+package.json > scripts / start: "start": "activeui-scripts start --port=3006"	
+
+# to enable Ctrl-C after npm/yarn start
+-> package.json > scripts : "stop": "taskkill -F -IM node.exe",
+
+# build / deploy / server
+yarn build
+	or
+npm run build
+
+# serve in production (on port 3006)
+npm install -g http-server
+http-server build -p 3006
+
+	ODER
+	
+npm install -g serve
+serve -p 3006 -s build
+
+## nach git clone von twh-atoti-ui
+npm i
+
+
+#### ERROR bei startui-startup:
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! errno ENOTFOUND
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! network request to https://registry.npmjs.org/serve/-/serve-14.2.1.tgz failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! network This is a problem related to network connectivity.
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! network In most cases you are behind a proxy or have bad network settings.
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! network
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! network If you are behind a proxy, please make sure that the
+Oct 05 10:23:57 atotiv01u.eb.lan.at startui_systemd.sh[47468]: npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+---> npm serve not installed / found, keine node_modules im PATH, warum auch immer!!!!
+
+cd ~
+npm install serve
+
+
+	

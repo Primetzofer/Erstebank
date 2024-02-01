@@ -1,0 +1,774 @@
+# --- util/machineID.py ------------------------------------------------------------------------------
+
+import socket
+
+def machine_is_local(machine_id_list):
+    hostname = socket.gethostname()
+    return [str(hn) for hn in machine_id_list if hostname == str(hn)]
+
+
+# --- config.py --------------------------------------------------------------------------------------
+
+ # ugly: define local developper machines where load_tables only loads restricted data set
+    local_machine_ids = ["W0196V00026",     # Stephan
+                         "W0188000A21",     # Rahul
+                         "W0188V00996"      # Marri
+                         ]
+						 
+                         
+# --- load_tables.py ---------------------------------------------------------------------------------
+
+load_tables.py
+# if local machine -> load only newest dates in table
+    if machine_is_local0:
+        dates_to_load = dates_to_load[:1]   # [:1] latest / newest data
+.
+.
+.
+ # only load on server
+        if not machine_is_local0:
+            session.tables[TableName.WHAT_IF_TABLE_NAME.value].load_sql(
+                "SELECT WhatIf_Classification_Unid, WhatIf_Classification_BusinessKey, WhatIf_Classification_ShortName, "
+                "WhatIf_Classification_UserName,  WhatIf_Classification_TimeStamp, WhatIf_Classification_Comment, "
+                "scn from MO_DB.pia.dim_WhatIf_Classification", url=config_str
+            )
+
+            session.tables[TableName.COLLATERAL_LIMIT_TABLE_NAME.value].load_sql(
+                "SELECT CollateralLimit_Unid, CollateralLimit_BusinessKey, Record_ValidFrom, ISNULL(Record_Validto,"
+                "100000) as Record_Validto , origin, CollateralType,Collateral_RiskEntityType,LimitCategory, "
+                "Counterparty_BusinessKey, Issuer_BusinessKey, Comment from MO_DB.pia.v_dim_CollateralLimit", url=config_str
+            )
+
+            session.tables[TableName.SETTLEMENT_INFO_TABLE_NAME.value].load_sql(
+                "SELECT SettlementInformation_Unid, SettlementInformation_BusinessKey,SettlementStatus,description as "
+                "SettlementDescription  from MO_DB.twh.dim_SettlementInformation where SettlementInformation_Unid>0",
+                url=config_str
+            )
+
+            session.tables[TableName.SCN_TABLE_NAME.value].load_sql(
+                "SELECT * from MO_DB.pia.CF_dim_ScnInfo where scn>0 and scn<=(select max(max_SCN) from "
+                "PIA.dbo.PIA_Synchronisation_Table)", url=config_str
+            )
+
+            session.tables[TableName.AUDIT_BO_FO_MATCH_TABLE_NAME.value].load_sql(
+                "SELECT * FROM MO_DB.pia.v_dim_Audit_BO_FO_Match", url=config_str
+            )
+            
+            
+# --- cube/liquidity/liquidity_cube_measures_config.py ------------------------------------------------
+
+def define_measures(extended_flow_table, measures, levels):
+    define_native_measures(extended_flow_table, measures)
+    define_measure_formatter_and_folder(measures)
+
+    # ## MINIMUM DEPTH ##
+    # LEGAL_POSITION_NOMINAL_CURR: depends on LEGAL_POSITION_NOMINAL_CURR_HIDDEN (native)
+    create_minimum_depth_measure(LiquidityCubeMeasures.LEGAL_POSITION_NOMINAL_CURR.value,
+                                 LiquidityCubeMeasures.LEGAL_POSITION_NOMINAL_CURR_HIDDEN.value,
+                                 LiquidityCubeDimensions.CF_DIM_ASSET_TYPE_PRODUCT.value,
+                                 LiquidityCubeHierarchy.ASSET_TYPE_PRODUCT_CURRENCY.value,
+                                 LiquidityCubeLevel.ASSET_TYPE_PRODUCT_CURRENCY.value,
+                                 LiquidityCubeMeasuresFolder.CASH_FLOW.value, Formatter.DOUBLE.value, levels, measures)
+
+    # FLOW_AMOUNT_CURR: depends on FLOW_AMOUNT_CURR_HIDDEN (native)
+    create_minimum_depth_measure(LiquidityCubeMeasures.FLOW_AMOUNT_CURR.value,
+                                 LiquidityCubeMeasures.FLOW_AMOUNT_CURR_HIDDEN.value,
+                                 LiquidityCubeDimensions.CF_DIM_ASSET_TYPE_PRODUCT.value,
+                                 LiquidityCubeHierarchy.ASSET_TYPE_PRODUCT_CURRENCY.value,
+                                 LiquidityCubeLevel.ASSET_TYPE_PRODUCT_CURRENCY.value,
+                                 LiquidityCubeMeasuresFolder.CASH_FLOW.value, Formatter.DOUBLE.value, levels, measures)
+
+    # ## STREAM2POSITION ##
+    # BAL_FLOW_AMOUNT_CURR: depends on FLOW_AMOUNT_CURR (native)
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_FLOW_AMOUNT_CURR.value,
+                                      LiquidityCubeMeasures.FLOW_AMOUNT_CURR.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # BAL_FLOW_AMOUNT_EUR: depends on FLOW_AMOUNT_EUR (native)
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_FLOW_AMOUNT_EUR.value,
+                                      LiquidityCubeMeasures.FLOW_AMOUNT_EUR.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # BAL_LEGAL_POS_NOM_CURR
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_LEGAL_POS_NOM_CURR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_NOMINAL_CURR.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.LEGAL_POSITION.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # BAL_LEGAL_POS_NOM_EUR
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_LEGAL_POS_NOM_EUR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_NOMINAL_EUR.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.LEGAL_POSITION.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # BAL_LEGAL_POS_DIRTY_CURR
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_LEGAL_POS_DIRTY_EUR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_DIRTY_EUR.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.LEGAL_POSITION.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # BAL_LEGAL_POS_DIRTY_EUR
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_LEGAL_POS_DIRTY_CURR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_DIRTY_CURR.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.LEGAL_POSITION.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # BAL_EQUITY_QUANTITY
+    create_stream_to_position_measure(LiquidityCubeMeasures.BAL_EQUITY_QUANTITY.value,
+                                      LiquidityCubeMeasures.EQUITY_QUANTITY.value,
+                                      LiquidityCubeDimensions.DIM_CAL_DATE_OFFSET.value,
+                                      LiquidityCubeHierarchy.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeLevel.CF_DATE_BUCKET_SPA.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # ABS_BAL_FLOW_AMOUNT_CURR (Abs. Bal. Flow Amount Curr): depends on FLOW_AMOUNT_CURR (native)
+    create_stream_to_position_measure(LiquidityCubeMeasures.ABS_BAL_FLOW_AMOUNT_CURR.value,
+                                      LiquidityCubeMeasures.FLOW_AMOUNT_CURR.value,
+                                      LiquidityCubeDimensions.CF_DIM_ABS_DATE.value,
+                                      LiquidityCubeHierarchy.ABS_FLOWDATE_DATE.value,
+                                      LiquidityCubeLevel.ABS_FLOWDATE_LEVEL.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # ABS_BAL_FLOW_AMOUNT_EUR (Abs. Bal. Flow Amount EUR): depends on FLOW_AMOUNT_EUR (native)
+    create_stream_to_position_measure(LiquidityCubeMeasures.ABS_BAL_FLOW_AMOUNT_EUR.value,
+                                      LiquidityCubeMeasures.FLOW_AMOUNT_EUR.value,
+                                      LiquidityCubeDimensions.CF_DIM_ABS_DATE.value,
+                                      LiquidityCubeHierarchy.ABS_FLOWDATE_DATE.value,
+                                      LiquidityCubeLevel.ABS_FLOWDATE_LEVEL.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # ABS_BAL_LEGAL_POS_NOM_CURR (Abs. Bal. Legal Pos. Nom. Curr): depends on LEGAL_POSITION_NOMINAL_CURR
+    create_stream_to_position_measure(LiquidityCubeMeasures.ABS_BAL_LEGAL_POS_NOM_CURR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_NOMINAL_CURR.value,
+                                      LiquidityCubeDimensions.CF_DIM_ABS_DATE.value,
+                                      LiquidityCubeHierarchy.ABS_FLOWDATE_DATE.value,
+                                      LiquidityCubeLevel.ABS_FLOWDATE_LEVEL.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # ABS_BAL_LEGAL_POS_NOMINAL_EUR (Abs. Bal. Legal Pos. Nom. EUR): depends on LEGAL_POSITION_NOMINAL_EUR
+    create_stream_to_position_measure(LiquidityCubeMeasures. ABS_BAL_LEGAL_POS_NOMINAL_EUR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_NOMINAL_EUR.value,
+                                      LiquidityCubeDimensions.CF_DIM_ABS_DATE.value,
+                                      LiquidityCubeHierarchy.ABS_FLOWDATE_DATE.value,
+                                      LiquidityCubeLevel.ABS_FLOWDATE_LEVEL.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # ABS_BAL_LEGAL_POS_DIRTY_CURR (Abs. Bal. Legal Pos. Dirty Curr): depends on LEGAL_POSITION_DIRTY_CURR
+    create_stream_to_position_measure(LiquidityCubeMeasures.ABS_BAL_LEGAL_POS_DIRTY_CURR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_DIRTY_CURR.value,
+                                      LiquidityCubeDimensions.CF_DIM_ABS_DATE.value,
+                                      LiquidityCubeHierarchy.ABS_FLOWDATE_DATE.value,
+                                      LiquidityCubeLevel.ABS_FLOWDATE_LEVEL.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+    # ABS_BAL_LEGAL_POS_DIRTY_EUR (Abs. Bal. Legal Pos. Dirty EUR): depends on LEGAL_POSITION_DIRTY_EUR
+    create_stream_to_position_measure(LiquidityCubeMeasures.ABS_BAL_LEGAL_POS_DIRTY_EUR.value,
+                                      LiquidityCubeMeasures.LEGAL_POSITION_DIRTY_EUR.value,
+                                      LiquidityCubeDimensions.CF_DIM_ABS_DATE.value,
+                                      LiquidityCubeHierarchy.ABS_FLOWDATE_DATE.value,
+                                      LiquidityCubeLevel.ABS_FLOWDATE_LEVEL.value,
+                                      LiquidityCubeMeasuresFolder.CASH_FLOW.value,
+                                      Formatter.DOUBLE.value, levels, measures)
+
+
+# ---app/cube/gceligibility_cube.py ------------------------------------------------------------------------------------------------
+
+import atoti as tt
+from enum import Enum
+
+
+from ..constants import cube_constants, TableName
+
+
+class GCEligibilityCubeDimensions(Enum):
+    GC_TABLE = "GCTable"
+
+
+class GCEligibilityCubeHierarchy(Enum):
+    ID = "EligibleCollateral_Unid"
+    ISIN = "ISIN"
+    HAIRCUT = "GC_Pooling_Haircut_pct"
+    ELIG = "GC_Pooling_Basket_eligible"
+    ELIG_EXT = "GC_Pooling_Extended_Basket_eligible"
+    ECB_HQLA = "ECB_HQLA"
+    HQLA_LEVEL = "HQLA_Level"
+    HQLA_CONSOLIDATED = "HQLA_Consolidated"
+    ISSUER = "Issuer"
+    ISSUER_INTERNAL_RATING = "IssuerInternalRating"
+    ISSUER_RATING = "IssuerRating"
+    SECURITY_RATING = "SecurityRating"
+    ECB_ELIGIBLE = "ECB_eligible"
+    FED_ELIGIBLE = "FED_eligible"
+    SNB_ELIGIBLE = "SNB_eligible"
+    ISSUER_RICOS_CODE = "IssuerRicosCode"
+
+
+class GCEligibilityCubeLevel(Enum):
+    ID = "EligibleCollateral_Unid"
+    ISIN = "ISIN"
+    HAIRCUT = "GC_Pooling_Haircut_pct"
+    ELIG = "GC_Pooling_Basket_eligible"
+    ELIG_EXT = "GC_Pooling_Extended_Basket_eligible"
+    ECB_HQLA = "ECB_HQLA"
+    HQLA_LEVEL = "HQLA_Level"
+    HQLA_CONSOLIDATED = "HQLA_Consolidated"
+    ISSUER = "Issuer"
+    ISSUER_INTERNAL_RATING = "IssuerInternalRating"
+    ISSUER_RATING = "IssuerRating"
+    SECURITY_RATING = "SecurityRating"
+    ECB_ELIGIBLE = "ECB_eligible"
+    FED_ELIGIBLE = "FED_eligible"
+    SNB_ELIGIBLE = "SNB_eligible"
+    ISSUER_RICOS_CODE = "IssuerRicosCode"
+
+
+class GCEligibilityTableColumn(Enum):
+    ID = "EligibleCollateral_Unid"
+    ISIN = "ISIN"
+    HAIRCUT = "GC_Pooling_Haircut_pct"
+    ELIG = "GC_Pooling_Basket_eligible"
+    ELIG_EXT = "GC_Pooling_Extended_Basket_eligible"
+    ECB_HQLA = "ECB_HQLA"
+    HQLA_LEVEL = "HQLA_Level"
+    HQLA_CONSOLIDATED = "HQLA_Consolidated"
+    ISSUER = "Issuer"
+    ISSUER_INTERNAL_RATING = "IssuerInternalRating"
+    ISSUER_RATING = "IssuerRating"
+    SECURITY_RATING = "SecurityRating"
+    ECB_ELIGIBLE = "ECB_eligible"
+    FED_ELIGIBLE = "FED_eligible"
+    SNB_ELIGIBLE = "SNB_eligible"
+    ISSUER_RICOS_CODE = "IssuerRicosCode"
+
+
+def create_gceligibility_cube(session: tt.Session, /) -> None:
+    gceligibility_table = session.tables[TableName.GC_ELIGIBILITY_TABLE_NAME.value]
+    gceligibility_cube = session.create_cube(gceligibility_table, cube_constants.GC_ELIGIBILITY, mode="manual")
+    h, l, m = gceligibility_cube.hierarchies,  gceligibility_cube.levels,  gceligibility_cube.measures
+
+    h.update(
+        {
+            # ID
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ID.value): {
+                GCEligibilityCubeLevel.ID.value:
+                    gceligibility_table[GCEligibilityTableColumn.ID.value]},
+
+            # ISIN
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISIN.value): {
+                GCEligibilityCubeLevel.ISIN.value: gceligibility_table[GCEligibilityTableColumn.ISIN.value]},
+
+            # HAIRCUT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HAIRCUT.value): {
+                GCEligibilityCubeLevel.HAIRCUT.value:
+                    gceligibility_table[GCEligibilityTableColumn.HAIRCUT.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # ELIG_EXT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG_EXT.value): {
+                GCEligibilityCubeLevel.ELIG_EXT.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG_EXT.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # ECB_HQLA
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_HQLA.value): {
+                GCEligibilityCubeLevel.ECB_HQLA.value:
+                    gceligibility_table[GCEligibilityTableColumn.ECB_HQLA.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # HQLA_LEVEL
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HQLA_LEVEL.value): {
+                GCEligibilityCubeLevel.HQLA_LEVEL.value:
+                    gceligibility_table[GCEligibilityTableColumn.HQLA_LEVEL.value]},
+
+            # HQLA_CONSOLIDATED
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HQLA_CONSOLIDATED.value): {
+                GCEligibilityCubeLevel.HQLA_CONSOLIDATED.value:
+                    gceligibility_table[GCEligibilityTableColumn.HQLA_CONSOLIDATED.value]},
+
+            # ISSUER
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER.value): {
+                GCEligibilityCubeLevel.ISSUER.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # ISSUER_INTERNAL_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER_INTERNAL_RATING.value): {
+                GCEligibilityCubeLevel.ISSUER_INTERNAL_RATING.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER_INTERNAL_RATING.value]},
+
+            # ISSUER_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER_RATING.value): {
+                GCEligibilityCubeLevel.ISSUER_RATING.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER_RATING.value]},
+
+            # SECURITY_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SECURITY_RATING.value): {
+                GCEligibilityCubeLevel.SECURITY_RATING.value:
+                    gceligibility_table[GCEligibilityTableColumn.SECURITY_RATING.value]},
+
+            # ECB_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.ECB_ELIGIBLE.value:
+                    gceligibility_table[GCEligibilityTableColumn.ECB_ELIGIBLE.value]},
+
+            # FED_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.FED_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.FED_ELIGIBLE.value:
+                    gceligibility_table[GCEligibilityTableColumn.FED_ELIGIBLE.value]},
+
+            # SNB_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.SNB_ELIGIBLE.value:
+                    gceligibility_table[GCEligibilityTableColumn.SNB_ELIGIBLE.value]},
+
+            # ISSUER_RICOS_CODE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER_RICOS_CODE.value): {
+                GCEligibilityCubeLevel.ISSUER_RICOS_CODE.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER_RICOS_CODE.value]},
+
+        })
+
+    """
+            # ISSUER
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUER.value): {
+                GCEligibilityCubeLevel.ISSUER.value: GCEligibility_table[GCEligibilityTableColumn.ISSUER.value]},
+
+            # GC_POOLING_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_BASKET_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.GC_POOLING_BASKET_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_BASKET_CBF
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_BASKET_CBF.value): {
+                GCEligibilityCubeLevel.GC_POOLING_BASKET_CBF.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_BASKET_CBF.value]},
+
+            # GC_POOLING_BASKET_CBL
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_BASKET_CBL.value): {
+                GCEligibilityCubeLevel.GC_POOLING_BASKET_CBL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_BASKET_CBL.value]},
+
+            # C_POOLING_EXTENDED_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EXTENDED_BASKET_ELIGIBLE.value): {
+                    GCEligibilityCubeLevel.GC_POOLING_EXTENDED_BASKET_ELIGIBLE.value:
+                        GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EXTENDED_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_EXTENDED_BASKET_CBF
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EXTENDED_BASKET_CBF.value): {
+                GCEligibilityCubeLevel.GC_POOLING_EXTENDED_BASKET_CBF.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EXTENDED_BASKET_CBF.value]},
+
+            # GC_POOLING_EXTENDED_BASKET_CBL
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EXTENDED_BASKET_CBL.value): {
+                GCEligibilityCubeLevel.GC_POOLING_EXTENDED_BASKET_CBL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EXTENDED_BASKET_CBL.value]},
+
+            # GC_POOLING_INT_MXQ_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_INT_MXQ_BASKET_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.GC_POOLING_INT_MXQ_BASKET_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_INT_MXQ_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_INT_MXQ_BASKET_CBF
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_INT_MXQ_BASKET_CBF.value): {
+                GCEligibilityCubeLevel.GC_POOLING_INT_MXQ_BASKET_CBF.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_INT_MXQ_BASKET_CBF.value]},
+
+            # GC_POOLING_INT_MXQ_BASKET_CBL
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_INT_MXQ_BASKET_CBL.value): {
+                GCEligibilityCubeLevel.GC_POOLING_INT_MXQ_BASKET_CBL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_INT_MXQ_BASKET_CBL.value]},
+
+            # GC_POOLING_EQUITY_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EQUITY_BASKET_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.GC_POOLING_EQUITY_BASKET_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EQUITY_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.GC_POOLING_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_HAIRCUT_PCT.value]},
+
+            # ECB_LIQUIDITY_CLASS
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ECB_LIQUIDITY_CLASS.value): {
+                GCEligibilityCubeLevel.ECB_LIQUIDITY_CLASS.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_LIQUIDITY_CLASS.value]},
+
+            # ECB_TYPE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_TYPE.value): {
+                GCEligibilityCubeLevel.ECB_TYPE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_TYPE.value]},
+
+            # ECB_REFERENCE_MARKET
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_REFERENCE_MARKET.value): {
+                GCEligibilityCubeLevel.ECB_REFERENCE_MARKET.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_REFERENCE_MARKET.value]},
+
+            # ECB_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.ECB_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_HAIRCUT_PCT.value]},
+
+            # SNB_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.SNB_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_HAIRCUT_PCT.value]},
+
+            # FED_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.FED_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.FED_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.FED_HAIRCUT_PCT.value]},
+
+            # -----------------------------------------------------------------------------------------------
+
+            # ECB_OWN_USE_COVERED_BONDS
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_OWN_USE_COVERED_BONDS.value): {
+                GCEligibilityCubeLevel.ECB_OWN_USE_COVERED_BONDS.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_OWN_USE_COVERED_BONDS.value]},
+
+            # SNB_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.SNB_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_ELIGIBLE.value]},
+
+            # SNB_LIQUIDITY_CLASS
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_LIQUIDITY_CLASS.value): {
+                GCEligibilityCubeLevel.SNB_LIQUIDITY_CLASS.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_LIQUIDITY_CLASS.value]},
+
+            # HQLA_LEVEL
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HQLA_LEVEL.value): {
+                GCEligibilityCubeLevel.HQLA_LEVEL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.HQLA_LEVEL.value]},
+
+            # ECB_HQLA_RULE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ECB_HQLA_RULE.value): {
+                GCEligibilityCubeLevel.ECB_HQLA_RULE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_HQLA_RULE.value]},
+
+            # HQLA_CONSOLIDATED
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.HQLA_CONSOLIDATED.value): {
+                GCEligibilityCubeLevel.HQLA_CONSOLIDATED.value:
+                    GCEligibility_table[GCEligibilityTableColumn.HQLA_CONSOLIDATED.value]},
+
+            # SNB_HAIRCUT
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.SNB_HAIRCUT.value): {
+                GCEligibilityCubeLevel.SNB_HAIRCUT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_HAIRCUT.value]},
+
+            # FED_HAIRCUT
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.FED_HAIRCUT.value): {
+                GCEligibilityCubeLevel.FED_HAIRCUT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.FED_HAIRCUT.value]},
+
+            # FED_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.FED_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.FED_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.FED_ELIGIBLE.value]},
+
+            # ISSUER_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUER_RATING.value): {
+                GCEligibilityCubeLevel.ISSUER_RATING.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ISSUER_RATING.value]},
+
+            # SECURITY_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.SECURITY_RATING.value): {
+                GCEligibilityCubeLevel.SECURITY_RATING.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SECURITY_RATING.value]},
+
+            # SECURITY_DESCRIPTION
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.SECURITY_DESCRIPTION.value): {
+                GCEligibilityCubeLevel.SECURITY_DESCRIPTION.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SECURITY_DESCRIPTION.value]},
+
+            # OEWS_SECURITY_TYPE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEWS_SECURITY_TYPE.value): {
+                GCEligibilityCubeLevel.OEWS_SECURITY_TYPE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEWS_SECURITY_TYPE.value]},
+
+            # OEWS_SECURITY_SUB_TYPE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEWS_SECURITY_SUB_TYPE.value): {
+                GCEligibilityCubeLevel.OEWS_SECURITY_SUB_TYPE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEWS_SECURITY_SUB_TYPE.value]},
+
+            # OEAWSADDON1
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON1.value): {
+                GCEligibilityCubeLevel.OEAWSADDON1.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON1.value]},
+
+            # OEAWSADDON2
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON2.value): {
+                GCEligibilityCubeLevel.OEAWSADDON2.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON2.value]},
+
+            # OEAWSADDON3
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON3.value): {
+                GCEligibilityCubeLevel.OEAWSADDON3.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON3.value]},
+
+            # OEAWSADDON4
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON4.value): {
+                GCEligibilityCubeLevel.OEAWSADDON4.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON4.value]},
+
+            # OEAWSADDON5
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON5.value): {
+                GCEligibilityCubeLevel.OEAWSADDON5.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON5.value]},
+
+            # OEAWSADDON6
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON6.value): {
+                GCEligibilityCubeLevel.OEAWSADDON6.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON6.value]},
+
+            # OEAWSADDON7
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON7.value): {
+                GCEligibilityCubeLevel.OEAWSADDON7.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON7.value]},
+
+            # OEAWSADDON8
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON8.value): {
+                GCEligibilityCubeLevel.OEAWSADDON8.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON8.value]},
+
+            # OEAWSADDON9
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON9.value): {
+                GCEligibilityCubeLevel.OEAWSADDON9.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON9.value]},
+
+            # OEAWSADDON10
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON10.value): {
+                GCEligibilityCubeLevel.OEAWSADDON10.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON10.value]},
+
+            # OEAWSADDON11
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON11.value): {
+                GCEligibilityCubeLevel.OEAWSADDON11.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON11.value]},
+
+            # OEAWSADDON12
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON12.value): {
+                GCEligibilityCubeLevel.OEAWSADDON12.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON12.value]},
+
+            # OEAWSADDON13
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON13.value): {
+                GCEligibilityCubeLevel.OEAWSADDON13.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON13.value]},
+
+            # OEAWSADDON14
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON14.value): {
+                GCEligibilityCubeLevel.OEAWSADDON14.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON14.value]},
+
+            # NOTIONAL_CURRENCY
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.NOTIONAL_CURRENCY.value): {
+                GCEligibilityCubeLevel.NOTIONAL_CURRENCY.value:
+                    GCEligibility_table[GCEligibilityTableColumn.NOTIONAL_CURRENCY.value]},
+
+            # IS_EEA
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.IS_EEA.value): {
+                GCEligibilityCubeLevel.IS_EEA.value:
+                    GCEligibility_table[GCEligibilityTableColumn.IS_EEA.value]},
+
+            # INTERNAL_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.INTERNAL_RATING.value): {
+                GCEligibilityCubeLevel.INTERNAL_RATING.value:
+                    GCEligibility_table[GCEligibilityTableColumn.INTERNAL_RATING.value]},
+
+            # ISSUERRICOSCODE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUERRICOSCODE.value): {
+                GCEligibilityCubeLevel.ISSUERRICOSCODE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ISSUERRICOSCODE.value]},
+
+            # ISSUERRICOSRATYNA
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUERRICOSRATYNA.value): {
+                GCEligibilityCubeLevel.ISSUERRICOSRATYNA.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ISSUERRICOSRATYNA.value]},
+
+            # EUREX_ADMISSIBLESECURITIES
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.EUREX_ADMISSIBLESECURITIES.value): {
+                GCEligibilityCubeLevel.EUREX_ADMISSIBLESECURITIES.value:
+                    GCEligibility_table[GCEligibilityTableColumn.EUREX_ADMISSIBLESECURITIES.value]},
+        }
+    )"""
+
+    """# define ScoringMeasure
+    scoringdict_issuerrating = {"AAA":  1,
+                                "AA+":  2,
+                                "AA":   3,
+                                "AA.":  4,
+                                "A+":   5,
+                                "A":    6,
+                                "A-":   7,
+                                "BBB+": 8,
+                                "BBB":  9,
+                                "BBB-": 10,
+                                "BB+":  11,
+                                "BB":   12,
+                                "BB-":  13,
+                                "B+":   14,
+                                "B":    15,
+                                "B-":   16,
+                                "CCC+": 17,
+                                "CCC":  18,
+                                "CCC-": 19,
+                                "CC":   20,
+                                "C":    21,
+                                "D":    22
+                                }
+
+    scoringdict_internalissuerrating = {"1":    1,
+                                        "2":    4,
+                                        "3":    6,
+                                        "4a":   8,
+                                        "4b":   9,
+                                        "4c":   10,
+                                        "5a":   12,
+                                        "5b":   14,
+                                        "5c":   16,
+                                        "6a":   18,
+                                        "6b":   20,
+                                        "7":    21,
+                                        "8":    22}
+
+    # calc. IssuerRatingScore & InternalRatingScore, both not visible
+    m["IssuerRatingScore"] = tt.switch(l[StaticdataCubeLevel.ISSUER_RATING.value], scoringdict_issuerrating,
+                                       default=0)
+    m["IssuerRatingScore"].visible = False
+    m["InternalRatingScore"] = tt.switch(l[StaticdataCubeLevel.INTERNAL_RATING.value], scoringdict_internalissuerrating,
+                                         default=0)
+    m["InternalRatingScore"].visible = False
+
+    # calc. number of valid ratings (0 = unrated), not visible
+    m["no_of_valid_ratings"] = tt.where({m["IssuerRatingScore"] > 0: 1}, default=0) \
+                               + tt.where({m["InternalRatingScore"] > 0: 1}, default=0)
+    m["no_of_valid_ratings"].visible = False
+
+    # calc. scoring measure; = 100% if no valid_ratings!
+    m["Scoring"] = tt.where({m["no_of_valid_ratings"] > 0: (m["IssuerRatingScore"] + m["InternalRatingScore"])
+                                                           / m["no_of_valid_ratings"]}, default=1)
+    """
+    """
+    # measures composite dep. on rating etc
+    DicR1 = {"A1": 1, "A2": 2, "BB": 4}
+    DicR2 = {"A++": 2, "A+": 3, "BB-": 5}
+    # m2["RatingScore"] = tt.where(l2["R1"] == "A1", 100, 0)
+    m2["RatingScore"] = (tt.switch(l2["R1"], DicR1, default=10) + tt.switch(l2["R2"], DicR2, default=20)) / 2
+    m2["RatingScoreR2"] = tt.switch(l2["R2"], DicR2, default=20)
+    m2["RatingScoreR1"] = tt.switch(l2["R1"], DicR1, default=10)"""
+
+
+
+    # this is redundant as we we will implement optimization in a different manner ...
+    # define_liquidity_cube_slicing_hierarchies(liquidity_cube)
+    # define_staticdata_cube_dimensions_and_hierarchies(hierarchies)
+    # configure_date_hierarchy(hierarchies, levels)
+    # define_measures(staticdata_cube, measures, levels)
+    return
+
+
+# ---create_and_join_tables.py ------------------------------------------------------------------------------------------------
+492ff
+def create_gc_eligibility_table(session: tt.Session, /) -> None:
+    """Description  of the FX Store """
+    session.create_table(
+        TableName.GC_ELIGIBILITY_TABLE_NAME.value,
+        keys=[
+            GCEligibilityTableColumn.ID.value
+        ],
+        types={
+            GCEligibilityTableColumn.ID.value: tt.type.INT,
+            GCEligibilityTableColumn.ISIN.value: tt.type.STRING,
+            GCEligibilityTableColumn.HAIRCUT.value: tt.type.DOUBLE,
+            GCEligibilityTableColumn.ELIG.value: tt.type.INT,
+            GCEligibilityTableColumn.ELIG_EXT.value: tt.type.INT,
+            GCEligibilityTableColumn.ECB_HQLA.value: tt.type.STRING,
+            GCEligibilityTableColumn.HQLA_LEVEL.value: tt.type.STRING,
+            GCEligibilityTableColumn.HQLA_CONSOLIDATED.value: tt.type.STRING,
+            GCEligibilityTableColumn.ISSUER.value: tt.type.STRING,
+            GCEligibilityTableColumn.ISSUER_INTERNAL_RATING.value: tt.type.STRING,
+            GCEligibilityTableColumn.ISSUER_RATING.value: tt.type.STRING,
+            GCEligibilityTableColumn.SECURITY_RATING.value: tt.type.STRING,
+            GCEligibilityTableColumn.ECB_ELIGIBLE.value: tt.type.INT,
+            GCEligibilityTableColumn.FED_ELIGIBLE.value: tt.type.INT,
+            GCEligibilityTableColumn.SNB_ELIGIBLE.value: tt.type.INT,
+            GCEligibilityTableColumn.ISSUER_RICOS_CODE.value: tt.type.STRING
+        },
+        default_values={
+            GCEligibilityTableColumn.ID.value: 0,
+            GCEligibilityTableColumn.HAIRCUT.value: 0.0,
+            GCEligibilityTableColumn.ELIG.value: 0,
+            GCEligibilityTableColumn.ELIG_EXT.value: 0,
+            GCEligibilityTableColumn.ECB_ELIGIBLE.value: 0,
+            GCEligibilityTableColumn.FED_ELIGIBLE.value: 0,
+            GCEligibilityTableColumn.SNB_ELIGIBLE.value: 0,
+        },
+    )

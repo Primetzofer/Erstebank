@@ -1,0 +1,4 @@
+### pandas
+
+df.iat[0, 0]		selects elements by i,j indexnr.
+df.loc[["colname1", "colname2"]]	select by column name

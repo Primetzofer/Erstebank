@@ -1,0 +1,135 @@
+
+1.  # How to do UI UPDATE?
+	open package.json
+	change version 5.1.5 ctrl+d
+	save
+	npm install
+		
+****************************************************************
+# How do you install a new version from scratch?
+1. go to JFrog https://activeviam.jfrog.io/ui/repos/tree/General/activeui-generic-release/5.1.9/activeui-starter-source-5.1.9.zip
+2. download the latest version
+3. unzip the file
+4. npm install (the node packages are installed)
+5. adjust the content server
+don't forget to compare package.json with the installed versions otherwise receiving error msgs!1
+
+ # How to do UI downgrad?
+
+ delet lock file & node_modules folder 
+ 
+ *************************************************************
+
+2.  How to add  ### TOOLS ### in the code?
+2.1. === bookmarks of dashboard
+     ### toolDashboardSelector
+	 
+2.2. === Version Control Info
+     ### myTool
+	 
+2.3. === bookmarks of widgets
+     ### toolSavedWidgetSelector
+
+******************************************************************
+
+3. How to modify the ### HEADER ### n the code?
+3.1. new header "Version Control"?
+     src - custom - UIVersioncontrolmenue 
+
+3.2. new header for Check data -> "actual data are loaded"?
+     applicationMenueItems -> dataLoadStatus with endpoint info (https://atotiu.erste-group.net/atoti/9090/atoti/pyapi/getinfo)
+	    useEffect(() => {
+		const fetchStatus = async () => {
+		const resp = await fetch("<host>/atoti/pyapi/getinfo");
+		if (resp.ok) {
+			const body = (await resp.json()) as GetInfoResponseBody;
+			const lastT = JSON.parse(
+			body.lastT.replaceAll(")", "]").replaceAll("(", "[")
+				// "[(20230705, 5, 612125), (20230703, 3, 612125), (20230630, 106, 612125)]"
+				//   .replaceAll(")", "]")
+					//   .replaceAll("(", "[")
+				 as lastT;
+
+******************************************************************
+
+4. How to do ### formatting ###?
+   cellstyles
+    
+
+5. Hot to add a ### menue ###?
+   in tools - widgets - FFXIV_Mounts
+
+
+6. ### Theme ####
+    allows coloring the header,...
+	defined in myCustomTheme.json
+	
+	https://activeui.activeviam.com/activeui/documentation/latest/docs/theme
+	https://activeui.activeviam.com/activeui/documentation/latest/docs/api/types#theme
+
+
+ # 7. How to import new ### icons ###?
+   go to ant design or font.google 
+ 
+ 
+# 8. How to find available PLUGINS of UI in the documentation?
+    API - TYPES  <ctrl+F> Plugin
+ 
+ 
+# 9. '''''Helpful links:
+ 1. icons, design:  https://fonts.google.com/
+ 2. developer help. for ex: map(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+ 3. desin for AU: https://ant.design/components/overview (for ex.open windows: https://ant.design/docs/blog/modal-hook-order)
+ 4. including css formattting: https://www.w3schools.com/w3css/w3css_tables.asp
+ 
+ 
+ # How working with F12?
+ - network - WS - message - Vs8 - mdx query
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+2. data visualization from front to backend (post) - example in frontend  
+
+3. add #check date field# in header bar (communication ui & server -> endpoints localhost:9090/atoti/pyapi/getinfo) Versioninfo
+
+4. how can I change the #header backgroundcolor# in the widgets 
+
+5. how can I use the online #Atoti UI documentation# efficiently? (Docs &  API) implementing of context menues, pinned filters, title bar, the header,.... 
+
+6. formatting of the widths of #pinned filter#
+
+7. correct user of menue missing. at the moment there is anonymousUser
+
+8. add #mutlitple lines# in the tables (Zeilenumbruch)
+
+9. to see "the bookmarkfolder" additional to the data model, tools, dashboard
+
+10. coloring "lines" of the tables to get a clear overview
+
+11. #non measure numbers#  also #black#, formatting of non measure numbers (notional,....)
+
+12. going through all available functions concerning layouting (isBodyCell, isHeaderCell, isStaticHeaderCell, withDefaultCellStyle....)
+
+
+Alexandra Primetzhofer 
+27.06.2023
+
+- How to get rid of "Do you really want to quit this page" dialogue?
+
+# ############################
+# topics for training 6.9.2023
+# ============================
+
+
+1) altenative solution for pw & user access to endpoints in "dataLoadStatus"
+
+2) copy & past pivot tables in excel
+
+3) which env is used for build?
+4) when I start ui locally (http://127.0.0.1:3000/) I always have to remove cookies. 
+can I remove this in the code directly?

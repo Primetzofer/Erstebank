@@ -1,0 +1,193 @@
+database_config.py
+class ConfigQueries(BaseModel):
+    fill_days_to_load: str = Field(..., alias="fill-days-to-load")
+    get_days_to_load: str = Field(..., alias="get-days-to-load")
+    get_pia_control_table: str = Field(...,  alias="get-pia-control-table")
+# --------------------------------------------------------------------------------------------------
+cube_constants.py
+class PIAControlCubeDimensions(Enum):
+    PIA_CONTROL_TABLE = "PIAControlTable"
+
+
+class PIAControlCubeHierarchy(Enum):
+    SCN = "SCN"
+    REFERENZ_ID = "Referenz_id"
+    DEAL_ID = "Deal_Id"
+    DEAL_BUSINESS_KEY = "DealBusinessKey"
+    TYP = "Typ"
+    DEAL_TYP = "DealTyp"
+    CPI_ACTION = "CPI_Action"
+    CAPTURE_DATE = "CaptureDate"
+    AP_IMPORT_DATE = "AP_Import_Date"
+
+
+class PIAControlCubeLevel(Enum):
+    SCN = "SCN"
+    REFERENZ_ID = "Referenz_id"
+    DEAL_ID = "Deal_Id"
+    DEAL_BUSINESS_KEY = "DealBusinessKey"
+    TYP = "Typ"
+    DEAL_TYP = "DealTyp"
+    CPI_ACTION = "CPI_Action"
+    CAPTURE_DATE = "CaptureDate"
+    AP_IMPORT_DATE = "AP_Import_Date"
+# --------------------------------------------------------------------------------------------------
+table_constants.py
+27	   PIA_CONTROL_TABLE_NAME = "PIAControlTable"
+78ff
+	class PiaControlTableColumn(Enum):
+    SCN = "SCN"
+    REFERENZ_ID = "Referenz_id"
+    DEAL_ID = "Deal_Id"
+    DEAL_BUSINESS_KEY = "DealBusinessKey"
+    TYP = "Typ"
+    DEAL_TYP = "DealTyp"
+    CPI_ACTION = "CPI_Action"
+    CAPTURE_DATE = "CaptureDate"
+    AP_IMPORT_DATE = "AP_Import_Date"
+# --------------------------------------------------------------------------------------------------
+cube.__init__.py
+from .pia_control_cube import *
+# --------------------------------------------------------------------------------------------------
+liquidity_cube.py
+60ff
+# ------ 106 extra measure "BalanceNonZeroCol" - Equity Short
+    measures["BalanceNonZeroCol"] = tt.agg.sum(
+        tt.where((measures[LiquidityCubeMeasures.BAL_EQUITY_QUANTITY.value] < 0.0001),
+                 measures[LiquidityCubeMeasures.BAL_EQUITY_QUANTITY.value], None),
+        scope=tt.OriginScope(level_isin))
+# --------------------------------------------------------------------------------------------------
+cube.pia_control_cube.py
+import atoti as tt
+from ..constants import cube_constants, TableName, PiaControlTableColumn, PIAControlCubeDimensions,\
+    PIAControlCubeHierarchy, PIAControlCubeLevel
+
+
+def create_pia_control_cube(session: tt.Session, /) -> None:
+    pia_control_table = session.tables[TableName.PIA_CONTROL_TABLE_NAME.value]
+    pia_control_cube = session.create_cube(pia_control_table, cube_constants.PIA_CONTROL, mode="manual")
+    h, l, m = pia_control_cube.hierarchies,  pia_control_cube.levels, pia_control_cube.measures
+    define_dimensions_and_hierarchies(pia_control_table, h)
+    define_measures(m, l)
+
+
+def define_dimensions_and_hierarchies(pia_control_table, h):
+    h.update(
+        {
+            # SCN
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.SCN.value): {
+                PIAControlCubeLevel.SCN.value:
+                    pia_control_table[PiaControlTableColumn.SCN.value]},
+
+            # REFERENZ_ID
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.REFERENZ_ID.value): {
+                PIAControlCubeLevel.REFERENZ_ID.value:
+                    pia_control_table[PiaControlTableColumn.REFERENZ_ID.value]},
+
+            # DEAL_ID
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.DEAL_ID.value): {
+                PIAControlCubeLevel.DEAL_ID.value:
+                    pia_control_table[PiaControlTableColumn.DEAL_ID.value]},
+
+            # DEAL_BUSINESS_KEY
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.DEAL_BUSINESS_KEY.value): {
+                PIAControlCubeLevel.DEAL_BUSINESS_KEY.value:
+                    pia_control_table[PiaControlTableColumn.DEAL_BUSINESS_KEY.value]},
+
+            # TYP
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.TYP.value): {
+                PIAControlCubeLevel.TYP.value:
+                    pia_control_table[PiaControlTableColumn.TYP.value]},
+
+            # DEAL_TYP
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.DEAL_TYP.value): {
+                PIAControlCubeLevel.DEAL_TYP.value:
+                    pia_control_table[PiaControlTableColumn.DEAL_TYP.value]},
+
+            # CPI_ACTION
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.CPI_ACTION.value): {
+                PIAControlCubeLevel.CPI_ACTION.value:
+                    pia_control_table[PiaControlTableColumn.CPI_ACTION.value]},
+
+            # CAPTURE_DATE
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.CAPTURE_DATE.value): {
+                PIAControlCubeLevel.CAPTURE_DATE.value:
+                    pia_control_table[PiaControlTableColumn.CAPTURE_DATE.value]},
+
+            # AP_IMPORT_DATE
+            (PIAControlCubeDimensions.PIA_CONTROL_TABLE.value, PIAControlCubeHierarchy.AP_IMPORT_DATE.value): {
+                PIAControlCubeLevel.AP_IMPORT_DATE.value:
+                    pia_control_table[PiaControlTableColumn.AP_IMPORT_DATE.value]}
+        }
+    )
+
+    pass
+
+
+def define_measures(m, l):
+    return
+# --------------------------------------------------------------------------------------------------
+mdx_scheduler.py
+content = item["subject"]
+            msg = EmailMessage()
+            msg['Subject'] = item["subject"]
+            msg['From'] = self.mdxconfig.sender_email
+            msg['To'] = item["to"]
+            msg["Cc"] = item["cc"]
+            msg.set_content(content)
+# --------------------------------------------------------------------------------------------------
+queries-config.yaml
+  config:
+    get-pia-control-table: "select SCN, Referenz_id, Deal_Id, DealBusinessKey, Typ, DealTyp, CPI_Action, CaptureDate, 
+                        AP_Import_Date from PIA.dbo.PIA_Control_Table"
+						.
+						.
+						.
+	    trade: "select Convert(Int, Trade_Unid) as TRade_Unid,Trade_BusinessKey,convert(datetime, convert(varchar(10), 
+             TradeDate, 101)) As TradeDate,MirrorBookName,TradeStatus,InternalExternal,CapturedByFullName,
+             CAST(ValueDate as DateTime) as ValueDate,ValueDateAsInt,cpty_depot,cpty_subdepot,cpty_verwahrart,
+             cpty_custodian,Comments,CallNotices,InitialTerm,Brokers_Shortname,ClearingModes,BundleId FROM 
+             MO_DB.pia.v_dim_Trade where Trade_Unid>0"
+            # and CAST(TradeDate as DATE) <= GETDATE()"
+# --------------------------------------------------------------------------------------------------
+create_and_join_tables.py
+def create_pia_control_table(session: tt.Session, /) -> None:
+    session.create_table(
+        TableName.PIA_CONTROL_TABLE_NAME.value,
+        keys=[PiaControlTableColumn.SCN.value],
+        types={
+            PiaControlTableColumn.SCN.value: tt.type.LONG,
+            PiaControlTableColumn.REFERENZ_ID.value: tt.type.INT,
+            PiaControlTableColumn.DEAL_ID.value: tt.type.INT,
+            PiaControlTableColumn.DEAL_BUSINESS_KEY.value: tt.type.STRING,
+            PiaControlTableColumn.TYP.value: tt.type.STRING,
+            PiaControlTableColumn.DEAL_TYP.value: tt.type.STRING,
+            PiaControlTableColumn.CPI_ACTION.value: tt.type.STRING,
+            PiaControlTableColumn.CAPTURE_DATE.value: tt.type.LOCAL_DATE_TIME,
+            PiaControlTableColumn.AP_IMPORT_DATE.value:tt.type.LOCAL_DATE_TIME
+        },
+        default_values={
+            PiaControlTableColumn.SCN.value: 0,
+            PiaControlTableColumn.REFERENZ_ID.value: 0,
+            PiaControlTableColumn.DEAL_ID.value: 0
+        }
+    )
+	
+744:	create_pia_control_table(session)
+
+# --------------------------------------------------------------------------------------------------
+create_cubes.py
+def create_cubes(session: tt.Session, /) -> None:
+    create_liquidity_cube(session)
+    create_gceligibility_cube(session)
+    create_pia_control_cube(session)
+	
+# --------------------------------------------------------------------------------------------------
+16:	session.tables[TableName.PIA_CONTROL_TABLE_NAME.value].load_sql(config.config_queries.get_pia_control_table,
+    #                                                                url=config_str)
+			
+		
+
+
+
+	

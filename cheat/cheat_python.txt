@@ -1,0 +1,161 @@
+
+# mkvirtualenv with python version
+mkvirtualenv -p /usr/bin/python xyz
+
+# mkvirtualenv with system site packages
+mkvirtualenv --system-site-packages g3
+
+# freeze
+pip freeze > requirements.txt
+# freeze without site packages
+pip freeze -l > requirements.txt 
+# freeze without version
+pip freeze | awk -F "==" '{ print $1 }'   #
+
+# guck3
+# telegram filters
+import telegram
+if telegram.__version__ == "20.1":
+    from telegram.ext import filters
+else:
+    from telegram.ext import Filters
+
+pip3 install --pre torch torchvision torchaudio --index-url
+https://download.pytorch.org/whl/nightly/cu118
+
+#install from requirements
+pip install -r requirements.txt
+# (Achtung: evtl. vorher emerge -a dev-python/bsddb3!!)
+
+
+#update all requirements
+pip install -U `pip list --outdated | tail -n +3 | awk '{print $1}'`
+	bzw.
+pip freeze > requirements.ext
+pur -r requirements.txt
+pip install -r requirements
+
+
+# install opencv & gi
+pip install opencv-python
+pip install pygobject
+
+# use gi in virtualenv
+pip install vext
+pip install vext.gi
+https://urldefense.com/v3/__https://github.com/stuaxo/vext__;!!OMGRPR5eiCE28w!qohPlr_4StMkIUsvQdrVnq6coibe7V4VMyP2zTr8fLGO_9xpo_veqQ0mCrQqbZUQjkuommp_eoNfZq6i1d2GfP3p64hIdIAUhQ$ 
+
+--> doer pip install --system-site-packages ... (??)
+
+### also use global libs ###
+if create new:
+	Create the environment with virtualenv --system-site-packages
+if making existing one using global libs:
+	rm ~/.virtualenvs/cvp0/lib/python3.5/no-global-site-
+packages.txt
+
+### mkvirtualenv
+make new virtualenv with python 3.7	mkvirtualenv pkgtest --
+python=python3.7
+
+### upload to pypi
+workon gzbx
+pip install twine
+python setup.py sdist
+twine upload dist/*
+
+### upgrade to nonstable python version -> unmask useflags
+/etc/portage/profile/use.stable.mask
+-python_targets_python3_7
+-python_single_target_python3_7
+
+### install with pip with non-standard python version
+python3.7 -m pip install --user ginzicut
+
+### eselect python
+# perform if e.g. python-exec: Invalid impl in /etc/python-exec/python-
+exec.conf: python2.7
+eselect python list
+eselect python cleanup
+eselect python update
+eselect	python list
+
+# opencv site-package
+cd  /usr/lib/python3.10/site-packages/cv2
+
+
+#### ATOTI #####
+# if error: Could not fetch URL https://pypi.org/simple/pip/: There was a problem confirming ....
+pip install --trusted-host files.pythonhosted.org --trusted-host pypi.org <package>
+pip install --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip
+
+### setup python and pip
+install python 3.11
+add to path, and move up:
+	C:\Users\A96BWJA\AppData\Local\Programs\Python\Python311
+open cmd.exe:
+cd C:\Users\A96BWJA\
+	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+add to path:
+C:\Users\A96BWJA\AppData\Local\Programs\Python\Python311\Scripts
+
+### graphviz for jupyterlab
+https://graphviz.org/download/
+install systemwide, add to path: C:\Program Files\Graphviz\bin
+open new shell
+activate venv
+pip install graphviz
+
+##### für hoate: venv
+# create venv directory in project/current directory
+python -m venv venv
+# activate virtual env
+venv\Scripts\activate
+# install packages
+install atoti pandas atoti-jupyterlab jupyterlab atoti_plus [graphviz]
+# start py
+.\venv\Scripts\python.exe .\atotipandas.py
+# deaktivieren
+deactivate
+
+cd C:\Users\A96BWJA\PycharmProjects\atoti_training2
+
+#### bequemer: virtualenvwrapper - besser in cmd.exe!!!!!
+pxon.bat
+ausserhalb eines venv: pip install virtualenvwrapper-win
+mkvirtualenv
+lsvirtualenv
+workon ...
+deactivate
+siehe: https://pypi.org/project/virtualenvwrapper-win/
+
+##### POETRY ####
+
+1. install
+get link for install script (at https://python-poetry.org/docs/#installing-with-the-official-installer)
+
+	https://install.python-poetry.org
+
+open notepad, paste content of above link into notepad and save e.g. as 
+
+	C:\Users\A96BWJA\PycharmProjects\install_poetry.py
+
+chnage into above dir and run
+
+	python install_poetry.py
+
+(press enter to see script output)
+
+poetry update --with=dev 
+
+# generate requirements
+poetry export --without-hashes --format=requirements.txt > requirements.txt
+
+
+
+
+
+
+
+
+

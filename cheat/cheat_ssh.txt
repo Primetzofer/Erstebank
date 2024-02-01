@@ -1,0 +1,49 @@
+https://conf.s-mxs.net/display/JCKB/Bitbucket+SSO+login
+
+'Wichtig: HOME Variabel muss gesetzt sein: 
+# Variable: HOME
+# Wert: C:\Users\A96BWJA\PycharmProjects
+
+## 1. set env variable HOME korrekt, z.b. bei mir:
+C:\Users\A96BWJA\PycharmProjects
+# in diesem Verzeichnis muss der .gitconfig und der .ssh (später) Folder sein!
+
+## 2. im explorer den Folder oben mit Maus Rechts - "git bash" öffnen
+# key generieren
+ssh-keygen -t rsa -b 4096 
+
+# start ssh agent
+eval $(ssh-agent)
+
+# add key
+ssh-add /c/Users/A96BWJA/PycharmProjects/.ssh/id_rsa
+
+# config file in .ssh erstellen mit namen "config" und folgendem inhalt:
+IdentityFile C:\Users\A96BWJA\PycharmProjects\.ssh\id_rsa
+
+# public key ausgeben:
+cat id_rsa.pub
+# diesen inhalt mit maus rechts - kopieren
+
+## 3. atlassian bitbucket ssh key id_rsa.pub hinzufügen
+# bitbucket im browser öffnen
+# Rechts oben auf Konto Avatar klicken -> Konto Verwalten -> SSH-Schlüssel
+# Schlüssel hinzufügen
+# Öffentlichen Schlüssel hinzufügen -> Inhalt des id_rsa.pub oben reinkopieren, Schlüssel hinzufügen
+
+## 4. twh-atotiplus Verzeichnis samt inhalt löschen
+# powershell als admin öffnen
+cd C:\Users\A96BWJA\PycharmProjects
+# löschen
+rm -r -fo twh-atotiplus
+
+## 5. erneut klonen, aber mit ssh!! - das war's
+git clone ssh://git@stash.s-mxs.net:7999/atoti/twh-atotiplus.git
+# zukünftig bleibt sonst alles gleich, origin ist halt jetzt ssh://git@ ...
+# credentials sind nicht mehr nötig!
+
+
+
+
+
+

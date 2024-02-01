@@ -1,0 +1,549 @@
+import atoti as tt
+from enum import Enum
+
+
+from ..constants import cube_constants, TableName
+
+
+class GCEligibilityCubeDimensions(Enum):
+    GC_TABLE = "GCTable"
+
+
+class GCEligibilityCubeHierarchy(Enum):
+    ID = "EligibleCollateral_Unid"
+    ISIN = "ISIN"
+    HAIRCUT = "GC_Pooling_Haircut_pct"
+    ELIG = "GC_Pooling_Basket_eligible"
+    ELIG_EXT = "GC_Pooling_Extended_Basket_eligible"
+    ECB_HQLA = "ECB_HQLA"
+    HQLA_LEVEL = "HQLA_Level"
+    HQLA_CONSOLIDATED = "HQLA_Consolidated"
+    ISSUER = "Issuer"
+    ISSUER_INTERNAL_RATING = "IssuerInternalRating"
+    ISSUER_RATING = "IssuerRating"
+    SECURITY_RATING = "SecurityRating"
+    ECB_ELIGIBLE = "ECB_eligible"
+    FED_ELIGIBLE = "FED_eligible"
+    SNB_ELIGIBLE = "SNB_eligible"
+    ISSUER_RICOS_CODE = "IssuerRicosCode"
+
+
+class GCEligibilityCubeLevel(Enum):
+    ID = "EligibleCollateral_Unid"
+    ISIN = "ISIN"
+    HAIRCUT = "GC_Pooling_Haircut_pct"
+    ELIG = "GC_Pooling_Basket_eligible"
+    ELIG_EXT = "GC_Pooling_Extended_Basket_eligible"
+    ECB_HQLA = "ECB_HQLA"
+    HQLA_LEVEL = "HQLA_Level"
+    HQLA_CONSOLIDATED = "HQLA_Consolidated"
+    ISSUER = "Issuer"
+    ISSUER_INTERNAL_RATING = "IssuerInternalRating"
+    ISSUER_RATING = "IssuerRating"
+    SECURITY_RATING = "SecurityRating"
+    ECB_ELIGIBLE = "ECB_eligible"
+    FED_ELIGIBLE = "FED_eligible"
+    SNB_ELIGIBLE = "SNB_eligible"
+    ISSUER_RICOS_CODE = "IssuerRicosCode"
+
+
+class GCEligibilityTableColumn(Enum):
+    ID = "EligibleCollateral_Unid"
+    ISIN = "ISIN"
+    HAIRCUT = "GC_Pooling_Haircut_pct"
+    ELIG = "GC_Pooling_Basket_eligible"
+    ELIG_EXT = "GC_Pooling_Extended_Basket_eligible"
+    ECB_HQLA = "ECB_HQLA"
+    HQLA_LEVEL = "HQLA_Level"
+    HQLA_CONSOLIDATED = "HQLA_Consolidated"
+    ISSUER = "Issuer"
+    ISSUER_INTERNAL_RATING = "IssuerInternalRating"
+    ISSUER_RATING = "IssuerRating"
+    SECURITY_RATING = "SecurityRating"
+    ECB_ELIGIBLE = "ECB_eligible"
+    FED_ELIGIBLE = "FED_eligible"
+    SNB_ELIGIBLE = "SNB_eligible"
+    ISSUER_RICOS_CODE = "IssuerRicosCode"
+
+
+def create_gceligibility_cube(session: tt.Session, /) -> None:
+    gceligibility_table = session.tables[TableName.GC_ELIGIBILITY_TABLE_NAME.value]
+    gceligibility_cube = session.create_cube(gceligibility_table, cube_constants.GC_ELIGIBILITY, mode="manual")
+    h, l, m = gceligibility_cube.hierarchies,  gceligibility_cube.levels,  gceligibility_cube.measures
+
+    h.update(
+        {
+            # ID
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ID.value): {
+                GCEligibilityCubeLevel.ID.value:
+                    gceligibility_table[GCEligibilityTableColumn.ID.value]},
+
+            # ISIN
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISIN.value): {
+                GCEligibilityCubeLevel.ISIN.value: gceligibility_table[GCEligibilityTableColumn.ISIN.value]},
+
+            # HAIRCUT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HAIRCUT.value): {
+                GCEligibilityCubeLevel.HAIRCUT.value:
+                    gceligibility_table[GCEligibilityTableColumn.HAIRCUT.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # ELIG_EXT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG_EXT.value): {
+                GCEligibilityCubeLevel.ELIG_EXT.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG_EXT.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # ECB_HQLA
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_HQLA.value): {
+                GCEligibilityCubeLevel.ECB_HQLA.value:
+                    gceligibility_table[GCEligibilityTableColumn.ECB_HQLA.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # HQLA_LEVEL
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HQLA_LEVEL.value): {
+                GCEligibilityCubeLevel.HQLA_LEVEL.value:
+                    gceligibility_table[GCEligibilityTableColumn.HQLA_LEVEL.value]},
+
+            # HQLA_CONSOLIDATED
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HQLA_CONSOLIDATED.value): {
+                GCEligibilityCubeLevel.HQLA_CONSOLIDATED.value:
+                    gceligibility_table[GCEligibilityTableColumn.HQLA_CONSOLIDATED.value]},
+
+            # ISSUER
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER.value): {
+                GCEligibilityCubeLevel.ISSUER.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER.value]},
+
+            # ELIG
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ELIG.value): {
+                GCEligibilityCubeLevel.ELIG.value:
+                    gceligibility_table[GCEligibilityTableColumn.ELIG.value]},
+
+            # ISSUER_INTERNAL_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER_INTERNAL_RATING.value): {
+                GCEligibilityCubeLevel.ISSUER_INTERNAL_RATING.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER_INTERNAL_RATING.value]},
+
+            # ISSUER_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER_RATING.value): {
+                GCEligibilityCubeLevel.ISSUER_RATING.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER_RATING.value]},
+
+            # SECURITY_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SECURITY_RATING.value): {
+                GCEligibilityCubeLevel.SECURITY_RATING.value:
+                    gceligibility_table[GCEligibilityTableColumn.SECURITY_RATING.value]},
+
+            # ECB_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.ECB_ELIGIBLE.value:
+                    gceligibility_table[GCEligibilityTableColumn.ECB_ELIGIBLE.value]},
+
+            # FED_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.FED_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.FED_ELIGIBLE.value:
+                    gceligibility_table[GCEligibilityTableColumn.FED_ELIGIBLE.value]},
+
+            # SNB_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.SNB_ELIGIBLE.value:
+                    gceligibility_table[GCEligibilityTableColumn.SNB_ELIGIBLE.value]},
+
+            # ISSUER_RICOS_CODE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ISSUER_RICOS_CODE.value): {
+                GCEligibilityCubeLevel.ISSUER_RICOS_CODE.value:
+                    gceligibility_table[GCEligibilityTableColumn.ISSUER_RICOS_CODE.value]},
+
+        })
+
+    """
+            # ISSUER
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUER.value): {
+                GCEligibilityCubeLevel.ISSUER.value: GCEligibility_table[GCEligibilityTableColumn.ISSUER.value]},
+
+            # GC_POOLING_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_BASKET_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.GC_POOLING_BASKET_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_BASKET_CBF
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_BASKET_CBF.value): {
+                GCEligibilityCubeLevel.GC_POOLING_BASKET_CBF.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_BASKET_CBF.value]},
+
+            # GC_POOLING_BASKET_CBL
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_BASKET_CBL.value): {
+                GCEligibilityCubeLevel.GC_POOLING_BASKET_CBL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_BASKET_CBL.value]},
+
+            # C_POOLING_EXTENDED_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EXTENDED_BASKET_ELIGIBLE.value): {
+                    GCEligibilityCubeLevel.GC_POOLING_EXTENDED_BASKET_ELIGIBLE.value:
+                        GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EXTENDED_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_EXTENDED_BASKET_CBF
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EXTENDED_BASKET_CBF.value): {
+                GCEligibilityCubeLevel.GC_POOLING_EXTENDED_BASKET_CBF.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EXTENDED_BASKET_CBF.value]},
+
+            # GC_POOLING_EXTENDED_BASKET_CBL
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EXTENDED_BASKET_CBL.value): {
+                GCEligibilityCubeLevel.GC_POOLING_EXTENDED_BASKET_CBL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EXTENDED_BASKET_CBL.value]},
+
+            # GC_POOLING_INT_MXQ_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_INT_MXQ_BASKET_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.GC_POOLING_INT_MXQ_BASKET_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_INT_MXQ_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_INT_MXQ_BASKET_CBF
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_INT_MXQ_BASKET_CBF.value): {
+                GCEligibilityCubeLevel.GC_POOLING_INT_MXQ_BASKET_CBF.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_INT_MXQ_BASKET_CBF.value]},
+
+            # GC_POOLING_INT_MXQ_BASKET_CBL
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_INT_MXQ_BASKET_CBL.value): {
+                GCEligibilityCubeLevel.GC_POOLING_INT_MXQ_BASKET_CBL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_INT_MXQ_BASKET_CBL.value]},
+
+            # GC_POOLING_EQUITY_BASKET_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_EQUITY_BASKET_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.GC_POOLING_EQUITY_BASKET_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_EQUITY_BASKET_ELIGIBLE.value]},
+
+            # GC_POOLING_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.GC_POOLING_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.GC_POOLING_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.GC_POOLING_HAIRCUT_PCT.value]},
+
+            # ECB_LIQUIDITY_CLASS
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ECB_LIQUIDITY_CLASS.value): {
+                GCEligibilityCubeLevel.ECB_LIQUIDITY_CLASS.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_LIQUIDITY_CLASS.value]},
+
+            # ECB_TYPE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_TYPE.value): {
+                GCEligibilityCubeLevel.ECB_TYPE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_TYPE.value]},
+
+            # ECB_REFERENCE_MARKET
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_REFERENCE_MARKET.value): {
+                GCEligibilityCubeLevel.ECB_REFERENCE_MARKET.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_REFERENCE_MARKET.value]},
+
+            # ECB_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.ECB_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_HAIRCUT_PCT.value]},
+
+            # SNB_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.SNB_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_HAIRCUT_PCT.value]},
+
+            # FED_HAIRCUT_PCT
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.FED_HAIRCUT_PCT.value): {
+                GCEligibilityCubeLevel.FED_HAIRCUT_PCT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.FED_HAIRCUT_PCT.value]},
+
+            # -----------------------------------------------------------------------------------------------
+
+            # ECB_OWN_USE_COVERED_BONDS
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.ECB_OWN_USE_COVERED_BONDS.value): {
+                GCEligibilityCubeLevel.ECB_OWN_USE_COVERED_BONDS.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_OWN_USE_COVERED_BONDS.value]},
+
+            # SNB_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.SNB_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_ELIGIBLE.value]},
+
+            # SNB_LIQUIDITY_CLASS
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.SNB_LIQUIDITY_CLASS.value): {
+                GCEligibilityCubeLevel.SNB_LIQUIDITY_CLASS.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_LIQUIDITY_CLASS.value]},
+
+            # HQLA_LEVEL
+            (GCEligibilityCubeDimensions.GC_TABLE.value,
+             GCEligibilityCubeHierarchy.HQLA_LEVEL.value): {
+                GCEligibilityCubeLevel.HQLA_LEVEL.value:
+                    GCEligibility_table[GCEligibilityTableColumn.HQLA_LEVEL.value]},
+
+            # ECB_HQLA_RULE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ECB_HQLA_RULE.value): {
+                GCEligibilityCubeLevel.ECB_HQLA_RULE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ECB_HQLA_RULE.value]},
+
+            # HQLA_CONSOLIDATED
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.HQLA_CONSOLIDATED.value): {
+                GCEligibilityCubeLevel.HQLA_CONSOLIDATED.value:
+                    GCEligibility_table[GCEligibilityTableColumn.HQLA_CONSOLIDATED.value]},
+
+            # SNB_HAIRCUT
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.SNB_HAIRCUT.value): {
+                GCEligibilityCubeLevel.SNB_HAIRCUT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SNB_HAIRCUT.value]},
+
+            # FED_HAIRCUT
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.FED_HAIRCUT.value): {
+                GCEligibilityCubeLevel.FED_HAIRCUT.value:
+                    GCEligibility_table[GCEligibilityTableColumn.FED_HAIRCUT.value]},
+
+            # FED_ELIGIBLE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.FED_ELIGIBLE.value): {
+                GCEligibilityCubeLevel.FED_ELIGIBLE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.FED_ELIGIBLE.value]},
+
+            # ISSUER_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUER_RATING.value): {
+                GCEligibilityCubeLevel.ISSUER_RATING.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ISSUER_RATING.value]},
+
+            # SECURITY_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.SECURITY_RATING.value): {
+                GCEligibilityCubeLevel.SECURITY_RATING.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SECURITY_RATING.value]},
+
+            # SECURITY_DESCRIPTION
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.SECURITY_DESCRIPTION.value): {
+                GCEligibilityCubeLevel.SECURITY_DESCRIPTION.value:
+                    GCEligibility_table[GCEligibilityTableColumn.SECURITY_DESCRIPTION.value]},
+
+            # OEWS_SECURITY_TYPE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEWS_SECURITY_TYPE.value): {
+                GCEligibilityCubeLevel.OEWS_SECURITY_TYPE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEWS_SECURITY_TYPE.value]},
+
+            # OEWS_SECURITY_SUB_TYPE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEWS_SECURITY_SUB_TYPE.value): {
+                GCEligibilityCubeLevel.OEWS_SECURITY_SUB_TYPE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEWS_SECURITY_SUB_TYPE.value]},
+
+            # OEAWSADDON1
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON1.value): {
+                GCEligibilityCubeLevel.OEAWSADDON1.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON1.value]},
+
+            # OEAWSADDON2
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON2.value): {
+                GCEligibilityCubeLevel.OEAWSADDON2.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON2.value]},
+
+            # OEAWSADDON3
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON3.value): {
+                GCEligibilityCubeLevel.OEAWSADDON3.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON3.value]},
+
+            # OEAWSADDON4
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON4.value): {
+                GCEligibilityCubeLevel.OEAWSADDON4.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON4.value]},
+
+            # OEAWSADDON5
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON5.value): {
+                GCEligibilityCubeLevel.OEAWSADDON5.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON5.value]},
+
+            # OEAWSADDON6
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON6.value): {
+                GCEligibilityCubeLevel.OEAWSADDON6.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON6.value]},
+
+            # OEAWSADDON7
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON7.value): {
+                GCEligibilityCubeLevel.OEAWSADDON7.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON7.value]},
+
+            # OEAWSADDON8
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON8.value): {
+                GCEligibilityCubeLevel.OEAWSADDON8.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON8.value]},
+
+            # OEAWSADDON9
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON9.value): {
+                GCEligibilityCubeLevel.OEAWSADDON9.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON9.value]},
+
+            # OEAWSADDON10
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON10.value): {
+                GCEligibilityCubeLevel.OEAWSADDON10.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON10.value]},
+
+            # OEAWSADDON11
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON11.value): {
+                GCEligibilityCubeLevel.OEAWSADDON11.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON11.value]},
+
+            # OEAWSADDON12
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON12.value): {
+                GCEligibilityCubeLevel.OEAWSADDON12.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON12.value]},
+
+            # OEAWSADDON13
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON13.value): {
+                GCEligibilityCubeLevel.OEAWSADDON13.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON13.value]},
+
+            # OEAWSADDON14
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.OEAWSADDON14.value): {
+                GCEligibilityCubeLevel.OEAWSADDON14.value:
+                    GCEligibility_table[GCEligibilityTableColumn.OEAWSADDON14.value]},
+
+            # NOTIONAL_CURRENCY
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.NOTIONAL_CURRENCY.value): {
+                GCEligibilityCubeLevel.NOTIONAL_CURRENCY.value:
+                    GCEligibility_table[GCEligibilityTableColumn.NOTIONAL_CURRENCY.value]},
+
+            # IS_EEA
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.IS_EEA.value): {
+                GCEligibilityCubeLevel.IS_EEA.value:
+                    GCEligibility_table[GCEligibilityTableColumn.IS_EEA.value]},
+
+            # INTERNAL_RATING
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.INTERNAL_RATING.value): {
+                GCEligibilityCubeLevel.INTERNAL_RATING.value:
+                    GCEligibility_table[GCEligibilityTableColumn.INTERNAL_RATING.value]},
+
+            # ISSUERRICOSCODE
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUERRICOSCODE.value): {
+                GCEligibilityCubeLevel.ISSUERRICOSCODE.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ISSUERRICOSCODE.value]},
+
+            # ISSUERRICOSRATYNA
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.ISSUERRICOSRATYNA.value): {
+                GCEligibilityCubeLevel.ISSUERRICOSRATYNA.value:
+                    GCEligibility_table[GCEligibilityTableColumn.ISSUERRICOSRATYNA.value]},
+
+            # EUREX_ADMISSIBLESECURITIES
+            (GCEligibilityCubeDimensions.GC_TABLE.value, GCEligibilityCubeHierarchy.EUREX_ADMISSIBLESECURITIES.value): {
+                GCEligibilityCubeLevel.EUREX_ADMISSIBLESECURITIES.value:
+                    GCEligibility_table[GCEligibilityTableColumn.EUREX_ADMISSIBLESECURITIES.value]},
+        }
+    )"""
+
+    # define measure "scoring"
+
+    worst_ratingscore = 22
+    scoringdict_issuerrating = {"AAA":  1,
+                                "AA+":  2,
+                                "AA":   3,
+                                "AA.":  4,
+                                "A+":   5,
+                                "A":    6,
+                                "A-":   7,
+                                "BBB+": 8,
+                                "BBB":  9,
+                                "BBB-": 10,
+                                "BB+":  11,
+                                "BB":   12,
+                                "BB-":  13,
+                                "B+":   14,
+                                "B":    15,
+                                "B-":   16,
+                                "CCC+": 17,
+                                "CCC":  18,
+                                "CCC-": 19,
+                                "CC":   20,
+                                "C":    21,
+                                "D":    22
+                                }
+    scoringdict_internalissuerrating = {"1":    1,
+                                        "2":    4,
+                                        "3":    6,
+                                        "4a":   8,
+                                        "4b":   9,
+                                        "4c":   10,
+                                        "5a":   12,
+                                        "5b":   14,
+                                        "5c":   16,
+                                        "6a":   18,
+                                        "6b":   20,
+                                        "7":    21,
+                                        "8":    22}
+    scoringdict_hqla_level = {"L1":   2,
+                              "L2":   8,
+                              "N/A":  14,
+                              "None": 18}
+
+    # CBeligRatingScore - FED / ECB / SNB_ELIGIBLE
+    m["CBeligRatingScore"] = tt.agg.sum(tt.where((l[GCEligibilityCubeLevel.ECB_ELIGIBLE.value] == 1) |
+                                                  (l[GCEligibilityCubeLevel.FED_ELIGIBLE.value] == 1) |
+                                                  (l[GCEligibilityCubeLevel.SNB_ELIGIBLE.value] == 1), 6, 14),
+                                         scope=tt.OriginScope(l[GCEligibilityCubeLevel.ECB_ELIGIBLE.value],
+                                                              l[GCEligibilityCubeLevel.FED_ELIGIBLE.value],
+                                                              l[GCEligibilityCubeLevel.SNB_ELIGIBLE.value]))
+    m["CBeligRatingScore"].visible = False
+
+    # HQLALevelRatingScore - HQLA-Level
+    m["HQLALevelRatingScore"] = tt.agg.sum(tt.switch(l[GCEligibilityCubeLevel.HQLA_LEVEL.value],
+                                                     scoringdict_hqla_level, default=0),
+                                           scope=tt.OriginScope(l[GCEligibilityCubeLevel.HQLA_LEVEL.value]))
+    m["HQLALevelRatingScore"].visible = False
+
+    # IssuerRatingScore - ISSUER_RATING
+    m["IssuerRatingScore"] = tt.agg.sum(tt.switch(l[GCEligibilityCubeLevel.ISSUER_RATING.value],
+                                                  scoringdict_issuerrating, default=0),
+                                        scope=tt.OriginScope(l[GCEligibilityCubeLevel.ISSUER_RATING.value]))
+    m["IssuerRatingScore"].visible = False
+
+    # InternalRatingScore - ISSUER_INTERNAL_RATING
+    m["InternalRatingScore"] = tt.agg.sum(tt.switch(l[GCEligibilityCubeLevel.ISSUER_INTERNAL_RATING.value],
+                                                    scoringdict_internalissuerrating, default=0),
+                                          scope=tt.OriginScope(l[GCEligibilityCubeLevel.ISSUER_INTERNAL_RATING.value]))
+    m["InternalRatingScore"].visible = False
+
+    # calc. number of valid ratings
+    m["no_of_valid_ratings"] = tt.agg.sum(tt.where(m["IssuerRatingScore"] > 0, 1, 0),
+                                          scope=tt.OriginScope(l[GCEligibilityCubeLevel.ISSUER_RATING.value])) + \
+                                tt.agg.sum(tt.where(m["InternalRatingScore"] > 0, 1, 0),
+                                          scope=tt.OriginScope(
+                                                l[GCEligibilityCubeLevel.ISSUER_INTERNAL_RATING.value])) + \
+                                tt.agg.sum(tt.where(m["HQLALevelRatingScore"] > 0, 1, 0),
+                                            scope=tt.OriginScope(l[GCEligibilityCubeLevel.HQLA_LEVEL.value]))
+    m["no_of_valid_ratings"].visible = False
+
+    # calc. scoring measure as average ("+ 1" below because CBeligibility is always avail.)
+    m["Scoring"] = tt.agg.mean((m["IssuerRatingScore"] + m["InternalRatingScore"] + m["HQLALevelRatingScore"] +
+                                m["CBeligRatingScore"]) / ((m["no_of_valid_ratings"] + 1) * worst_ratingscore),
+                               scope=tt.OriginScope(l[GCEligibilityCubeLevel.ISIN.value]))
+    m["Scoring"].formatter = "DOUBLE[0.00%]"
+    return
+

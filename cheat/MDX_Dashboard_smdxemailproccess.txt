@@ -1,0 +1,66 @@
+
+import time, os
+from datetime import datetime
+import multiline
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.cron import CronTrigger
+import atoti as tt
+
+
+class MDXScheduler:
+
+    def __init__(self, url, querydbjson):
+        self.scheduler = BackgroundScheduler()
+        self.url = url
+        self.querydbjson = querydbjson
+        self.jobs = []
+        self.setup_scheduler()
+        self.scheduler.start()
+
+    def setup_scheduler(self):
+        with open(self.querydbjson, "r") as fp:
+            json_dict = multiline.load(fp, multiline=True)
+            self.jobs = []
+        for id0, item in json_dict.items():
+            job = self.scheduler.add_job(self.send_mdx, CronTrigger.from_crontab(item["cron"]),
+                                         args=[id0, item, ])
+            # job = self.scheduler.add_job(send_mdx, "cron", second="0,10,20,30,40,50", args=[id0, item, self.url])
+            self.jobs.append(job)
+
+    def send_mdx(self, id0, item):
+        t0 = time.time()
+        print("Querying ID " + str(id0), self.url, datetime.fromtimestamp(time.time()).strftime("%d.%m.%Y, %H:%M:%S"))
+        session = tt.QuerySession(self.url)
+        df = session.query_mdx(item["query"], keep_totals=True)
+        print(df)
+        print(datetime.fromtimestamp(time.time()).strftime("%d.%m.%Y, %H:%M:%S"))
+        print(" ... querying took", round(time.time() - t0, 2), " seconds")
+        print("-" * 60)
+
+    def remove_all_jobs(self):
+        self.scheduler.pause()
+        for job in self.jobs:
+            job.remove()
+        self.scheduler.resume()
+
+
+def mdx_email_process(url, mdxconfig):
+    querydbjson = mdxconfig.querydbjson
+    print(querydbjson, url)
+
+    # mdx_scheduler = MDXScheduler(url, querydbjson)
+
+    lastt_modified = os.path.getmtime(querydbjson)
+
+    while True:
+        time.sleep(5)
+        dt = os.path.getmtime(querydbjson)
+        if os.path.getmtime(querydbjson) > lastt_modified:
+            lastt_modified = dt
+            #mdx_scheduler.remove_all_jobs()
+            #s = mdx_scheduler.setup_scheduler()
+            print("QueryDB changed: " + datetime.fromtimestamp(dt).strftime("%d.%m.%Y, %H:%M:%S"))
+
+        # dt = datetime.fromtimestamp(os.path.getmtime(querydbjson))
+        # print("I am still alive", url, datetime.fromtimestamp(time.time()).strftime("%d.%m.%Y, %H:%M:%S"))
+

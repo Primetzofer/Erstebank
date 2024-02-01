@@ -1,0 +1,64 @@
+#### CMD.EXE ###
+
+# change drive & directory simult.
+L:\>cd /d C:
+c:\> ....
+
+
+# find pids that listen on port 9090 (cmd.exe!!)
+netstat -ano | find "9090"
+
+# find pids that listen on port 9090 (powershell!!)
+netstat -ano | Select-String -Pattern "9090"
+
+# kill by pid
+taskkill /F /PID pidnr
+
+# kill by process name
+taskkill /IM firefox.exe
+
+# get all running processes + pid
+tasklist
+
+#### POWERSHELL ###
+
+# force rm dir recursively
+rm -r -fo dir/
+
+
+#### POWERSHELL ####
+
+# npm / alias
+Get-command npm
+
+# ist npm ein Alias?
+Get-Alias
+
+# temporär rauslöschen
+del alias:npm
+
+# permanent rauslöschen:
+notepad $profile
+# --> set-Alias oder so raushaun, ps neu starten
+
+# search for process by name in PS
+ps *xplor*
+
+
+### kill agora-connector
+# in der ps
+ps jp2l*    # get pid xxx of jp2launcher
+kill xxx
+
+# get environment variables
+Get-ChildItem -Path Env:
+	oder
+dir env:
+
+# set env. variable
+$env:APP_MEASURES_STYLE = 'oldstyle'
+
+
+
+
+

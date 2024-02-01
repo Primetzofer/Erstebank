@@ -1,0 +1,435 @@
+-----> BO
+SELECT
+  NON EMPTY Crossjoin(
+    {
+      [Measures].[Bal. Legal Pos. Nom. Curr]
+    },
+    Hierarchize(
+      Descendants(
+        {
+          [Dim Cal Date Offset].[CF Date Bucket Spa].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON COLUMNS,
+  NON EMPTY Crossjoin(
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[Asset Type Product Currency].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Processing Org].[Processing Org Business Key].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Custodian].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Depot].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Depotname].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Product].[Product Type].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Audit BO FO Match].[Audit BO FO Match Business Key].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON ROWS
+  FROM (
+    SELECT
+    [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember].[XS2168038417] ON COLUMNS
+    FROM [Liquidity]
+    WHERE [CF Dim Asset Location].[Locked For Trading].[ALL].[AllMember].[free]
+  )
+  WHERE [CF Dim Asset Location].[Locked For Trading].[ALL].[AllMember].[free]
+  CELL PROPERTIES VALUE, FORMATTED_VALUE, BACK_COLOR, FORE_COLOR, FONT_FLAGS
+  
+  -----> BO_EH
+  SELECT
+  NON EMPTY Crossjoin(
+    {
+      [Measures].[Bal. Legal Pos. Nom. Curr]
+    },
+    Hierarchize(
+      Descendants(
+        {
+          [Dim Cal Date Offset].[CF Date Bucket Spa].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON COLUMNS,
+  NON EMPTY Crossjoin(
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[Asset Type Product Currency].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Processing Org].[Processing Org Business Key].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Custodian].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Depot].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Depotname].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Product].[Product Type].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Audit BO FO Match].[Audit BO FO Match Business Key].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON ROWS
+  FROM (
+    SELECT
+    [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember].[XS2168038417] ON COLUMNS
+    FROM (
+      SELECT
+      [CF Dim Processing Org].[Processing Org Business Key].[ALL].[AllMember].[ERSTE] ON COLUMNS
+      FROM [Liquidity]
+    )
+    WHERE [CF Dim Asset Location].[Locked For Trading].[ALL].[AllMember].[free]
+  )
+  WHERE [CF Dim Asset Location].[Locked For Trading].[ALL].[AllMember].[free]
+  CELL PROPERTIES VALUE, FORMATTED_VALUE, BACK_COLOR, FORE_COLOR, FONT_FLAGS
+  
+  -----> INFO
+  SELECT
+  NON EMPTY Crossjoin(
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[ISIN].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[Issuer].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[IssuerRicosCode].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[GC_Pooling_Haircut_pct].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[SecurityRating].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[IssuerRating].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[SNB_eligible].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[FED_eligible].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[ECB_eligible].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[ECB_HQLA].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[HQLA_Level].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[IssuerInternalRating].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [GCTable].[HQLA_Consolidated].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON ROWS,
+  NON EMPTY {
+    [Measures].[Scoring]
+  } ON COLUMNS
+  FROM (
+    SELECT
+    [GCTable].[ISIN].[ALL].[AllMember].[AT0000A105W3] ON COLUMNS
+    FROM [GC Eligibility Table]
+  )
+  CELL PROPERTIES VALUE, FORMATTED_VALUE, BACK_COLOR, FORE_COLOR, FONT_FLAGS
+  
+  
+  ----> Deals
+  SELECT
+  NON EMPTY Crossjoin(
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Trade].[Trade Business Key].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Folder].[Folder Business Key].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[Asset Type Product Currency].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Depotname].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Location].[Custodian].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Product].[Product Type].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Trade].[Trade Date].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON ROWS,
+  NON EMPTY Crossjoin(
+    {
+      [Measures].[Bal. Legal Pos. Nom. Curr]
+    },
+    Hierarchize(
+      Descendants(
+        {
+          [Dim Cal Date Offset].[CF Date Bucket Spa].[ALL].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON COLUMNS
+  FROM (
+    SELECT
+    [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember].[XS1312891549] ON COLUMNS
+    FROM [Liquidity]
+    WHERE [CF Dim Processing Org].[Processing Org Business Key].[ALL].[AllMember].[ERSTE]
+  )
+  WHERE (
+    [CF Dim Processing Org].[Processing Org Business Key].[ALL].[AllMember].[ERSTE],
+    [CF Dim Asset Location].[Locked For Trading].[ALL].[AllMember].[free]
+  )
+  CELL PROPERTIES VALUE, FORMATTED_VALUE, BACK_COLOR, FORE_COLOR, FONT_FLAGS

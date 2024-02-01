@@ -1,0 +1,37 @@
+def create_endpoints(session, check_date_dir, first_date, logger):
+
+    @session.endpoint("getinfo", method="GET")
+    def getinfo(request, user, session):
+        # http://localhost:9090/atoti/pyapi/getinfo
+
+        # get app version
+        dict0 = {"twhatoti_version": str(__version__)}
+
+        # get dates in db
+        fill_table_for_dates_to_load()
+        dates_to_load = retrieve_dates_to_load()
+        dict0["dates_to_load"] = str(dates_to_load)
+
+        # atoti version
+        dict0["atoti_version"] = str(version("atoti"))
+
+        new_check_date_dir = check_date_dir.copy()
+        int_res0, scn = new_check_date_dir[first_date]
+        current_max_scn = retrieve_current_max_scn()
+        new_check_date_dir[first_date] = (int_res0, current_max_scn)
+        dict0["check_date_dir"] = str(new_check_date_dir)
+        dict0["check_date_colour"] = str(get_check_date_colour(new_check_date_dir, logger))
+
+        dict0["last_seen_scn"] = current_max_scn
+
+        return dict0
+		
+		
+		
+		
+{"twhatoti_version": "23.7.27.1", 
+ "dates_to_load": "[(20230828, 28, 41977551), (20230825, 25, 41977551), (20230824, 24, 41943730), (20230731, 107, 41263687), (20230630, 106, 40406992)]", 
+ "atoti_version": "0.8.2", 
+ "check_date_dir": "{'20230828': (2704553, 41984179), '20230825': (2704553, 41977551), '20230824': (2703029, 41943730), '20230731': (2554182, 41263687), '20230630': (2368732, 40406992)}", 
+ "check_date_colour": "green", 
+ "last_seen_scn": 41984179}		

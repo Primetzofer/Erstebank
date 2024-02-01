@@ -1,0 +1,353 @@
+python
+### start atoti jupiter lab
+c:
+cd c:\Users\A96BWJA\AppData\Local\Programs\Python\Python310\tutorial
+jupyter lab
+
+### install via pip - man muss die Proxies setzen
+Set-Variable -Name HTTP_PROXY -Value "http://proxy-sd.s-mxs.net:8080"
+Set-Variable -Name HTTPS_PROXY -Value "http://proxy-sd.s-mxs.net:8080"
+pip install flask
+#  C:\Users\A96BWJA\Envs -> hier ist das Env
+
+### pythonprog
+c:
+cd C:\Users\A96BWJA\OneDrive - Erste Group\ActiveUI\pythonnprog
+cd <projectname>
+code .
+
+### poetry
+c:
+cd  C:\Users\A96BWJA\OneDrive - Erste Group\ActiveUI\pythonnprog\
+poetry new hello2project
+cd hello2project
+# create venv (keep it in project directory!)
+poetry config virtualenvs.in-project true
+poetry install
+# in pyproject,toml specify EXACT python version
+python = "3.10.8"
+# add package
+poetry add pandas numpy scipy atoti
+# add development dependencies (flake8 schon als vscode extension installiert)
+poetry add -D mypy black
+# call vs code from poetry
+poetry shell
+code .
+# open helloproject2 folder in vscode and create helloproject.py
+<Ctrl Shift P>
+
+
+### packages für optim
+poetry add pandas numpy scipy atoti
+
+
+
+### create venv in vs code
+Ctrl Shif P > Python: Create Environment
+
+## in cmd.exe active .venv
+.venv\Scripts\activate.bat
+C:\Users\A96BWJA\OneDrive - Erste Group\ActiveUI\pythonnprog\optim>.venv\Scripts\activate.bat
+
+
+
+#vscode shortcuts
+https://towardsdatascience.com/top-9-keyboard-shortcuts-in-vscode-for-data-scientists-468691b65ebe
+delete line 		Ctrl X
+
+### nur um git clone zu über https und pip install zu ermöglichen: in die Benutzer umgebungsvariablen!!!!
+### sonst nicht!!!!!
+### Proxies ################################################################
+HTTP_PROXY 	http://proxy-sd.s-mxs.net:8080
+HTTPS_PROXY	http://proxy-sd.s-mxs.net:8080
+bzw.
+HTTP_PROXY 	http://proxy.p1at.s-group.cc:8080
+HTTPS_PROXY	http://proxy.p1at.s-group.cc:8080
+
+
+### POWERSHELL ENVIRONMENT VARIABLES ###
+# print env variable:
+	$env:HTTPS_PROXY
+	$env:HTTPS_PROXY
+# print all environment variables
+	 dir env:
+# set env. variable locally
+	$env:HTTPS_PROXY = "http://proxy-sd.s-mxs.net:8080"
+	$env:HTTP_PROXY = "http://proxy-sd.s-mxs.net:8080"
+# remove environment variable:
+	$env:HTTPS_PROXY = ''
+	$env:HTTP_PROXY = ''
+
+bzw.
+
+    $env:HTTPS_PROXY = "http://proxy.p1at.s-group.cc:8080"
+	$env:HTTP_PROXY = "http://proxy.p1at.s-group.cc:8080"
+
+### powershell run script
+.\pxon.ps1
+
+### connect atoti session with excel
+1. start atoti session
+2. in Excel > Daten > Daten abrufen > aus Analysis Service > http:localhost:9090/xmla
+
+### install atoti plus with pip
+pip install atoti-plus --extra-index-url https://suntergrabner:suntergrabner_2022@pypi.atoti.io/simple
+
+### install atoti plus with poetry
+poetry source add --secondary  atotiplus https://pypi.atoti.io/simple/
+poetry config http-basic.atotiplus suntergrabner suntergrabner_2022  
+poetry config http-basic.atotiplus aprimetzhofer aprimetzhofer_2021  
+poetry add atoti-plus 
+
+######################################################################################
+### twh atotplus anmerkungen
+######################################################################################
+
+### nicht mehr in load_tables.py ändern, sondern in config.py, siehe unten (DB configstr: in load_tables.py)
+# configStr = "sqlserver://twh-uat.s-mxs.net:1433;DatabaseName=MO_DB;USER=u_atoti;PASSWORD=R14ahul!ato;ENCRYPT=false;"
+
+### in config.py / class DatabaseConfig, server und port ersetzen:
+class DatabaseConfig:
+	server = "twh-uat.s-mxs.net"
+	port = "1433"
+	'''das sollte eh schon drinstehen:
+	database = "MO_DB"
+    user = "u_atoti"
+    password = "R14ahul!ato"'''
+
+Servas Alex
+
+### entry point script for poetry run ...
+# in C:\Users\A96BWJA\PycharmProjects\twh-atotiplus\pyproject.toml
+.
+[tool.poetry.scripts]
+app = "cli:app"
+.
+# -> execute script "app" (poetry run 'app' ..) by calling cli/app.y with @app.command "start" 
+# @app.command is decorator from typer;
+_APP_PACKAGE = "app"
+run_command(["python", "-u", "-m", _APP_PACKAGE], run_with_poetry=True)
+# -u  unbuffered ...?
+# search sys.path for app directory and execute "__main__.py"
+# run command: C:\Users\A96BWJA\PycharmProjects\twh-atotiplus\cli\_run_command.py
+command = ["poetry", "run", "python", "-u", "-m", "app"]
+subprocess.run(command, check=True, env=env [False]) # check=True -> raises an exception, and not just a failure if error!
+# env = False
+# The secondary environment in which a subprocess runs is inherited from the environment of the parent process. 
+# This is the default behavior and the env parameter is set to its default value None
+
+### cli/app.py start executes ..... app/__main__.py:
+# __main__.py
+from . import App, Config     # imports it via __init__py -> imports it from app.py and config.py
+config = Config()
+with App(config=config) as app:
+    print(f"Session listening on port {app.session.port}")  # noqa: T201
+    app.session.wait() # starts App.session and waits for server stop
+
+### --> class App defined in app/app.py
+# App(config=config) initialzes session (__init__) and waits for session end,
+# App.__init__py in app/app.py:
+		self._session = start_session(config=config) -> start_session.py	
+		# creates session: tt.session ... im selben modul
+		# creates_and_join_tables: modul create_and_join_tables.py -> setzt alle tables auf und joined sie
+		# load_tables(session, config=config): modul load_tables.py -> load_sql Werte in die oben erstellten tables
+		# create_cubes(session)	: aus create_cubes.py = create_liquidity_cube(session) <---- do spüt die musi!!!
+		
+
+### Code Fragen	
+
+- deploy to server to check ISINs & measures: Bal. Legal -> no data for your query
+- default filter for Date = Today (old AP using Head / Tail plugin) -> workaround via rolling date range
+- How to set Date.Date always to today?
+Head(
+  NonEmpty(
+    [CF Dim Date].[Date].[Date].Members,
+    [Measures].[update.TIMESTAMP]
+  )
+)
+- change to German comma / point - formatter?? - LANGUAGE ?? 
+    in create_session:
+        i18n=tt.I18nConfig(default_locale="de-DE"),
+    i get:
+     No com.quartetfs.biz.pivot.cube.formatter.ICubeFormatterFactory with key de-DE
+
+- colours for neg
+- how & where can we include/import atoti_plus, to see mdx / manipulate mdx queries
+
+
+
+SELECT
+  NON EMPTY Crossjoin(
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Date].[Date].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    {
+      [Measures].[Flow Amount EUR]
+    }
+  ) ON COLUMNS,
+  NON EMPTY Crossjoin(
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Asset Type Product].[Asset Type Product Currency].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    ),
+    Hierarchize(
+      Descendants(
+        {
+          [CF Dim Product].[Product Type].[AllMember]
+        },
+        1,
+        SELF_AND_BEFORE
+      )
+    )
+  ) ON ROWS
+  FROM (
+    SELECT
+    Filter(
+      [CF Dim Date].[Date].[Date].Members,
+      IsDate(
+        [CF Dim Date].[Date].CurrentMember.MemberValue
+      ) AND DateDiff(
+        "d",
+        now(
+          
+        ),
+        CDate(
+          [CF Dim Date].[Date].CurrentMember.MemberValue
+        )
+      ) = 0
+    ) ON COLUMNS
+    FROM [Liquidity]
+  )
+  CELL PROPERTIES VALUE, FORMATTED_VALUE, BACK_COLOR, FORE_COLOR, FONT_FLAGS
+  
+ 
+
+todo:
+# format: schrift, bold, color etc
+# european numbers -> i18n
+
+# negative numbers in red:
+"name": "BO",
+	"style": {
+		"measures": {
+			"Bal. Legal Pos. Nom. Curr": {
+				"numberOfDecimals": 0,
+				"conditional": [
+					{
+						"lt": 0,
+						"style": {
+							"color": "#FF0000"
+						}
+					}
+				]
+			}
+		}
+	}
+
+
+# #### deploy atoti on server ####
+in pyproject.toml: change version number
+poetry build
+
+# mit winscp: copy akt. wheel to server into directory /home/J46Z013/Atoti_20230428 
+
+# ssh intp uat 
+cd /home/J46Z01/TWHAtoti
+
+# evtl. venv aktivieren
+source /home/J46Z013/TWHAtoti/python-venv/atotiv1/bin/activate
+
+cd wheels/
+
+pip install app-23....whl (--force-reinstall)
+
+----------------------------------------------------------------
+>>>> /home/J46Z013/TWHAtoti/startatoti.sh
+
+#!/bin/bash
+
+pkill -9 python
+
+sleep 3
+
+export ATOTI_LICENSE=/home/J46Z013/ActivePivot.lic.36001
+export ACTIVEPIVOT_LICENSE=/home/J46Z013/ActivePivot.lic.36001
+export LANG=de_AT.UTF-8
+export APP_ENV=uat
+
+source /home/J46Z013/TWHAtoti/python-venv/atotiv1/bin/activate
+#de_DE.UTF-8 UTF-8     Für Deutschland
+#de_CH.UTF-8 UTF-8     Für die Schweiz
+#de_AT.UTF-8 UTF-8     Für Österreich
+
+nohup /home/J46Z013/TWHAtoti/python-venv/atotiv1/bin/python -m app &
+
+----------------------------------------------------------------
+>>>> /home/J46Z013/TWHAtoti/start_atoti_with_venv.sh
+
+#!/bin/bash
+
+echo "-------------------------------------------------------"
+echo "$(date) (Re)Starting Atoti ... "
+echo "$(date) Killing python & waiting 5 seconds ..."
+pkill -9 python
+sleep 5
+
+echo "$(date) Changing into Atoti dir and setting variables ..."
+cd /home/J46Z013/TWHAtoti
+export ATOTI_LICENSE=/home/J46Z013/ActivePivot.lic.36001
+export ACTIVEPIVOT_LICENSE=/home/J46Z013/ActivePivot.lic.36001
+export LANG=de_AT.UTF-8
+export APP_ENV=uat
+
+#de_DE.UTF-8 UTF-8     Für Deutschland
+#de_CH.UTF-8 UTF-8     Für die Schweiz
+#de_AT.UTF-8 UTF-8     Für Österreich
+
+
+echo "$(date) Starting atoti/app ..."
+/home/J46Z013/TWHAtoti/python-venv/atotiv1/bin/python -m app
+
+----------------------------------------------------------------
+>>>> crontab -e
+
+50 7 * * * /home/J46Z013/TWHAtoti/start_atoti_with_venv.sh > /home/J46Z013/atotilogs/atoti_crontab.log 2>&1
+----------------------------------------------------------------
+# applicatio server on 
+cd /home/J46Z013/ActiveUI
+ nohup npx serve &
+
+
+ #querysession auth
+ session = tt.QuerySession(self.url, auth=tt.BasicAuthentication(username="a96bxxxx", password="password"))
+ 
+
+----------------------------------------------------------------
+Technical Users atoti:
+
+Id	UserName	HashedPassword	 
+1	atoti_role_user	pwdroleuser	 
+2	atoti_role_admin	pwdroleadmin	 
+3	atoti_role_855	pwdrole855	 
+4	atoti_role_867	pwdrole867	 
+5	atoti_role_848	pwdrole848	 
+6	atoti_role_855_867	pwdrole855867	 
+7	atoti_role_658	pwdrole658	 
+8	atoti_role_660	pwdrole660	 
+9	atoti_role_848	pwdrole848	 
+10	atoti_role_660_848	pwdrole660848	 
+11	atoti_role_ebhk	pwdroleebhk	 
+12	atoti_role_663	pwdrole663	 
+
+

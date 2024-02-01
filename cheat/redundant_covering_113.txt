@@ -1,0 +1,181 @@
+WITH 
+Set DealTypes AS {
+  [CF Dim Product].[EG Product Type].[ALL].[AllMember].&[Bond]
+} 
+Set DealTypesExtOnly AS {
+  [CF Dim Product].[EG Product Type].[ALL].[AllMember].[ReverseRepo.Bond],
+  [CF Dim Product].[EG Product Type].[ALL].[AllMember].[BuySellBack.Bond],
+  [CF Dim Product].[EG Product Type].[ALL].[AllMember].[SecuritiesBorrowing.Bond]
+} 
+Member Measures.ShortOnGivenDayTom AS (
+  Measures.[Short Positions],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[07 - day 7].&[7]
+),
+FORMAT_STRING="#,###" 
+Member Measures.ShortOnGivenDaySpot AS (
+  Measures.[Short Positions],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[07 - day 7].&[7]
+),
+FORMAT_STRING="#,###" 
+Member Measures.ReposOnGivenDayTom AS (
+  Measures.[Repos],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[07 - day 7].&[7]
+),
+FORMAT_STRING="#,###" 
+Member Measures.ReposOnGivenDaySpot AS (
+  Measures.[Repos],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[07 - day 7].&[7]
+),
+FORMAT_STRING="#,###" 
+Member Measures.ReposOnGivenDaySpot8 AS (
+  Measures.[Repos],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[07 - day 7].&[7]
+),
+FORMAT_STRING="#,###" 
+Member Measures.Redundancy8 AS (
+  Measures.[Redundancy],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[07 - day 7].&[7]
+),
+FORMAT_STRING="#,###" 
+Member Measures.Redundancy9 AS (
+  Measures.[Redundancy],
+  [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].&[01 - day 1].&[1]
+),
+FORMAT_STRING="#,###" 
+Member Measures.RedundantCoveringEUR AS iif(
+  (
+    (
+      (
+        Measures.ShortOnGivenDayTom + Measures.ReposOnGivenDayTom
+      ) > 1
+    ) AND (
+      (
+        Measures.ShortOnGivenDaySpot + Measures.ReposOnGivenDaySpot
+      ) > 1
+    ) AND (
+      Measures.ReposOnGivenDaySpot8 > 1
+    ) AND (
+      Measures.ReposOnGivenDayTom > 1
+    ) AND (
+      Measures.[Redundancy8] > 500000
+    ) AND (
+      Measures.[Redundancy9] > 500000
+    )
+  ),
+  Measures.[Redundancy],
+  NULL
+),
+FORMAT_STRING="#,###" 
+Member Measures.Bonds AS SUM(
+  {
+    [Measures].[Bal. Legal Pos. Nom. EUR Old 54]
+  } * DealTypes * {
+    [CF Dim Folder].[Profit Center].[ALL].[AllMember].[855]
+  }
+),
+FORMAT_STRING="#,###" 
+Member Measures.Repos AS SUM(
+  {
+    [Measures].[Bal. Legal Pos. Nom. EUR Old 54]
+  } * DealTypesExtOnly * {
+    [CF Dim Folder].[Profit Center].[ALL].[AllMember].[855]
+  }
+),
+FORMAT_STRING="#,###" 
+Member Measures.[Short Positions] AS Measures.Bonds,
+FORMAT_STRING="#,###" 
+Member Measures.Redundancy AS iif(
+  (
+    Measures.Bonds >= 0
+  ),
+  Measures.[Repos],
+  (
+    Measures.Bonds + Measures.Repos
+  )
+),
+FORMAT_STRING="#,###" 
+SELECT NON EMPTY CrossJoin(
+  Hierarchize(
+    [CF Dim Date].[Date].[Date].Members
+  ),
+  Hierarchize(
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[CF Date Bucket SPA].Members
+  ),
+  {
+    Measures.[RedundantCoveringEUR]
+  }
+) ON COLUMNS,
+NON EMPTY Hierarchize(
+  CrossJoin(
+    DrilldownLevel(
+      [CF Dim Asset Type Product].[ISIN].[ALL].[AllMember]
+    ),
+    Hierarchize(
+      DrilldownLevel(
+        [CF Dim Asset Type Product].[Asset Type Product Currency].[ALL].[AllMember]
+      )
+    ),
+    Hierarchize(
+      DrilldownLevel(
+        [CF Dim Asset Type Product].[Asset Type Product Description].[ALL].[AllMember]
+      )
+    )
+  )
+) ON ROWS 
+FROM (
+  SELECT {
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[05 - day 5],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[00 - today],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[00 - history],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[07 - day 7],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[02 - day 2],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[09 - day 9],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[10 - day 10],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[04 - day 4],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[01 - day 1],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[03 - day 3],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[06 - day 6],
+    [Dim Cal Date Offset].[CF Date Bucket SPA].[ALL].[AllMember].[08 - day 8]
+  } ON COLUMNS 
+  FROM (
+    SELECT {
+      [CF Dim Folder].[Profit Center].[ALL].[AllMember].[855]
+    } ON COLUMNS 
+    FROM (
+      SELECT Head(
+        NonEmpty(
+          [CF Dim Date].[Date].[Date].Members,
+          [Measures].[update.TIMESTAMP]
+        )
+      ) ON COLUMNS 
+      FROM (
+        SELECT {
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[DEAL#FLOW],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[DEAL#INTEREST],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[DEAL#OVERNIGHT_OENB],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[DEAL#PRINCIPAL],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[INSTRUMENT#INTEREST],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[INSTRUMENT#PRINCIPAL],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[PROJECTION#AD_HOC_ASSUMPTION_1Y_LINEAR],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[PROJECTION#CSA_INDUCED],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[PROJECTION#OPEN_END_LENDING_2BD],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[PROJECTION#REDEMPTION],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[RECONCILIATION#POSITION_ON_HOST_ONLY],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[RECONCILIATION#REPOS_ON_HOST_ONLY],
+          [CF Dim Flow Source].[Flow Source Business Key].[ALL].[AllMember].[TRANSFER#CUSTODY_TO_CUSTODY]
+        } ON COLUMNS 
+        FROM (
+          SELECT Filter(
+            [CF Dim Asset Type Product].[ISIN].[ISIN].Members,
+            Left(
+              [CF Dim Asset Type Product].[ISIN].CurrentMember.member_caption,
+              11
+            ) <> "BDEUR000020"
+          ) ON COLUMNS 
+          FROM [Liquidity]
+        )
+      )
+    )
+  )
+) CELL PROPERTIES VALUE,
+FORMATTED_VALUE

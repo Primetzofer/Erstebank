@@ -1,0 +1,276 @@
+
+### CREDENTIALS
+
+Konto:
+	dermatty   (stephan@untergrabner.at)
+	nov190R91  (Pascal.29#)????
+
+token:
+	6286f44f1ce5a032633b71a136b18eb7d765872b
+
+
+### SHORT VERSION
+prepare commit:			git add -A
+commit:				git commit -m " .... "
+
+### NEW PROJECT
+1. Create on github including README.md!
+2. cd GIT
+3. git clone ....
+4. work locally & commit
+5. git push origin master
+
+### INIT
+int lokal               git init
+add remote git          remote add origin https://dermatty@github.com/dermatty/GUCK.git
+wenn pull notwendig     git pull --rebase origin master
+push to remote:		git push -u origin master
+
+### config
+To set your identity		git config --global user.name "John Doe"
+				git config --global user.email
+johndoe@example.com
+--> set your entity locally: omit --global
+set timeoute for credentials	git config --global credential.helper 'cache --timeout=7200'
+list config			git config --list
+To set your editor		git config --global core.editor emacs
+To enable color			git config --global color.ui true
+--> see also ~/.gitconfig
+
+### basic
+init git in current directory	git init
+add files to track list		git add *.*
+To stage all changes for commit git add --all
+commit alle changes		git commit -m "initial project"
+status				git status
+stage and commit		git commit -a 
+pull from remote repos. to local	git pull
+
+### git add - prepare for the next commit
+git add -u			without adding new files
+git add -A			add all new/updated files in the tree
+
+### commits
+get log over commits		git log
+show commit diffs		git log -p
+show commit diffs over last 2 entries	git log -p -2
+revert last commit		git reset --soft "HEAD^"
+
+### remote
+# aktuelles dir mit github linken
+git remote add origin https://dermatty@github.com/dermatty/GUCK.git
+git push -u origin master
+git remote -v
+
+### checkout
+git checkout -b master
+git checkout -b devel
+
+### branches
+new branch "devel"		git checkout -b devel	
+				        git checkout -b devel v2.3 
+change branch			git checkout master
+delete branch locally (change to master before!) 	git branch -D
+devel
+delete branch remote		git push origin --delete devel
+list branches			git branch
+remove file only from remote, not from local	git rm --cached "file"
+
+### undo all local changes and revert to old commit
+git add . && git checkout master -f
+
+### DIFFS
+get diff between local and remote		git diff
+2.4..origin/master
+git diff master..2.72 !!!!
+git diff --stat --color master..branchName
+git diff --stat --color branchName..master
+git diff --name-status master..branchName
+
+### merge ###
+bring 2.71 to same state as master:     git checkout 2.71
+                                        git merge master
+
+### tags
+create tag      git tag -a 2.74 -m "Version 2.74"       
+# after creation: git push origin 2.74
+list tags       git tag --list
+delete tag locally   git tag -d 2.74
+delete tag remote    git push --delete origin 2.74
+push remote          git push origin 2.74
+checkout             git checkout tags/2.74 
+                     ### ACHTUNG: detached head!!!
+
+### delete
+    delete folder in nemo
+    git rm -r --cached folder-name
+    git add -A
+    git commit -m
+    git push origin master
+    
+### fork on git and pull to local
+remote: fork!
+local:
+    git init
+    git pull https://github.com/dermatty/yEnc-Python3.git
+    git remote add https://github.com/dermatty/yEnc-Python3.git
+    git push origin master
+
+### counter number of lines in git repository
+cloc $(git ls-files)
+
+
+##### FEHLER bei git push origin master #####
+Hinweis: Aktualisierungen wurden zurückgewiesen, weil das Remote-
+Repository Commits enthält,
+Hinweis: die lokal nicht vorhanden sind. Das wird üblicherweise durch
+einen "push" von
+Hinweis: Commits auf dieselbe Referenz von einem anderen Repository aus
+verursacht.
+Hinweis: Vielleicht müssen Sie die externen Änderungen zusammenführen
+(z. B. 'git pull ...')
+Hinweis: bevor Sie erneut "push" ausführen.
+Hinweis: Siehe auch die Sektion 'Note about fast-forwards' in 'git push
+--help'
+---> 
+git pull --rebase origin master
+git push origin master
+
+### reset branch <master> to tag <1.1>
+git checkout 1.1
+git diff master > ~/diff.patch
+git checkout master
+cat ~/diff.patch | git apply
+git commit -am 'Rolled back to version 1.1'
+git push origin master
+
+# credentials
+# passwort 10h = 3600 * 10 sec im git cache merken
+git config --global credential.helper 'cache --timeout 360000'
+
+# persistant credentials
+git config --global credential.helper 'store'
+
+# user data
+git config --global user.email "stephan@untergrabner.at"
+git config --global user.name "dermatty"
+
+################################################################################################################
+### COLLABORATION from scratch ###
+https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67
+
+git clone https://github.com/dermatty/PYSCRIPTS.git
+cd PYSCRIPTS
+git remote add origin https://github.com/dermatty/PYSCRIPTS.git    # oder auch git remote set-url origin ...
+git checkout -b reset_proxies	# create branch "reset_proxies" just for this commit
+git branch		        # show branches
+.
+.
+>>> a bissl programmieren <<<
+.
+.
+git add -A				# fügt evtl. neue files zum git tracking hinzu
+git commit -m "reset_proxies"		# committen
+
+# OPTIONAL (eigtl. nicht nötig):
+# Achtung kann sein dass man credentials setzen muss -> HOME env. variable + $env:HOME = "C:\Users ... " 
+# mit vim (i, Ctrl-c x), dann
+# 	git config --global --edit 
+
+git push origin reset_proxies	# push upstream and open new branch on github
+
+# evtl. weiter commits & pushs in dieser branch ohne --set-upstream
+
+# now create pull request on github -> "Compare & pull request"
+# -> "Open a pull request"
+# write a brief description
+# click reviewers -> select the "Merge Master", press "Create Pull Request"
+# now has to be approved by MergeMaster and merged into master -> "Merge Pull Request"
+# click button delete branch
+
+git checkout master		# change to master
+git branch -D reset_proxies	# delete branch, not needed anymore
+git pull --rebase origin master # lokal master auf selben Stand wie github bringen
+	bzw.
+git pull --rebase origin branch_load_only_one_date 	
+
+# wenn Fehler error: cannot pull with rebase: You have unstaged changes.
+	git status
+	git restore <file>
+		bzw.
+	git restore .		# alle!
+	
+# wenn Fehler nicht weggeht bzw.
+error: cannot pull with rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: please commit or stash them.
+
+	--> git pull --rebase --autostash origin master
+    
+# oder HARD-CORE -> complete reset:
+git reset --hard origin/master
+git 
+
+# wenn Fehler SSL certificate problem: self signed certificate in certificate chain
+git config http.sslVerify "false"
+	oder
+git config --global http.sslbackend schannel   (??)
+
+# what pycharm files have to be shared with git
+https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+	All files under the .idea directory in the project root except the items that store user-specific settings:
+	workspace.xml
+	usage.statistics.xml
+	shelf directory
+
+### undo last commit
+git reset --hard HEAD^
+
+### ATLASSIAN BITBUCKET ERSTE ############################
+USER: A96...
+PW: TOKEN
+
+# fatal: unable to access 'https://stash.s-mxs.net/scm/atoti/twh-atotiplus.git/': SSL certificate problem: unable to get local issuer certificate
+git config --global http.sslVerify false
+
+
+#### development branch statt neue branch für jeden development commit ####
+git checkout -b su_development			// development branch erstellen
+(git branch su_development)
+.
+.
+git add -A
+git commit -m "xxxxx"
+git push origin su_development			// programmieren, committen und gegen master mergen
+.
+.
+< auf bitbucket mergen, z.b. gegen master>
+.
+.
+git checkout master				// master lokal auf gleichen stand wie master remote bringen
+git pull --rebase origin master
+git checkout su_development			// lokale su_development auf gleichen stand wie master bringen
+git merge master				// eigtl. überflüssig
+
+
+#### RELEASE PROCEDURE
+# release branch z.B. 2023.11 Rahul erstellt jeden Monat eine neue mit JIRA Nr z.B.MODB-6080
+git checkout -b 2023.11				// neue release branch lokal erstellen
+git pull --rebase origin 2023.11		// von remote runterziehen
+git checkout su_development			// lokale dev. branch auf stand von release branch bringen
+git merge 2023.11
+.
+.
+git add -A
+git commit -m "MODB-6080 ...."
+git push origin su_development
+.
+.
+<auf bitbucket mergen, gegen 2023.11 !!! mit MODB ... im Betreff + Kommentar
+.
+git checkout 2023.11				// release branch auf gleichen stand wie remote bringen
+git pull --rebase origin 2023.11		
+git checkout su_development			// und release branch lokal gegen dev branch mergen 
+git merge 2023.11				// eigtl. überflüssig
+

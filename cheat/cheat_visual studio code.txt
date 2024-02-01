@@ -1,0 +1,10 @@
+
+# FEHERLBEHEBUNG - exe file startet nicht:
+
+When i trying to open VScode by .code command in window 11 , then getting this error
+"v8_initializer.cc(527)] Error loading V8 startup snapshot file"
+
+-> Lösung: a folder was created in my VS Code folder (C:\Users\XXX\AppData\Local\Programs\Microsoft VS Code) called "_". 
+I copied everything from this folder and pasted it into the VS Code folder and the error disappeared.
+
+###########

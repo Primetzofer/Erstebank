@@ -1,0 +1,47 @@
+midoffice.s-mxs.net, 1433 
+MO_DB, u_flows,  ';:€(^f9
+
+
+';:€(^f9'
+
+
+---- MO_DB:
+Database Engine
+TWH-UAT.S-MXS.NET, 1433
+SQL Server Authentication
+u_atoti
+R14ahul!ato
+
+
+
+
+
+
+Fragen:
+	I. zu https://svneb6315.erste-group.net/svn/twh/trunk/SmallProjects/Styxx/CMS_Analysis/sql/fill_s1_LIQ_eligibility.sql:
+	- es geht im Moment nur um die UAT
+	- wie krieg ich zugriff zur STAGING db. ?
+		z.b STAGING.dbo.s0_hql
+	- wo rennen die Skripte / SQLs die die Excels in die Staging importieren?
+	- wo sind die auf SVN?
+	- wo rennen die Skripte die die Staging auf die TWH UAT importieren?
+	- ist zugriff auf diese Server möglich?
+	- was bedeute s0, s1 und s2?
+	- wo rennen die webcrawler etc. die die CSV von den diversen Seiten holen? wo sind die auf SVN?
+	
+	---> Sinn des ganzen:
+		csv import aus dem Netz checken, stimmt das nocht gibts zusätzliche bessere Quellen etc.
+		eigene Quellen einfügen (eigene Excel) für HQLA, custodian data etc.
+
+
+       II. import aus WPA
+		- wo ist die cashflow engine
+		- wo sind die hardgecodeten depots etc? Hier gibt es mittlerweile viele Fehler!!!
+		
+
+
+	- was ist die "cashflow-engine" die angeblich Rahul + Erida entwickelt haben?
+	- was ist [dbo] ....
+
+C:\Users\A96BWJA\AppData\Local\Programs\oh-my-posh
+

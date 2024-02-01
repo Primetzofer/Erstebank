@@ -1,0 +1,214 @@
+### location
+C:\Program Files\Emacs
+
+### init.el: ist in HOME/.emacs.d
+C:\Users\A96BWJA\PycharmProjects\.emacs.de\init.el
+(C:\Users\A96BWJA\AppData\Roaming\.emacs.d\init.el)
+
+### emacs setup ###
+1. add melpa to init.el:
+(package-initialize)
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+2. install use-package
+M-x package-install RET use-package RET
+
+3. install elpy
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+
+4. install quelpa and qelpa-use-package
+M-x package-install RET quelpa RET
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
+
+5 install dired+ from wiki
+(use-package dired+
+  :quelpa (dired+ :fetcher url :url "https://www.emacswiki.org/emacs/download/dired+.el")
+  :defer 1
+  :init
+  (setq diredp-hide-details-initially-flag nil)
+  (setq diredp-hide-details-propagate-flag nil)
+
+  :config
+  (diredp-toggle-find-file-reuse-dir 1))
+
+6. install elpy
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+ M-x elpy-config
+
+;; global variables
+(setq
+ inhibit-startup-screen t
+ create-lockfiles nil
+ make-backup-files nil
+ column-number-mode t
+ scroll-error-top-bottom t
+ show-paren-delay 0.5
+ use-package-always-ensure t
+ sentence-end-double-space nil)
+
+;; buffer local variables
+(setq-default
+  indent-tabs-mode nil
+  tab-width 4
+  c-basic-offset 4)
+
+7. install color-theme
+M-x package-install RET color-theme RET
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-hober)
+
+8. S-Arrows für change window
+(global-set-key [S-left] 'windmove-left)          ; move to left window
+(global-set-key [S-right] 'windmove-right)        ; move to right window
+(global-set-key [S-up] 'windmove-up)              ; move to upper window
+(global-set-key [S-down] 'windmove-down)          ; move to lower window
+
+9. newline above / below
+(global-set-key (kbd "<C-S-return>") (lambda ()
+                        (interactive)
+                        (beginning-of-line)
+                        (newline-and-indent)
+                        (previous-line)))
+(global-set-key (kbd "<C-return>") (lambda ()
+                    (interactive)
+                    (end-of-line)
+                    (newline-and-indent)))
+
+
+## FILES
+    Open new file               C-x C-f
+    Save file	            	C-x C-s
+    Save file as                C-x C-w
+    invoke Dired                C-x d
+    invoke Dired in buffer      C-x 4 d
+    save all buffers            C-x s
+
+# MOVE POINT
+    C-n				<CURSOR DOWN>
+    C-p				<CURSOR UP>
+
+# INDENT
+    Mark text and press C-x TAB + <Cursor links/rechts...>                
+    Give it the argument -4 to move the selected region to the left by four spaces: C-u -4 C-x TAB.
+
+# SPECIAL: NEWLINE, TABS 
+    newline below               C-return    
+    newline above               C-Shift-return
+    C-q TAB                     do TAB (if normal TAB does not work in text mode)
+
+# CAPITALZE
+    M-l                         word to lower case
+    M-u                         word to upper case
+    C-x C-l                     region to lower case
+    C-x C-u                     region to uppe case
+
+# COPY/PASTE + MARK
+    copy                        M-w
+    paste                       C-y
+    cut			        	    C-w
+    rotate killring             M-y (after yank = C-y)
+    mark                        C-Space
+    undo                        C-x u
+    undo                        C-_
+    repeat last command		C-x z     zzzzzz
+
+# DELETE
+    Delete rest of line         C-k
+    Kill entire line            C-Shift-backspace
+    delete char                 C-d
+    delete word                 M-d
+
+# SEARCH/JUMP & MOVE
+    search forward              C-s 
+    query & replace             M-%             
+    ace jump word               C-c Space
+    jumpt t begin of line       C-a
+    jum end of line             C-e   
+    jump start of file          M-<
+    jump end of file            M->
+    goto line n                 M-g g n
+    center at current line	C-l
+    search multipl              M-x multi-occur   M-x multi-occur TAB RET
+
+# BUFFER & WINDOWS 
+    Open Window below               C-x 2
+    Open Window right               C-x 3
+    Delete Selected Windows         C-x 0
+    Delete all except selected      C-x 1
+    Select another window           C-x o
+    make window smaller             C-x -
+    make window taller              C-x +
+    (Move to window                  Shift-Arrows (auf Num-Block!!, mit Num-Block aktiviert!!))
+    Move to window                  C-Arrows)
+    Display list of buffer          C-x C-b
+    Select Buffer in current window	C-x b
+    Select next/last Buffer         C-x <left> / <right>
+    Kill Buffer                     C-x k
+
+# OTHER STUFF: font size, shell, eval
+    Change Font size            C-x C-- bzw. C-x C-+
+    Invoke Shell                M-x term
+    sync Shell                  in shell: dirs <RET>
+    change to line mode         C-c C-j
+    change to char.mode         C-c C-k
+    eval                        M-x eval-buffer   (cursor in init.el buffer)
+
+# BOOKMARKS
+    bookmark-set                C-x r m
+    bookmark-bmenu-list         C-x r l
+    bookmark-jump               C-x r b
+    M-x bookmark-save               
+    M-x bookmark-delete
+
+# QUIT
+    Quit minibuffer             C-g
+    Kill Emacs                  C-x C-c
+    Iconify                     C-z
+
+# FURTHER COMMANDS
+    open shell	                M-x ansi-term
+    eval current buffer         M-x eval-buffer
+    package install             M-x list-packages
+    i ... mark for install
+    u ... unmark
+    x ... install!
+    save desktop                M-x desktop-save
+    print buffer                M-x print-buffer
+    select theme                M-x load-library RET color-theme RET M-x color-theme-select RET
+
+# ELPY, ENSIME, GNUS MAIL
+    config                      M-x elpy-config
+    workon                      M-x pyvenv-workon
+    deactivate                  M-x pyvenv-deactivate
+    run python			C-c C-c
+    M-x ensime
+    sbt ensimeConfig
+    invoke                      M-x gnus
+    begin composing mail        m (in gnus)
+                                C-x m (in normal emacs)   
+    wegschicken                 C-c C-c     
+    ReRead imap                 M-g
+
+
+# package mgmt
+
+    update all pkg.		M-x list-pacakges > U > x
+
+# magit
+    enter magit status		C-x g
+
+# change mode
+M-x lisp-mode

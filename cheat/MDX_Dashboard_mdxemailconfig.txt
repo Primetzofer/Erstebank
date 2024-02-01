@@ -1,0 +1,27 @@
+import os
+import shutil
+
+
+class MdxEmailConfig:
+
+    def __init__(self):
+        self.int_host = "smtpgw.eb.lan.at"
+        self.ext_host = "c3po.s-mxs.net"
+        self.sender_email = "ALTASupport@erstegroup.com"
+
+        self.excel_dir = os.path.join(os.path.expanduser("~"), "mdxemail")
+        if not os.path.isdir(self.excel_dir):
+
+            if os.path.isfile(self.excel_dir):
+                try:
+                    shutil.rmtree(self.excel_dir)
+                except Exception:
+                    pass
+
+            if not os.path.exists(self.excel_dir):
+                os.makedirs(self.excel_dir)
+
+        self.querydbjson = os.path.join(self.excel_dir, "mdxquerydb.json")
+
+
+

@@ -1,0 +1,12 @@
+\\s0196cerf02.s-gruppe.net\calypso\TWH\toTWH\Collateral_Inventory
+
+# vfiler PROD
+\\s0196cerf02.f000.d0196.sd.spardat.at\calypso\TWH\toTWH\Atoti
+
+# vfiler UAT
+\\s0196cerf03.f000.d0196.sd.spardat.at\calypso\TWH\toTWH\Atoti
+
+#explorer quick access
+https://winaero.com/how-to-backup-quick-access-folders-in-windows-10/
+%AppData%\Microsoft\Windows\Recent\AutomaticDestinations
+-> backup to onedrive > C:\Users\A96BWJA\OneDrive - Erste Group\Automatic_Destinations_Backup

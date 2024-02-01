@@ -1,0 +1,29 @@
+### WSL #####################################################################
+
+### set root password
+> Open cmd.exe
+wsl -u root
+> Type passwd username and change the password
+exit
+wsl
+> Type sudo echo hi to confirm the new password works.
+
+### enabel ctrl-shift v/c
+mouse right click on grey title bar
+"Eigenschaften" -> Verwenden Sie Strg ... zum Kopieren
+
+#### WSL set Proxy for apt to work ###
+nano /etc/apt/apt.conf.d
+Acquire::http::Proxy "http://A96BWJA:windows-passwort@proxy-sd.s-mxs.net:8080";
+Acquire::https::Proxy "https://A96BWJA:windows-passwort@proxy-sd-mxs.net:8080";
+
+### access windows c: drive
+cd /mnt/c
+
+### sudo password ubuntu:
+	---> wie etec2
+
+
+ssh A96BWJA@J46Z013@atotiv01p.eb.lan.at@ssh.path.erste-group.net
+ssh A96BWJA@J46Z013@atotiv01u.eb.lan.at@ssh.path.erste-group.net
+

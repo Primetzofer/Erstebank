@@ -1,0 +1,38 @@
+# mark selection
+ctrl-W				select word & expand
+shift-ctrl left/right		start selection & expand
+shift-down/up			select current line from cursor & expand down/up
+
+# move
+ctrl-right/left			move one word right/left
+Strg + Alt + Rücktaste		move to start of line
+Ende				move to end of line
+
+# block indent
+shift down/up			mark lines
+tab				shift ti right
+shif tab			shift to left
+
+# delete
+Ctrl-Y				delete whole line (caret anywhere in the line)
+
+# insert newline
+Shift-Enter			below
+Ctrl-Alt-Enter		above
+
+# duplicate line
+Ctrl-D
+
+# move line to 1 line above/below
+Strg/Shift up/down
+
+# comment line
+strg /
+
+# jump to function definition
+ctrl + b
+
+
+
+
+

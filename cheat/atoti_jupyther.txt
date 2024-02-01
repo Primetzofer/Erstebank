@@ -1,0 +1,17 @@
+c:
+c:
+cd c:\Users\A96BWJA\AppData\Local\Programs\Python\Python310\tutorial
+jupyter lab
+
+
+### nur um git clone zu über https und pip install zu ermöglichen: in die Benutzer umgebungsvariablen!!!!
+### sonst nicht!!!!!
+### Proxies ################################################################
+HTTP_PROXY 	http://proxy-sd.s-mxs.net:8080
+HTTPS_PROXY	http://proxy-sd.s-mxs.net:8080
+bzw.
+HTTP_PROXY 	http://proxy.p1at.s-group.cc:8080
+HTTPS_PROXY	http://proxy.p1at.s-group.cc:8080
+
+# convert notebook to .py
+jupyter nbconvert --to script main.ipynb
