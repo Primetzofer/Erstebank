@@ -1,0 +1,1871 @@
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+Buchungsdatum: 04.01.2010                         Alter Saldo                              1.123,65-
+AUTOMAT 14267 KARTE3 31.12.UM 20:45                                       31.12.2009         150,00- EUR        Bx_
+
+BANKOMAT 37581 KARTE3 02.01.UM 13:41                                      02.01.2010          50,00- EUR        Bx_
+
+Gutschrift     IHRE PERSONA                                               28.12.2009        3.301,30 EUR        Bx_
+ERSTE GROUP BANK AG
+Miete Prozellang. 32/11                                                   04.01.2010         630,44- EUR        G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  04.01.2010         123,00- EUR        G__
+IG Immobilien Invest Gmbh
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  04.01.2010           9,02- EUR        Bx_
+SPARKASSEN VERSICHERUNG AG
+I109065                                                                   04.01.2010         120,50- EUR        Bx_
+DONAU VERSICHERUNG AG
+CB Fit 10/2010          000100001586                                      04.01.2010          69,00- EUR        Bx_
+Stars Fitness Bet
+MUELLER       0001P K3 31.12.UM 09.34                                     31.12.2009          17,95- EUR        Bx_
+
+SB-Auszahlung       K3 S30101 04.01/11:52                                 04.01.2010          40,00- EUR        Bx_
+
+Buchungsdatum: 05.01.2010                         Alter Saldo                               967,74
+Kredit 284-285-532/08                                                     05.01.2010         121,12- EUR        Bx_
+DI Alexandra Primetzhofer
+HOFER DANKT 0515P K3 04.01.UM 12.44                                       04.01.2010           6,54- EUR        Bx_
+
+MIKE        0001 K3 05.01.UM 18:21                                        05.01.2010          96,00- EUR        Bx_
+
+Buchungsdatum: 07.01.2010                         Alter Saldo                               744,08
+BIPA 1010    0166P K3 05.01.UM 13.40                                      05.01.2010           5,97- EUR        Bx_
+
+DOUGLAS 1010 0005 K3 07.01.UM 18:32                                       07.01.2010          33,45- EUR        Bx_
+
+Buchungsdatum: 08.01.2010                         Alter Saldo                               704,66
+DEPOTGEB: 28428553201 FÜR 011009-311209                                   08.01.2010           5,02- EUR        B__
+
+BANKOMAT 36021 KARTE3 08.01.UM 06:11                                      08.01.2010         100,00- EUR        Bx_
+
+SPAR DANKT 4823P K3 07.01.UM 12.09                                        07.01.2010          21,63- EUR        Bx_
+
+ZARA 1010     3173P K3 07.01.UM 16.51                                     07.01.2010          19,95- EUR        Bx_
+
+ADIDAS       0004P K3 07.01.UM 16.35                                      07.01.2010          24,47- EUR        Bx_
+
+Buchungsdatum: 11.01.2010                         Alter Saldo                               533,59
+SUTTERLUETY 0240 K3 09.01.UM 11:35                                        09.01.2010          95,20- EUR        Bx_
+
+Strom Teilbetrag 145001745784                                             11.01.2010          21,60- EUR        Bx_
+WIENSTROM GMBH
+DOUGLAS 1010 0005P K3 07.01.UM 18.31                                      07.01.2010          51,00- EUR        Bx_
+
+BANKOMAT 10951 KARTE3 11.01.UM 10:00                                      11.01.2010          80,00- EUR        Bx_
+
+VISA-MONATSRECHNUNG PER 2010.01.08                                        11.01.2010         724,73- EUR        Bx_
+
+Buchungsdatum: 12.01.2010                         Alter Saldo                               438,94-
+SPAR DANKT 1277P K3 11.01.UM 18.28                                        11.01.2010          33,41- EUR        Bx_
+
+SKI ARLBERG POOL WES/0110 000033370001                                    12.01.2010         228,00- EUR        Bx_
+HOBEX AG
+BANKOMAT 04711 KARTE3 12.01.UM 11:36                                      12.01.2010          80,00- EUR        Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 1/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+Buchungsdatum: 13.01.2010                         Alter Saldo                               780,35-
+AT   25,00 POS 10.01.10 10:28 K3                                          10.01.2010          25,00- EUR        Bx_
+SKISERVICE VERKAUF 6764 LECH           06764
+Buchungsdatum: 14.01.2010                         Alter Saldo                               805,35-
+BANKOMAT 03631 KARTE3 13.01.UM 19:17                                      13.01.2010          50,00- EUR        Bx_
+
+AT   82,61 POS 02.01.10 14:44 K3                                          02.01.2010          82,61- EUR        Bx_
+INTERSPAR DANKT 1190 WIEN        01190
+SPAR DANKT 1277P K3 13.01.UM 16.47                                        13.01.2010          13,40- EUR        Bx_
+
+SPAR DANKT 1277 K3 14.01.UM 17:11                                         14.01.2010           8,60- EUR        Bx_
+
+Buchungsdatum: 18.01.2010                         Alter Saldo                               959,96-
+BANKOMAT 22061 KARTE3 15.01.UM 20:06                                      15.01.2010         150,00- EUR        Bx_
+
+SPAR DANKT 4823 K3 18.01.UM 18:33                                         18.01.2010          10,57- EUR        Bx_
+
+Buchungsdatum: 19.01.2010                         Alter Saldo                              1.120,53-
+SPAR DANKT 4823P K3 18.01.UM 18.13                                        18.01.2010          14,42- EUR        Bx_
+
+Buchungsdatum: 20.01.2010                         Alter Saldo                              1.134,95-
+KUNDENNUMMER 1.17332995          500708993417                             20.01.2010          74,59- EUR        Bx_
+T-MOBILE AUSTRIA GMBH
+HOFER DANKT 0515P K3 19.01.UM 13.38                                       19.01.2010           8,46- EUR        Bx_
+
+Buchungsdatum: 21.01.2010                         Alter Saldo                              1.218,00-
+HOFER DANKT 0515P K3 20.01.UM 15.59                                       20.01.2010          11,75- EUR        Bx_
+
+DANKE ZIP     1476 K3 21.01.UM 17:44                                      21.01.2010           6,91- EUR        Bx_
+
+Buchungsdatum: 22.01.2010                         Alter Saldo                              1.236,66-
+AT   72,00 POS 20.01.10 18:41 K3                                          20.01.2010          72,00- EUR        Bx_
+CARE 4 YOU WIEN            1010
+BIPA 1010    0166P K3 21.01.UM 11.09                                      21.01.2010           9,48- EUR        Bx_
+
+VINDOBONA      0001P K3 21.01.UM 08.32                                    21.01.2010          28,80- EUR        Bx_
+
+Buchungsdatum: 25.01.2010                         Alter Saldo                              1.346,94-
+BANKOMAT 33711 KARTE3 22.01.UM 22:11                                      22.01.2010          80,00- EUR        Bx_
+
+PENNY DANKT 7183 K3 23.01.UM 17:30                                        23.01.2010          38,31- EUR        Bx_
+
+AUTOMAT 10717 KARTE3 23.01.UM 19:45                                       23.01.2010         100,00- EUR        Bx_
+
+A1 RECHNUNG    01/10 332456069779269                                      25.01.2010          19,99- EUR        Bx_
+MOBILKOM AUSTRIA
+LIVING      0001P K3 23.01.UM 15.26                                       23.01.2010          29,30- EUR        Bx_
+
+HILLINGER     0001P K3 23.01.UM 16.56                                     23.01.2010          27,20- EUR        Bx_
+
+JET 7111    5702 K3 23.01.UM 17.07                                        23.01.2010          49,56- EUR        Bx_
+
+HOFER DANKT 0515P K3 22.01.UM 15.47                                       22.01.2010          18,14- EUR        Bx_
+
+Buchungsdatum: 26.01.2010                         Alter Saldo                              1.709,44-
+BANKOMAT 02351 KARTE3 25.01.UM 19:02                                      25.01.2010          50,00- EUR        Bx_
+
+AT   10,80 POS 23.01.10 16:08 K3                                          23.01.2010          10,80- EUR        Bx_
+FALKE GMBH BERGHEIM
+DANKE ZIP     1476P K3 25.01.UM 11.42                                     25.01.2010           4,67- EUR        Bx_
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 2/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+BILLA DANKT 0133P K3 25.01.UM 11.49                                       25.01.2010          10,83- EUR        Bx_
+
+DOUGLAS 1010 0005P K3 25.01.UM 18.45                                      25.01.2010          48,45- EUR        Bx_
+
+Buchungsdatum: 27.01.2010                         Alter Saldo                              1.834,19-
+AT   53,50 POS 23.01.10 16:32 K3                                          23.01.2010          53,50- EUR        Bx_
+BURTON OUTLET STORE 7111 PARNDOR 07111
+ZUM R. KREBS 0001P K3 26.01.UM 13.20                                      26.01.2010          19,70- EUR        Bx_
+
+Appartement 194511                                                        27.01.2010         266,00- EUR        Bx_
+Appartments
+SB-Auszahlung       K3 S30101 27.01/17:47                                 27.01.2010          50,00- EUR        Bx_
+
+Buchungsdatum: 29.01.2010                         Alter Saldo                              2.223,39-
+DANKE ZIP     1476P K3 28.01.UM 12.43                                     28.01.2010          18,69- EUR        Bx_
+
+DANKE ZIP     1476 K3 29.01.UM 09:26                                      29.01.2010           8,66- EUR        Bx_
+
+Buchungsdatum: 01.02.2010                         Alter Saldo                              2.250,74-
+AUTOMAT 20433 KARTE3 29.01.UM 22:36                                       29.01.2010         130,00- EUR        Bx_
+
+Gutschrift     IHRE PERSONA                                               28.01.2010        3.313,30 EUR        Bx_
+ERSTE GROUP BANK AG
+I109065                                                                   01.02.2010         120,50- EUR        Bx_
+DONAU VERSICHERUNG AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.02.2010           9,02- EUR        Bx_
+SPARKASSEN VERSICHERUNG AG
+KOKON        0002P K3 29.01.UM 17.54                                      29.01.2010          26,00- EUR        Bx_
+
+HOFER DANKT 0515P K3 29.01.UM 16.07                                       29.01.2010          15,31- EUR        Bx_
+
+CB Fit 02/2010          000100001586                                      01.02.2010          69,00- EUR        Bx_
+Stars Fitness Bet
+Buchungsdatum: 02.02.2010                         Alter Saldo                               692,73
+Miete Prozellang. 32/11                                                   02.02.2010         630,44- EUR        G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.02.2010         123,00- EUR        G__
+IG Immobilien Invest Gmbh
+Buchungsdatum: 03.02.2010                         Alter Saldo                                 60,71-
+HOFER DANKT 0515P K3 02.02.UM 15.50                                       02.02.2010          19,36- EUR        Bx_
+
+Buchungsdatum: 05.02.2010                         Alter Saldo                                 80,07-
+Kredit 284-285-532/08                                                     05.02.2010         121,12- EUR        Bx_
+DI Alexandra Primetzhofer
+AT   42,80 POS 03.02.10 08:37 K3                                          03.02.2010          42,80- EUR        Bx_
+OMV 7585/ Vienna          1010
+BIPA      0984 K3 05.02.UM 18:13                                          05.02.2010          13,66- EUR        Bx_
+
+Buchungsdatum: 08.02.2010                         Alter Saldo                               257,65-
+AUTOMAT 10717 KARTE3 05.02.UM 19:44                                       05.02.2010          50,00- EUR        Bx_
+
+AUTOMAT 52145 KARTE3 06.02.UM 20:13                                       06.02.2010          70,00- EUR        Bx_
+
+DANKE ZIP     1476P K3 05.02.UM 10.06                                     05.02.2010          10,86- EUR        Bx_
+
+SPAR DANKT 4823P K3 05.02.UM 18.06                                        05.02.2010          64,53- EUR        Bx_
+
+HOFER DANKT 0530P K3 06.02.UM 16.22                                       06.02.2010          41,69- EUR        Bx_
+
+SPAR DANKT 4823P K3 06.02.UM 09.37                                        06.02.2010          58,98- EUR        Bx_
+
+S.W.M. STORE 0001 K3 08.02.UM 17:51                                       08.02.2010           5,48- EUR        Bx_
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 3/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 09.02.2010                          Alter Saldo                              559,19-
+VISA-MONATSRECHNUNG PER 2010.02.08                                        09.02.2010        1.015,78- EUR        Bx_
+
+SB-Auszahlung      K3 S30101 09.02/11:35                                  09.02.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 10.02.2010                          Alter Saldo                             1.624,97-
+Strom Teilbetrag 147501285836                                             10.02.2010          21,60- EUR         Bx_
+WIENSTROM GMBH
+BANKOMAT 01031 KARTE3 10.02.UM 17:30                                      10.02.2010          60,00- EUR         Bx_
+
+Buchungsdatum: 11.02.2010                          Alter Saldo                             1.706,57-
+DOUGLAS 1010 0005 K3 10.02.UM 19:04                                       10.02.2010         118,70- EUR         Bx_
+
+Buchungsdatum: 12.02.2010                          Alter Saldo                             1.825,27-
+AT   12,99 POS 10.02.10 17:34 K3                                          10.02.2010          12,99- EUR         Bx_
+TCHIBO/EDUSCHO DANKT WIEN              1010
+HOFER DANKT 0515P K3 11.02.UM 12.39                                       11.02.2010           2,48- EUR         Bx_
+
+Knr.8390101002, jan/feb 2010                                              12.02.2010          48,00- EUR         G__
+Energie Comfort
+Urlaub Malediven                                                          12.02.2010        5.000,00 EUR         Bx_
+DI Alexandra Primetzhofer
+2010-270016                                                               12.02.2010        5.418,00- EUR        G__
+Gullivers Reisen
+SB-Auszahlung      K3 S30138 12.02/17:27                                  12.02.2010          40,00- EUR         Bx_
+
+BP 1010     2655 K3 12.02.UM 18:04                                        12.02.2010          76,20- EUR         Bx_
+
+Buchungsdatum: 15.02.2010                          Alter Saldo                             2.422,94-
+C+C 1220     0180 K3 12.02.UM 18:59                                       12.02.2010         119,16- EUR         Bx_
+
+SB-Auszahlung      K3 S30101 15.02/09:03                                  15.02.2010          40,00- EUR         Bx_
+
+SERVITENGAR. 0001P K3 12.02.UM 17.58                                      12.02.2010          56,00- EUR         Bx_
+
+Buchungsdatum: 16.02.2010                          Alter Saldo                             2.638,10-
+MUELLER       0001 K3 16.02.UM 10:52                                      16.02.2010          28,78- EUR         Bx_
+
+HOFER DANKT 0515 K3 16.02.UM 12:29                                        16.02.2010          15,08- EUR         Bx_
+
+SCHLECKER       3401 K3 16.02.UM 18:27                                    16.02.2010           5,18- EUR         Bx_
+
+Buchungsdatum: 17.02.2010                          Alter Saldo                             2.687,14-
+AT   33,80 POS 15.02.10 13:56 K3                                          15.02.2010          33,80- EUR         Bx_
+APOTHEKE ZUM SCHWAN 1010 WIEN              01010
+SB-Auszahlung      K3 S30101 17.02/11:45                                  17.02.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 18.02.2010                          Alter Saldo                             2.770,94-
+KUNDENNUMMER 1.17332995          500808707642                             18.02.2010          79,34- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+Buchungsdatum: 19.02.2010                          Alter Saldo                             2.850,28-
+DOUGLAS 1010 0005 K3 18.02.UM 20:06                                       18.02.2010         166,00- EUR         Bx_
+
+HOFER DANKT 0515 K3 19.02.UM 12:33                                        19.02.2010           9,48- EUR         Bx_
+
+KIKA 1220   0227 K3 19.02.UM 18:06                                        19.02.2010         297,95- EUR         Bx_
+
+Buchungsdatum: 22.02.2010                          Alter Saldo                             3.323,71-
+AUTOMAT 10717 KARTE3 19.02.UM 22:49                                       19.02.2010          80,00- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                     Seite 4/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+BANKOMAT 17491 KARTE3 21.02.UM 11:35                                      21.02.2010         120,00- EUR        Bx_
+
+BIPA 7350   7047P K3 20.02.UM 14.49                                       20.02.2010          21,27- EUR        Bx_
+
+BIPA 1010   0174P K3 19.02.UM 09.50                                       19.02.2010          12,96- EUR        Bx_
+
+LEDERLEITNER 0001P K3 19.02.UM 15.03                                      19.02.2010          38,10- EUR        Bx_
+
+Buchungsdatum: 23.02.2010                         Alter Saldo                              3.596,04-
+AT   49,44 POS 21.02.10 17:41 K3                                          21.02.2010          49,44- EUR        Bx_
+OMV 8737/ Oberpullend       7350
+BANKOMAT 04011 KARTE3 23.02.UM 09:20                                      23.02.2010         250,00- EUR        Bx_
+
+Buchungsdatum: 24.02.2010                         Alter Saldo                              3.895,48-
+SPAR DANKT 4823 K3 23.02.UM 18:59                                         23.02.2010          35,60- EUR        Bx_
+
+BANKOMAT 25271 KARTE3 23.02.UM 19:00                                      23.02.2010          30,00- EUR        Bx_
+
+DANKE ZIP    1476P K3 23.02.UM 14.07                                      23.02.2010           6,46- EUR        Bx_
+
+BIPA 1090   0984P K3 23.02.UM 18.45                                       23.02.2010           7,37- EUR        Bx_
+
+SB-Auszahlung     K3 S30101 24.02/17:33                                   24.02.2010          30,00- EUR        Bx_
+
+Buchungsdatum: 25.02.2010                         Alter Saldo                              4.004,91-
+BIPA 1090   0976P K3 24.02.UM 14.08                                       24.02.2010           7,68- EUR        Bx_
+
+ZARA 1010    3173 K3 25.02.UM 13:39                                       25.02.2010          50,85- EUR        Bx_
+
+BANKOMAT 25271 KARTE3 25.02.UM 18:13                                      25.02.2010          40,00- EUR        Bx_
+
+Buchungsdatum: 26.02.2010                         Alter Saldo                              4.103,44-
+SPAR DANKT 4823P K3 25.02.UM 18.11                                        25.02.2010          28,02- EUR        Bx_
+
+BANKOMAT 08491 KARTE3 26.02.UM 11:21                                      26.02.2010          30,00- EUR        Bx_
+
+A1 RECHNUNG    02/10 332456069689352                                      26.02.2010          22,26- EUR        Bx_
+MOBILKOM AUSTRIA
+Buchungsdatum: 01.03.2010                         Alter Saldo                              4.183,72-
+AUTOMAT 21413 KARTE3 26.02.UM 22:34                                       26.02.2010          50,00- EUR        Bx_
+
+AT   21,00 POS 25.02.10 13:14 K3                                          25.02.2010          21,00- EUR        Bx_
+NESPRESSO AM GRABEN 1010 WIEN             01010
+AT   47,20 POS 25.02.10 12:45 K3                                          25.02.2010          47,20- EUR        Bx_
+PARFUMERIE HUBER 1010 WIEN            01010
+AT    15,00 POS 25.02.10 12:53 K3                                         25.02.2010          15,00- EUR        Bx_
+TIFFANY AND COMPANY WIEN          1010
+BAUMAX 3400 0798 K3 27.02.UM 14:42                                        27.02.2010          41,74- EUR        Bx_
+
+AT  24,80 POS 25.02.10 13:06 K3                                           25.02.2010          24,80- EUR        Bx_
+MONSOON ACCESSORIZE 1010 WIEN             01010
+Gutschrift     IHRE PERSONA                                               28.02.2010        5.170,93 EUR        Bx_
+ERSTE GROUP BANK AG
+I109065                                                                   01.03.2010         120,50- EUR        Bx_
+DONAU VERSICHERUNG AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.03.2010           9,02- EUR        Bx_
+SPARKASSEN VERSICHERUNG AG
+SPAR DANKT 4823P K3 27.02.UM 12.08                                        27.02.2010          44,37- EUR        Bx_
+
+DM-FIL. 0735 0735P K3 26.02.UM 11.33                                      26.02.2010           6,15- EUR        Bx_
+
+THALIA      6750P K3 28.02.UM 16.49                                       28.02.2010          10,30- EUR        Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 5/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+CB Fit 03/2010          000100001586                                      01.03.2010          69,00- EUR        Bx_
+Stars Fitness Bet
+Buchungsdatum: 02.03.2010                         Alter Saldo                               528,13
+BANKOMAT 25041 KARTE3 01.03.UM 19:01                                      01.03.2010          50,00- EUR        Bx_
+
+Miete Prozellang. 32/11                                                   02.03.2010         630,44- EUR        G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.03.2010         123,00- EUR        G__
+IG Immobilien Invest Gmbh
+HOFER DANKT 0515P K3 01.03.UM 12.34                                       01.03.2010          13,52- EUR        Bx_
+
+DOUGLAS 1010 0005P K3 01.03.UM 18.57                                      01.03.2010          48,45- EUR        Bx_
+
+SB-Auszahlung       K3 S30101 02.03/13:14                                 02.03.2010         500,00- EUR        Bx_
+
+Buchungsdatum: 03.03.2010                         Alter Saldo                               837,28-
+AT    89,90 POS 26.02.10 19:21 K3                                         26.02.2010          89,90- EUR        Bx_
+IKEA WIEN NORD 1220 WIEN         01220
+VINDOBONA       0001 K3 03.03.UM 08:19                                    03.03.2010          55,30- EUR        Bx_
+
+LOEWENAPOTHE 0001 K3 03.03.UM 11:05                                       03.03.2010           5,00- EUR        Bx_
+
+Buchungsdatum: 04.03.2010                         Alter Saldo                               987,48-
+BIPA 1090    0984P K3 03.03.UM 08.13                                      03.03.2010          14,14- EUR        Bx_
+
+HOFER DANKT 0530P K3 03.03.UM 10.50                                       03.03.2010          17,32- EUR        Bx_
+
+Buchungsdatum: 05.03.2010                         Alter Saldo                              1.018,94-
+Kredit 284-285-532/08                                                     05.03.2010         121,12- EUR        Bx_
+DI Alexandra Primetzhofer
+Buchungsdatum: 08.03.2010                         Alter Saldo                              1.140,06-
+805509649202                                                              08.03.2010          12,96 EUR         Bx_
+WIENER GEBIETSKRANKENKASSE
+Buchungsdatum: 10.03.2010                         Alter Saldo                              1.127,10-
+Strom Teilbetrag 141001517026                                             10.03.2010          21,60- EUR        Bx_
+WIENSTROM GMBH
+Buchungsdatum: 12.03.2010                         Alter Saldo                              1.148,70-
+VISA-MONATSRECHNUNG PER 2010.03.11                                        12.03.2010         277,00- EUR        Bx_
+
+Buchungsdatum: 17.03.2010                         Alter Saldo                              1.425,70-
+BANKOMAT 37081 KARTE3 17.03.UM 12:58                                      17.03.2010          80,00- EUR        Bx_
+
+Buchungsdatum: 18.03.2010                         Alter Saldo                              1.505,70-
+KUNDENNUMMER 1.17332995           500212400075                            18.03.2010          50,04- EUR        Bx_
+T-MOBILE AUSTRIA GMBH
+SPAR DANKT 4823P K3 17.03.UM 17.30                                        17.03.2010          31,83- EUR        Bx_
+
+Buchungsdatum: 22.03.2010                         Alter Saldo                              1.587,57-
+BAUMAX 3400 0798 K3 20.03.UM 10:33                                        20.03.2010          41,49- EUR        Bx_
+
+AGIP 7322    9013 K3 21.03.UM 16:54                                       21.03.2010          53,41- EUR        Bx_
+
+BIPA 1090    0976P K3 19.03.UM 17.19                                      19.03.2010          15,09- EUR        Bx_
+
+HOFER DANKT 0530P K3 20.03.UM 10.55                                       20.03.2010          21,39- EUR        Bx_
+
+VALUT                 10,00                                               22.03.2010           7,43 EUR         Bx_
+US DOLLAR
+SB-Auszahlung       K3 S30101 22.03/14:21                                 22.03.2010          20,00- EUR        Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 6/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+Buchungsdatum: 23.03.2010                         Alter Saldo                              1.731,52-
+DOUGLAS 1010 0005 K3 22.03.UM 19:04                                       22.03.2010         120,00- EUR        Bx_
+
+DANKE ZIP     1476 K3 23.03.UM 13:18                                      23.03.2010           8,45- EUR        Bx_
+
+Buchungsdatum: 24.03.2010                         Alter Saldo                              1.859,97-
+AUTOMAT 10717 KARTE3 23.03.UM 19:21                                       23.03.2010          30,00- EUR        Bx_
+
+WEIN&CO 1010 0023P K3 23.03.UM 18.49                                      23.03.2010          12,82- EUR        Bx_
+
+SPAR DANKT 4823P K3 23.03.UM 19.20                                        23.03.2010          16,82- EUR        Bx_
+
+Buchungsdatum: 25.03.2010                         Alter Saldo                              1.919,61-
+SB-Auszahlung       K3 S30101 25.03/12:00                                 25.03.2010          30,00- EUR        Bx_
+
+Buchungsdatum: 26.03.2010                         Alter Saldo                              1.949,61-
+A1 RECHNUNG    03/10 332456069485066                                      26.03.2010          22,00- EUR        Bx_
+MOBILKOM AUSTRIA
+DOUGLAS 1010 0005P K3 25.03.UM 18.35                                      25.03.2010          48,45- EUR        Bx_
+
+Buchungsdatum: 29.03.2010                         Alter Saldo                              2.020,06-
+AT   87,40 POS 25.03.10 12:48 K3                                          25.03.2010          87,40- EUR        Bx_
+PARFUMERIE HUBER 1010 WIEN             01010
+PROSI       0001P K3 27.03.UM 16.17                                       27.03.2010          20,46- EUR        Bx_
+
+QUICK-LADEN 43421 K3 28.03.UM 03.01                                       28.03.2010          50,00- EUR        Bx_
+
+BANKOMAT 43421 KARTE3 28.03.UM 03.01                                      28.03.2010         200,00- EUR        Bx_
+
+Buchungsdatum: 30.03.2010                         Alter Saldo                              2.377,92-
+VM        0001 K3 30.03.UM 13:53                                          30.03.2010         134,40- EUR        Bx_
+
+ZUM R. KREBS 0001 K3 30.03.UM 14:05                                       30.03.2010         153,00- EUR        Bx_
+
+Buchungsdatum: 31.03.2010                         Alter Saldo                              2.665,32-
+SPAR DANKT 4823P K3 30.03.UM 17.46                                        30.03.2010          29,36- EUR        Bx_
+
+HOFER DANKT 0515 K3 31.03.UM 12:42                                        31.03.2010          11,41- EUR        Bx_
+
+Buchungsdatum: 01.04.2010                         Alter Saldo                              2.706,09-
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.04.2010           9,02- EUR        Bx_
+SPARKASSEN VERSICHERUNG AG
+Gutschrift     IHRE PERSONA                                               28.03.2010        9.419,36 EUR        Bx_
+ERSTE GROUP BANK AG
+I109065                                                                   01.04.2010         120,50- EUR        Bx_
+DONAU VERSICHERUNG AG
+BIPA 1010    0174P K3 31.03.UM 13.18                                      31.03.2010          21,85- EUR        Bx_
+
+CB Fit 04/2010          000100001586                                      01.04.2010          69,00- EUR        Bx_
+Stars Fitness Bet
+KOKON        0002 K3 01.04.UM 13:03                                       01.04.2010          31,00- EUR        Bx_
+
+Buchungsdatum: 02.04.2010                         Alter Saldo                              6.461,90
+Miete Prozellang. 32/11                                                   02.04.2010         630,44- EUR        G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.04.2010         123,00- EUR        G__
+IG Immobilien Invest Gmbh
+SPAR DANKT 4823P K3 01.04.UM 17.56                                        01.04.2010          39,99- EUR        Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 7/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 06.04.2010                         Alter Saldo                              5.668,47
+BANKOMAT 25271 KARTE3 02.04.UM 19:37                                      02.04.2010         200,00- EUR         Bx_
+
+Kredit 284-285-532/08                                                     05.04.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+BP 4810     3067P K3 05.04.UM 15.53                                       05.04.2010          34,85- EUR         Bx_
+
+Buchungsdatum: 07.04.2010                         Alter Saldo                              5.312,50
+SPAR DANKT 4823P K3 06.04.UM 19.31                                        06.04.2010          33,34- EUR         Bx_
+
+HOFER DANKT 0515P K3 06.04.UM 12.44                                       06.04.2010          10,53- EUR         Bx_
+
+Buchungsdatum: 08.04.2010                         Alter Saldo                              5.268,63
+HOFER DANKT 0515P K3 07.04.UM 13.17                                       07.04.2010           2,86- EUR         Bx_
+
+Buchungsdatum: 09.04.2010                         Alter Saldo                              5.265,77
+AT  300,00 POS 07.04.10 18:34 K3                                          07.04.2010         300,00- EUR         Bx_
+MOUNTAINBIKER 1090 WIEN         01090
+VISA-MONATSRECHNUNG PER 2010.04.08                                        09.04.2010         540,74- EUR         Bx_
+
+Bar Auszahlung                                                            09.04.2010        4.450,00- EUR        Bx_
+
+WP-KAUF          20554419/AT0000301262                                    14.04.2010        8.657,55- EUR        B__
+
+Buchungsdatum: 12.04.2010                         Alter Saldo                              8.682,52-
+MERKUR 3400 3357 K3 10.04.UM 14:25                                        10.04.2010         102,53- EUR         Bx_
+
+Strom Teilbetrag 148001155577                                             12.04.2010          21,60- EUR         Bx_
+WIENSTROM GMBH
+WP Kauf - AT0000301262 - BC                                               12.04.2010        8.600,00 EUR         Bx_
+DI Alexandra Primetzhofer
+Knr.8390101002, mar/apr 10                                                12.04.2010          47,00- EUR         G__
+Energie Comfort
+SB-Auszahlung     K3 S30101 12.04/13:16                                   12.04.2010          40,00- EUR         Bx_
+
+Buchungsdatum: 13.04.2010                         Alter Saldo                               293,65-
+DEPOTGEB: 28428553201 FÜR 010110-310310                                   13.04.2010           4,36- EUR         B__
+
+HOFER DANKT 0515P K3 12.04.UM 13.49                                       12.04.2010           7,21- EUR         Bx_
+
+Buchungsdatum: 14.04.2010                         Alter Saldo                               305,22-
+AT   27,96 POS 10.04.10 13:54 K3                                          10.04.2010          27,96- EUR         Bx_
+BAUMAX FIL 798 3400 KLOSTERN          03400
+HOFER DANKT 0515P K3 13.04.UM 12.45                                       13.04.2010           5,46- EUR         Bx_
+
+DOUGLAS 1010 0005 K3 14.04.UM 18:47                                       14.04.2010          51,00- EUR         Bx_
+
+Buchungsdatum: 15.04.2010                         Alter Saldo                               389,64-
+DOUGLAS 1010 0005 K3 14.04.UM 18:50                                       14.04.2010          72,50- EUR         Bx_
+
+2801859161                                                                15.04.2010        1.453,45 EUR         Bx_
+DONAU VERSICHERUNG AG
+SPAR DANKT 4823 K3 15.04.UM 17:48                                         15.04.2010          22,82- EUR         Bx_
+
+Buchungsdatum: 16.04.2010                         Alter Saldo                               968,49
+AT   11,10 POS 14.04.10 17:20 K3                                          14.04.2010          11,10- EUR         Bx_
+NESPRESSO AM GRABEN 1010 WIEN             01010
+DANKE ZIP    1476P K3 15.04.UM 12.26                                      15.04.2010           7,15- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                     Seite 8/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag        SKZ
+
+Buchungsdatum: 19.04.2010                         Alter Saldo                               950,24
+DOUGLAS 1010 0005 K3 16.04.UM 19:04                                       16.04.2010         147,00- EUR        Bx_
+
+BANKOMAT 25041 KARTE3 16.04.UM 19:14                                      16.04.2010          90,00- EUR        Bx_
+
+HOFER 7350 0444 K3 17.04.UM 10:57                                         17.04.2010          99,54- EUR        Bx_
+
+AGIP 7322    9013 K3 18.04.UM 15:00                                       18.04.2010          49,01- EUR        Bx_
+
+NABER        0001P K3 16.04.UM 13.31                                      16.04.2010           9,25- EUR        Bx_
+
+SB-Auszahlung     K3 S30101 19.04/17:35                                   19.04.2010          50,00- EUR        Bx_
+
+Buchungsdatum: 20.04.2010                         Alter Saldo                               505,44
+ZILEPUNKT      1476P K3 19.04.UM 12.33                                    19.04.2010           5,16- EUR        Bx_
+
+ZILEPUNKT      1476 K3 20.04.UM 12:39                                     20.04.2010          12,22- EUR        Bx_
+
+Buchungsdatum: 21.04.2010                         Alter Saldo                               488,06
+AT   37,00 POS 17.04.10 11:06 K3                                          17.04.2010          37,00- EUR        Bx_
+REIFEN RITZ 7350 OBERPULL        07350
+Buchungsdatum: 22.04.2010                         Alter Saldo                               451,06
+Jahresabrechnung 2009                                                     22.04.2010          76,93- EUR        G__
+IG Immobilien Invest Gmbh
+Buchungsdatum: 23.04.2010                         Alter Saldo                               374,13
+BANKOMAT 38571 KARTE3 22.04.UM 19:47                                      22.04.2010          90,00- EUR        Bx_
+
+KUNDENNUMMER 1.17332995          500511216027                             23.04.2010          52,30- EUR        Bx_
+T-MOBILE AUSTRIA GMBH
+HOFER DANKT 0515P K3 22.04.UM 12.36                                       22.04.2010          16,12- EUR        Bx_
+
+SPAR DANKT 4823P K3 22.04.UM 17.03                                        22.04.2010          11,40- EUR        Bx_
+
+Buchungsdatum: 26.04.2010                         Alter Saldo                               204,31
+AT   69,52 POS 23.04.10 15:11 K3                                          23.04.2010          69,52- EUR        Bx_
+BAUMAX FIL 798 3400 KLOSTERN           03400
+BANKOMAT 04011 KARTE3 25.04.UM 19:09                                      25.04.2010          80,00- EUR        Bx_
+
+A1 RECHNUNG    04/10 332456069309285                                      26.04.2010         706,90- EUR        Bx_
+MOBILKOM AUSTRIA
+BIPA 1090    0984P K3 24.04.UM 11.47                                      24.04.2010          21,45- EUR        Bx_
+
+Buchungsdatum: 28.04.2010                         Alter Saldo                               673,56-
+AT   73,89 POS 23.04.10 13:22 K3                                          23.04.2010          73,89- EUR        Bx_
+INTERSPAR DANKT 1190 WIEN        01190
+SB-Auszahlung     K3 S30101 28.04/08:35                                   28.04.2010          30,00- EUR        Bx_
+
+Buchungsdatum: 29.04.2010                         Alter Saldo                               777,45-
+NR.: 101349 - Grillshop 000000023108                                      29.04.2010         332,12- EUR        G__
+Madlener Gmbh Gas-Griller-Transport
+HOFER DANKT 0515P K3 28.04.UM 12.43                                       28.04.2010           6,54- EUR        Bx_
+
+BANKOMAT 04011 KARTE3 29.04.UM 18:40                                      29.04.2010          80,00- EUR        Bx_
+
+Buchungsdatum: 30.04.2010                         Alter Saldo                              1.196,11-
+MVH         0001 K3 30.04.UM 14:26                                        30.04.2010          19,95- EUR        Bx_
+
+MUELLER       0001 K3 30.04.UM 18:28                                      30.04.2010          85,49- EUR        Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 9/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                               Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 03.05.2010                           Alter Saldo                             1.301,55-
+BANKOMAT 04011 KARTE3 01.05.UM 17:13                                       01.05.2010          90,00- EUR         Bx_
+
+Gutschrift     IHRE PERSONA                                                28.04.2010        3.323,41 EUR         Bx_
+ERSTE GROUP BANK AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                   03.05.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+Miete Prozellang. 32/11                                                    03.05.2010         630,44- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                   03.05.2010         123,00- EUR         G__
+IG Immobilien Invest Gmbh
+I109065                                                                    03.05.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+MVH         0001P K3 30.04.UM 14.31                                        30.04.2010          19,95- EUR         Bx_
+
+CB Fit 05/2010          000100001586                                       03.05.2010          69,00- EUR         Bx_
+Stars Fitness Bet
+SPAR DANKT 4823 K3 03.05.UM 16:16                                          03.05.2010          31,32- EUR         Bx_
+
+Buchungsdatum: 04.05.2010                           Alter Saldo                              928,63
+BIPA 1090    0984P K3 03.05.UM 16.21                                       03.05.2010          11,57- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 04.05/17:44                                  04.05.2010          90,00- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 04.05/17:45                                  04.05.2010          20,00- EUR         Bx_
+
+Buchungsdatum: 05.05.2010                           Alter Saldo                              807,06
+Kredit 284-285-532/08                                                      05.05.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+s Kreditkartenrechnung per 05.05.2010                                      05.05.2010         320,89- EUR         Bx_
+
+BILLA DANKT 0921P K3 04.05.UM 11.51                                        04.05.2010           7,74- EUR         Bx_
+
+DOUGLAS 1010 0005 K3 05.05.UM 18:34                                        05.05.2010          51,00- EUR         Bx_
+
+Buchungsdatum: 06.05.2010                           Alter Saldo                              306,31
+AT    20,22 POS 03.05.10 14:15 K3                                          03.05.2010          20,22- EUR         Bx_
+IKEA VOESENDORF 2334 VOESENDO               02334
+SPAR DANKT 4823P K3 05.05.UM 19.37                                         05.05.2010          14,16- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 06.05/17:43                                  06.05.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 07.05.2010                           Alter Saldo                              241,93
+AT  14,90 POS 05.05.10 19:01 K3                                            05.05.2010          14,90- EUR         Bx_
+MANGO OESTERREICH HAND WIEN                 1010
+HOFER DANKT 0515P K3 06.05.UM 13.41                                        06.05.2010           5,46- EUR         Bx_
+
+SPAR DANKT 4822P K3 06.05.UM 18.19                                         06.05.2010          11,95- EUR         Bx_
+
+Buchungsdatum: 10.05.2010                           Alter Saldo                              209,62
+MERKUR 3400 3357 K3 08.05.UM 17:43                                         08.05.2010          72,19- EUR         Bx_
+
+Strom Teilbetrag 147252881468                                              10.05.2010          21,60- EUR         Bx_
+WIENSTROM GMBH
+WEIN&CO 1010 0023P K3 09.05.UM 20.56                                       09.05.2010          33,00- EUR         Bx_
+
+WEIN&CO 1010 0023P K3 09.05.UM 21.04                                       09.05.2010           4,88- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 10.05/13:11                                  10.05.2010          30,00- EUR         Bx_
+
+BIPA 1090    0984 K3 10.05.UM 18:35                                        10.05.2010          22,37- EUR         Bx_
+
+WP-VERKAUF           20685882/AT0000652011                                 14.05.2010         322,15 EUR          B__
+
+
+Kontonummer: 28428553200 BLZ: 00020111                    Kontoübersicht                                    Seite 10/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+WP-VERKAUF         20686544/AT0000652011                                  14.05.2010         320,95 EUR          B__
+
+Buchungsdatum: 11.05.2010                         Alter Saldo                               668,68
+MALISSA     0001 K3 11.05.UM 09:16                                        11.05.2010         132,00- EUR         Bx_
+
+SPAR DANKT 4823P K3 10.05.UM 18.30                                        10.05.2010           5,72- EUR         Bx_
+
+HOFER DANKT 0530 K3 11.05.UM 16:27                                        11.05.2010          28,88- EUR         Bx_
+
+ESSO 3400    2530 K3 11.05.UM 16:45                                       11.05.2010          94,35- EUR         Bx_
+
+Buchungsdatum: 12.05.2010                         Alter Saldo                               407,73
+BANKOMAT 25271 KARTE3 11.05.UM 18:50                                      11.05.2010         120,00- EUR         Bx_
+
+AT   41,42 POS 08.05.10 17:19 K3                                          08.05.2010          41,42- EUR         Bx_
+BAUMAX FIL 798 3400 KLOSTERN          03400
+Buchungsdatum: 14.05.2010                         Alter Saldo                               246,31
+BANKOMAT 14371 KARTE3 13.05.UM 14:46                                      13.05.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 17.05.2010                         Alter Saldo                               196,31
+BANKOMAT 35821 KARTE3 14.05.UM 22:03                                      14.05.2010          80,00- EUR         Bx_
+
+AUTOMAT 41133 KARTE3 16.05.UM 11:18                                       16.05.2010          80,00- EUR         Bx_
+
+EUROTHERME 0004 K3 17.05.UM 10:31                                         17.05.2010          27,00- EUR         Bx_
+
+BP 4810     3067 K3 17.05.UM 17:49                                        17.05.2010          49,61- EUR         Bx_
+
+Buchungsdatum: 18.05.2010                         Alter Saldo                                40,30-
+AT0000652011 DIVIDENDE 0,65 EUR                                           19.05.2010          63,37 EUR          Bx_
+Erste Bank Hauptanstalt
+AT0000652011 DIVIDENDE 0,65 EUR                                           19.05.2010           5,85 EUR          Bx_
+Erste Bank Hauptanstalt
+AT0000652011 DIVIDENDE 0,65 EUR                                           19.05.2010         180,86 EUR          Bx_
+Erste Bank Hauptanstalt
+SB-Auszahlung     K3 S30101 18.05/17:43                                   18.05.2010          20,00- EUR         Bx_
+
+Buchungsdatum: 19.05.2010                         Alter Saldo                               189,78
+ZIELPUNKT     1476P K3 18.05.UM 14.27                                     18.05.2010           4,07- EUR         Bx_
+
+SPAR DANKT 4823 K3 19.05.UM 17:47                                         19.05.2010          26,16- EUR         Bx_
+
+BIPA 1090   0984 K3 19.05.UM 17:50                                        19.05.2010           8,36- EUR         Bx_
+
+Buchungsdatum: 20.05.2010                         Alter Saldo                               151,19
+BILLA DANKT 0133P K3 19.05.UM 12.37                                       19.05.2010           9,09- EUR         Bx_
+
+Buchungsdatum: 21.05.2010                         Alter Saldo                               142,10
+BANKOMAT 37951 KARTE3 20.05.UM 20:41                                      20.05.2010          80,00- EUR         Bx_
+
+KUNDENNUMMER 1.17332995          500809188528                             21.05.2010          53,40- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+HOFER DANKT 0515P K3 20.05.UM 13.00                                       20.05.2010           8,33- EUR         Bx_
+
+KOKON       0002P K3 20.05.UM 12.46                                       20.05.2010          24,00- EUR         Bx_
+
+LEDERLEITNER 0001 K3 21.05.UM 12:47                                       21.05.2010          31,10- EUR         Bx_
+
+Buchungsdatum: 25.05.2010                         Alter Saldo                                54,73-
+HOFER 7350 0444 K3 22.05.UM 10:04                                         22.05.2010          72,91- EUR         Bx_
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 11/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                               Valuta       Gebuchter Betrag         SKZ
+
+OBI DANKT     0032 K3 22.05.UM 10:45                                       22.05.2010          33,34- EUR         Bx_
+
+BANKOMAT 04011 KARTE3 23.05.UM 18:55                                       23.05.2010          80,00- EUR         Bx_
+
+HOFER DANKT 0515P K3 21.05.UM 12.27                                        21.05.2010           4,27- EUR         Bx_
+
+BANKOMAT 40571 KARTE3 25.05.UM 12:57                                       25.05.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 26.05.2010                           Alter Saldo                              275,25-
+SB-Auszahlung       K3 S30101 26.05/11:30                                  26.05.2010          20,00- EUR         Bx_
+
+Buchungsdatum: 27.05.2010                           Alter Saldo                              295,25-
+DOUGLAS 1010 0005 K3 26.05.UM 18:52                                        26.05.2010          51,00- EUR         Bx_
+
+Waltraud Pension                                                           27.05.2010          10,00- EUR         G__
+WALDI
+BANKOMAT 40571 KARTE3 27.05.UM 12:22                                       27.05.2010          30,00- EUR         Bx_
+
+KOKON        0002 K3 27.05.UM 13:44                                        27.05.2010          40,50- EUR         Bx_
+
+Buchungsdatum: 28.05.2010                           Alter Saldo                              426,75-
+BANKOMAT 16651 KARTE3 27.05.UM 21:33                                       27.05.2010          80,00- EUR         Bx_
+
+LEDERLEITNER 0001P K3 27.05.UM 14.09                                       27.05.2010          24,70- EUR         Bx_
+
+SPAR DANKT 4823P K3 27.05.UM 18.03                                         27.05.2010          14,59- EUR         Bx_
+
+Buchungsdatum: 31.05.2010                           Alter Saldo                              546,04-
+BANKOMAT 13651 KARTE3 29.05.UM 00:23                                       29.05.2010          80,00- EUR         Bx_
+
+AT   13,50 POS 27.05.10 13:57 K3                                           27.05.2010          13,50- EUR         Bx_
+APOTHEKE ZUM SCHWAN 1010 WIEN               01010
+SPAR DANKT 4823 K3 29.05.UM 12:34                                          29.05.2010          55,88- EUR         Bx_
+
+BANKOMAT 37211 KARTE3 30.05.UM 18:52                                       30.05.2010          60,00- EUR         Bx_
+
+Buchungsdatum: 01.06.2010                           Alter Saldo                              755,42-
+I109065                                                                    01.06.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+Gutschrift     IHRE PERSONA                                                28.05.2010        5.192,98 EUR         Bx_
+ERSTE GROUP BANK AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                   01.06.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+AT   55,90 POS 29.05.10 13:19 K3                                           29.05.2010          55,90- EUR         Bx_
+AVANTI 7657/ Wien         1190
+CB Fit 06/2010          000100001586                                       01.06.2010          69,00- EUR         Bx_
+Stars Fitness Bet
+Buchungsdatum: 02.06.2010                           Alter Saldo                             4.183,14
+Miete Prozellang. 32/11                                                    02.06.2010         630,44- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                   02.06.2010         123,00- EUR         G__
+IG Immobilien Invest Gmbh
+Buchungsdatum: 04.06.2010                           Alter Saldo                             3.429,70
+AUTOMAT 10717 KARTE3 03.06.UM 17:51                                        03.06.2010          50,00- EUR         Bx_
+
+s Kreditkartenrechnung per 04.06.2010                                      04.06.2010         605,80- EUR         Bx_
+
+BIPA 1090    0984P K3 02.06.UM 11.18                                       02.06.2010          29,75- EUR         Bx_
+
+VINDOBONA       0001 K3 04.06.UM 17:15                                     04.06.2010           7,90- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                    Kontoübersicht                                    Seite 12/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 07.06.2010                         Alter Saldo                              2.736,25
+BANKOMAT 04011 KARTE3 05.06.UM 19:30                                      05.06.2010          60,00- EUR         Bx_
+
+Kredit 284-285-532/08                                                     05.06.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+HOFER DANKT 0515P K3 04.06.UM 12.25                                       04.06.2010           6,43- EUR         Bx_
+
+BILLA DANKT 0950P K3 06.06.UM 08.51                                       06.06.2010          21,27- EUR         Bx_
+
+MERKUR 3400 3357P K3 05.06.UM 12.13                                       05.06.2010           7,91- EUR         Bx_
+
+Knr.8390101002, mai/juni 10                                               07.06.2010          47,00- EUR         G__
+Energie Comfort
+Rn. 600006550364     000138780466                                         07.06.2010          60,80- EUR         G__
+News Gmbh, 1020 Wien
+BANKOMAT 40571 KARTE3 07.06.UM 12:13                                      07.06.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 08.06.2010                         Alter Saldo                              2.381,72
+BIBER       0001P K3 07.06.UM 18.00                                       07.06.2010          22,80- EUR         Bx_
+
+DOUGLAS 1010 0005 K3 08.06.UM 18:25                                       08.06.2010         135,00- EUR         Bx_
+
+Buchungsdatum: 09.06.2010                         Alter Saldo                              2.223,92
+AUTOMAT 10717 KARTE3 09.06.UM 13:18                                       09.06.2010         360,00- EUR         Bx_
+
+SPAR DANKT 4240 K3 09.06.UM 17:06                                         09.06.2010          26,79- EUR         Bx_
+
+Buchungsdatum: 10.06.2010                         Alter Saldo                              1.837,13
+Strom Teilbetrag 142001712429                                             10.06.2010          21,60- EUR         Bx_
+WIENSTROM GMBH
+BIPA 1090    0984P K3 09.06.UM 13.30                                      09.06.2010          27,71- EUR         Bx_
+
+BIPA 1090    0976P K3 09.06.UM 16.19                                      09.06.2010           7,98- EUR         Bx_
+
+Buchungsdatum: 11.06.2010                         Alter Saldo                              1.779,84
+HOFER DANKT 0507P K3 10.06.UM 09.06                                       10.06.2010          15,98- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 11.06/10:03                                   11.06.2010          30,00- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 11.06/10:04                                   11.06.2010         270,00- EUR         Bx_
+
+VINDOBONA       0001 K3 11.06.UM 16:18                                    11.06.2010          70,30- EUR         Bx_
+
+Buchungsdatum: 14.06.2010                         Alter Saldo                              1.393,56
+AT   35,50 POS 10.06.10 08:45 K3                                          10.06.2010          35,50- EUR         Bx_
+BMW WIEN WIEN              1190
+SHELL 8430 7229P K3 12.06.UM 09.00                                        12.06.2010          16,19- EUR         Bx_
+
+Buchungsdatum: 16.06.2010                         Alter Saldo                              1.341,87
+HRK 470,06/00615K +01,59 006140845K3                                      14.06.2010          68,53- EUR         Bx_
+PBZTTOMMY ANTONA MATAIJ         51250
+Buchungsdatum: 18.06.2010                         Alter Saldo                              1.273,34
+KUNDENNUMMER 1.17332995          500212914431                             18.06.2010          80,70- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+HRK 164,16/00616K +01,27 006151728K3                                      15.06.2010          24,65- EUR         Bx_
+PBZTKONZUM ZAGREB            53270
+Buchungsdatum: 21.06.2010                         Alter Saldo                              1.167,99
+HRK   82,33/00616K +01,18 006181017K3                                     18.06.2010          12,90- EUR         Bx_
+PBZTTOMMY ANTONA MATAIJ          51250
+HRK 400,00/00616K +00,00 006181022K3                                      18.06.2010          56,96- EUR         Bx_
+ERSTE ATM A1251095 N. VINODOLSKI
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 13/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+ESSO 3400    2530 K3 20.06.UM 15:11                                       20.06.2010          63,42- EUR         Bx_
+
+BANKOMAT 25271 KARTE3 20.06.UM 16:30                                      20.06.2010          70,00- EUR         Bx_
+
+HOFER DANKT 0515 K3 21.06.UM 13:51                                        21.06.2010          11,71- EUR         Bx_
+
+Buchungsdatum: 22.06.2010                         Alter Saldo                               953,00
+HRK 321,41/00616K +01,43 006191001K3                                      19.06.2010          47,20- EUR         Bx_
+PBZTINA N VINODOLSKI        51250
+VALUT          60,00                                                      22.06.2010           8,33 EUR          Bx_
+KROATISCHER KUNA
+SPAR DANKT 4823P K3 21.06.UM 18.25                                        21.06.2010          11,86- EUR         Bx_
+
+1. Mahnstufe                                                              22.06.2010          22,74- EUR         G__
+IG Immobilien Invest Gmbh
+Appartement 207327                                                        22.06.2010         210,00- EUR         Bx_
+Appartments
+SB-Auszahlung     K3 S30101 22.06/17:32                                   22.06.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 23.06.2010                         Alter Saldo                               619,53
+SPAR DANKT 4823 K3 22.06.UM 19:31                                         22.06.2010          22,80- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 23.06/17:16                                   23.06.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 28.06.2010                         Alter Saldo                               546,73
+AUTOMAT 13147 KARTE3 25.06.UM 19:40                                       25.06.2010          80,00- EUR         Bx_
+
+SPAR DANKT 4823 K3 26.06.UM 10:20                                         26.06.2010          63,94- EUR         Bx_
+
+BIPA 1090   0984 K3 26.06.UM 12:26                                        26.06.2010           6,68- EUR         Bx_
+
+AT  65,80 POS 25.06.10 13:23 K3                                           25.06.2010          65,80- EUR         Bx_
+KOMARETHO GMBH WIEN
+AT  109,00 POS 25.06.10 14:26 K3                                          25.06.2010         109,00- EUR         Bx_
+SPODD 1010 WIEN            01010
+SPAR DANKT 4113P K3 25.06.UM 13.50                                        25.06.2010           4,48- EUR         Bx_
+
+MOHREN       0001P K3 25.06.UM 12.46                                      25.06.2010          11,50- EUR         Bx_
+
+BIPA 1090   0984P K3 26.06.UM 10.03                                       26.06.2010           2,99- EUR         Bx_
+
+Buchungsdatum: 29.06.2010                         Alter Saldo                               202,34
+ZIELPUNKT     1476P K3 28.06.UM 14.05                                     28.06.2010           8,82- EUR         Bx_
+
+DOUGLAS 1010 0005 K3 29.06.UM 14:49                                       29.06.2010          51,00- EUR         Bx_
+
+PATRIZIA PEP 0001 K3 29.06.UM 15:10                                       29.06.2010         186,00- EUR         Bx_
+
+Buchungsdatum: 30.06.2010                         Alter Saldo                                43,48-
+SB-Auszahlung     K3 S30138 29.06/21:18                                   29.06.2010          20,00- EUR         Bx_
+
+AT   58,99 POS 26.06.10 17:02 K3                                          26.06.2010          58,99- EUR         Bx_
+INTERSPAR DANKT 1190 WIEN        01190
+HOFER DANKT 0515P K3 29.06.UM 12.34                                       29.06.2010           5,55- EUR         Bx_
+
+Buchungsdatum: 01.07.2010                         Alter Saldo                               128,02-
+Gutschrift     IHRE PERSONA                                               28.06.2010       2.904,02 EUR          Bx_
+ERSTE GROUP BANK AG
+I109065-4                                                                 01.07.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.07.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+AT   49,50 POS 29.06.10 15:32 K3                                          29.06.2010          49,50- EUR         Bx_
+SPODD 1010 WIEN            01010
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 14/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+CB Fit 07/2010          000100001586                                      01.07.2010          69,00- EUR         Bx_
+Stars Fitness Bet
+SB-Auszahlung       K3 S30101 01.07/12:37                                 01.07.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 02.07.2010                         Alter Saldo                              2.497,98
+Miete Prozellang. 32/11                                                   02.07.2010         657,90- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.07.2010         123,00- EUR         G__
+IG Immobilien Invest Gmbh
+ZIELPUNKT     1476P K3 01.07.UM 12.30                                     01.07.2010           5,05- EUR         Bx_
+
+Buchungsdatum: 05.07.2010                         Alter Saldo                              1.712,03
+BANKOMAT 04481 KARTE3 03.07.UM 09:00                                      03.07.2010         100,00- EUR         Bx_
+
+SPAR DANKT 4279 K3 03.07.UM 09:58                                         03.07.2010         174,89- EUR         Bx_
+
+Kredit 284-285-532/08                                                     05.07.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+s Kreditkartenrechnung per 05.07.2010                                     05.07.2010         302,45- EUR         Bx_
+
+OBI DANKT     0032 K3 05.07.UM 14:13                                      05.07.2010          24,73- EUR         Bx_
+
+Buchungsdatum: 07.07.2010                         Alter Saldo                               988,84
+MUELLER       0001 K3 07.07.UM 17:53                                      07.07.2010          36,00- EUR         Bx_
+
+Buchungsdatum: 08.07.2010                         Alter Saldo                               952,84
+HOFER DANKT 0515P K3 07.07.UM 12.43                                       07.07.2010          17,30- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 08.07/17:37                                 08.07.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 09.07.2010                         Alter Saldo                               885,54
+SPAR DANKT 4113P K3 08.07.UM 12.25                                        08.07.2010           5,68- EUR         Bx_
+
+PALMERS 1010 0100 K3 09.07.UM 16:45                                       09.07.2010          19,80- EUR         Bx_
+
+Buchungsdatum: 12.07.2010                         Alter Saldo                               860,06
+DOUGLAS 1010 0005 K3 09.07.UM 19:05                                       09.07.2010         139,00- EUR         Bx_
+
+BANKOMAT 14101 KARTE3 09.07.UM 19:55                                      09.07.2010          90,00- EUR         Bx_
+
+Strom Teilbetrag 142502922408                                             12.07.2010          21,60- EUR         Bx_
+WIENSTROM GMBH
+BIPA 1010    0174 K3 12.07.UM 10:16                                       12.07.2010          24,52- EUR         Bx_
+
+Buchungsdatum: 13.07.2010                         Alter Saldo                               584,94
+DEPOTGEB: 28428553201 FÜR 010410-300610                                   13.07.2010           8,52- EUR         B__
+
+ZIELPUNKT     1476P K3 12.07.UM 10.23                                     12.07.2010           7,71- EUR         Bx_
+
+Buchungsdatum: 14.07.2010                         Alter Saldo                               568,71
+AUTOMAT 10717 KARTE3 13.07.UM 22:09                                       13.07.2010          20,00- EUR         Bx_
+
+AT   14,78 POS 10.07.10 09:55 K3                                          10.07.2010          14,78- EUR         Bx_
+BAUMAX FIL 798 3400 KLOSTERN            03400
+AT   74,31 POS 10.07.10 16:55 K3                                          10.07.2010          74,31- EUR         Bx_
+INTERSPAR DANKT 3400 KLOSTERN             03400
+SPAR DANKT 4113P K3 13.07.UM 11.55                                        13.07.2010           6,87- EUR         Bx_
+
+INTIMISSIMI 0134 K3 14.07.UM 11:45                                        14.07.2010          73,70- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 15/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 15.07.2010                         Alter Saldo                               379,05
+ZARA 3173    3173 K3 14.07.UM 11.14                                       14.07.2010          34,96- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 15.07/10:24                                   15.07.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 16.07.2010                         Alter Saldo                               314,09
+AT   57,60 POS 14.07.10 10:38 K3                                          14.07.2010          57,60- EUR         Bx_
+PARFUMERIE HUBER 1010 WIEN            01010
+Buchungsdatum: 19.07.2010                         Alter Saldo                               256,49
+SPAR DANKT 4279 K3 17.07.UM 10:10                                         17.07.2010          87,43- EUR         Bx_
+
+Buchungsdatum: 20.07.2010                         Alter Saldo                               169,06
+SB-Auszahlung     K3 S30101 20.07/11:36                                   20.07.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 21.07.2010                         Alter Saldo                               139,06
+KUNDENNUMMER 1.17332995          500413287585                             21.07.2010          90,31- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+Buchungsdatum: 22.07.2010                         Alter Saldo                                48,75
+SPAR DANKT 4822P K3 21.07.UM 19.51                                        21.07.2010          17,53- EUR         Bx_
+
+ZIELPUNKT     1476P K3 21.07.UM 14.14                                     21.07.2010           2,87- EUR         Bx_
+
+ZIELPUNKT     1476 K3 22.07.UM 09:44                                      22.07.2010          12,14- EUR         Bx_
+
+Buchungsdatum: 23.07.2010                         Alter Saldo                                16,21
+SPAR DANKT 4822P K3 22.07.UM 19.35                                        22.07.2010           9,88- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 23.07/12:01                                   23.07.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 26.07.2010                         Alter Saldo                                23,67-
+AT   13,20 POS 23.07.10 12:27 K3                                          23.07.2010          13,20- EUR         Bx_
+NESPRESSO AM GRABEN 1010 WIEN             01010
+SPAR DANKT 4823P K3 24.07.UM 16.51                                        24.07.2010          26,37- EUR         Bx_
+
+BIPA 1090   0984 K3 26.07.UM 17:51                                        26.07.2010          14,56- EUR         Bx_
+
+Buchungsdatum: 27.07.2010                         Alter Saldo                                77,80-
+ORTOPROBAN 0002P K3 26.07.UM 13.11                                        26.07.2010          18,90- EUR         Bx_
+
+SPAR DANKT 4113P K3 26.07.UM 13.23                                        26.07.2010           2,59- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 27.07/11:18                                   27.07.2010          20,00- EUR         Bx_
+
+BANKOMAT 11221 KARTE3 27.07.UM 17:02                                      27.07.2010          60,00- EUR         Bx_
+
+Buchungsdatum: 28.07.2010                         Alter Saldo                               179,29-
+ZARA 3173    3173 K3 27.07.UM 18:51                                       27.07.2010          49,92- EUR         Bx_
+
+Buchungsdatum: 29.07.2010                         Alter Saldo                               229,21-
+BANKOMAT 04011 KARTE3 28.07.UM 19:00                                      28.07.2010          50,00- EUR         Bx_
+
+AT   43,00 POS 27.07.10 12:12 K3                                          27.07.2010          43,00- EUR         Bx_
+BOTANICUS VIENNA 1010 WIEN       01010
+ZIELPUNKT     1476P K3 28.07.UM 12.08                                     28.07.2010           2,98- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 29.07/12:08                                   29.07.2010          20,00- EUR         Bx_
+
+Buchungsdatum: 30.07.2010                         Alter Saldo                               345,19-
+AUTOMAT 62395 KARTE3 29.07.UM 21:25                                       29.07.2010          50,00- EUR         Bx_
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 16/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+HOFER DANKT 0515P K3 29.07.UM 12.02                                       29.07.2010           2,98- EUR         Bx_
+
+Buchungsdatum: 02.08.2010                         Alter Saldo                               398,17-
+AT   56,03 POS 29.07.10 17:32 K3                                          29.07.2010          56,03- EUR         Bx_
+BP TANKSTELLE FRANZ JO WIEN             1010
+Gutschrift     IHRE PERSONA                                               28.07.2010        3.354,46 EUR         Bx_
+ERSTE GROUP BANK AG
+Miete Prozellang. 32/11                                                   02.08.2010         657,90- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.08.2010         125,62- EUR         G__
+IG Immobilien Invest Gmbh
+I109065-4                                                                 02.08.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  02.08.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+CB Fit 08/2010          000100001586                                      02.08.2010          69,00- EUR         Bx_
+Stars Fitness Bet
+SB-Auszahlung       K3 S30101 02.08/12:52                                 02.08.2010          10,00- EUR         Bx_
+
+MB Fitness 2010                                                           02.08.2010          14,50- EUR         Bx_
+Fitness
+MB Fitness 2010                                                           02.08.2010          18,10- EUR         Bx_
+Fitness
+Geburststagsfest Widi                                                     02.08.2010          20,00- EUR         G__
+Michael Lukasiewicz
+Buchungsdatum: 03.08.2010                         Alter Saldo                              1.855,62
+VINDOBONA       0001P K3 02.08.UM 17.53                                   02.08.2010          32,00- EUR         Bx_
+
+Jahresabrechnung 2009       008390101002                                  03.08.2010          51,27- EUR         G__
+Energie Comfort
+juli/august 10        008390101002                                        03.08.2010          76,00- EUR         G__
+Energie Comfort
+SB-Auszahlung       K3 S30101 03.08/11:41                                 03.08.2010          20,00- EUR         Bx_
+
+HOFER DANKT 0515 K3 03.08.UM 12:15                                        03.08.2010           8,44- EUR         Bx_
+
+Buchungsdatum: 04.08.2010                         Alter Saldo                              1.667,91
+s Kreditkartenrechnung per 04.08.2010                                     04.08.2010         428,09- EUR         Bx_
+
+Zuschuss Fitness 2009+2010                                                04.08.2010         216,00 EUR          Bx_
+FSPV Erste Bank Sekt.Fitness
+Buchungsdatum: 05.08.2010                         Alter Saldo                              1.455,82
+BANKOMAT 25271 KARTE3 04.08.UM 19:16                                      04.08.2010          80,00- EUR         Bx_
+
+Kredit 284-285-532/08                                                     05.08.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+Buchungsdatum: 06.08.2010                         Alter Saldo                              1.254,70
+SPAR DANKT 4823 K3 05.08.UM 19:04                                         05.08.2010          27,72- EUR         Bx_
+
+HOFER DANKT 0515P K3 04.08.UM 12.19                                       04.08.2010           9,73- EUR         Bx_
+
+Buchungsdatum: 09.08.2010                         Alter Saldo                              1.217,25
+BANKOMAT 35071 KARTE3 06.08.UM 19:47                                      06.08.2010         100,00- EUR         Bx_
+
+BANKOMAT 30491 KARTE3 07.08.UM 19:08                                      07.08.2010          70,00- EUR         Bx_
+
+AT   17,80 POS 06.08.10 12:54 K3                                          06.08.2010          17,80- EUR         Bx_
+BOTANICUS VIENNA 1010 WIEN       01010
+Buchungsdatum: 10.08.2010                         Alter Saldo                              1.029,45
+AT    48,00 POS 08.08.10 16:34 K3                                         08.08.2010          48,00- EUR         Bx_
+LOISIUM KELLERWELT VIN LANGENLOI 3550
+HOFER DANKT 0515P K3 09.08.UM 10.23                                       09.08.2010           7,11- EUR         Bx_
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 17/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+SB-Auszahlung      K3 S30101 10.08/12:04                                  10.08.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 11.08.2010                         Alter Saldo                               944,34
+CHAOS        0001 K3 10.08.UM 19:35                                       10.08.2010          82,80- EUR         Bx_
+
+BANKOMAT 25271 KARTE3 10.08.UM 19:43                                      10.08.2010          30,00- EUR         Bx_
+
+SPAR DANKT 4113P K3 10.08.UM 12.45                                        10.08.2010           6,66- EUR         Bx_
+
+Buchungsdatum: 12.08.2010                         Alter Saldo                               824,88
+F1QU8YGHTHJY2YC                                                           12.08.2010          46,98- EUR         G__
+BofA re: PAYPAL PTE LTD
+SPAR DANKT 4240 K3 12.08.UM 18:31                                         12.08.2010          30,52- EUR         Bx_
+
+Buchungsdatum: 13.08.2010                         Alter Saldo                               747,38
+BANKOMAT 40571 KARTE3 13.08.UM 11:56                                      13.08.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 16.08.2010                         Alter Saldo                               697,38
+BRENEIS      0002 K3 14.08.UM 10:20                                       14.08.2010         189,80- EUR         Bx_
+
+AUTOMAT 62385 KARTE3 14.08.UM 19:59                                       14.08.2010          50,00- EUR         Bx_
+
+6948625000020551                                                          16.08.2010           0,20 EUR          Bx_
+ PAYPAL PTE LTD
+6948625000020561                                                          16.08.2010           0,11 EUR          Bx_
+ PAYPAL PTE LTD
+Buchungsdatum: 17.08.2010                         Alter Saldo                               457,89
+BANKOMAT 25271 KARTE3 17.08.UM 16:40                                      17.08.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 18.08.2010                         Alter Saldo                               427,89
+AT    53,63 POS 16.08.10 13:59 K3                                         16.08.2010          53,63- EUR         Bx_
+BP STATION DOPPLER DR. GMUNDEN 4810
+SPAR DANKT 4823P K3 17.08.UM 16.39                                        17.08.2010          19,84- EUR         Bx_
+
+DROPS ESKIMO Wolle                                                        18.08.2010          44,10- EUR         G__
+Gabriele Glössl
+VINDOBONA       0001 K3 18.08.UM 15:53                                    18.08.2010          10,00- EUR         Bx_
+
+Buchungsdatum: 19.08.2010                         Alter Saldo                               300,32
+ZIELPUNKT      1476P K3 18.08.UM 12.22                                    18.08.2010           6,98- EUR         Bx_
+
+WERDERTOR        0001P K3 18.08.UM 12.13                                  18.08.2010          14,90- EUR         Bx_
+
+MB FSPV 2010                                                              19.08.2010           7,50- EUR         Bx_
+Freizeit- und Sportverein
+DOUGLAS 1010 0005 K3 19.08.UM 17:14                                       19.08.2010         123,30- EUR         Bx_
+
+Buchungsdatum: 20.08.2010                         Alter Saldo                               147,64
+DOUGLAS 1010 0005 K3 19.08.UM 18:51                                       19.08.2010          48,45- EUR         Bx_
+
+HOFER DANKT 0530 K3 20.08.UM 16:57                                        20.08.2010          45,73- EUR         Bx_
+
+Buchungsdatum: 23.08.2010                         Alter Saldo                                53,46
+AT   54,42 POS 20.08.10 16:38 K3                                          20.08.2010          54,42- EUR         Bx_
+BAUMAX FIL 798 3400 KLOSTERN          03400
+KUNDENNUMMER 1.17332995          500809658880                             23.08.2010          98,50- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+AGIP 7322    9013 K3 23.08.UM 08:11                                       23.08.2010          47,30- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 18/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 24.08.2010                         Alter Saldo                               146,76-
+SPAR DANKT 4823 K3 24.08.UM 17:50                                         24.08.2010          10,25- EUR         Bx_
+
+Buchungsdatum: 25.08.2010                         Alter Saldo                               157,01-
+SPAR DANKT 4823 K3 25.08.UM 13:51                                         25.08.2010          33,86- EUR         Bx_
+
+Buchungsdatum: 26.08.2010                         Alter Saldo                               190,87-
+SB-Auszahlung     K3 S30101 26.08/17:33                                   26.08.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 30.08.2010                         Alter Saldo                               240,87-
+MEDIA DANKT 0006 K3 28.08.UM 14:10                                        28.08.2010          79,98- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 30.08/11:48                                   30.08.2010          30,00- EUR         Bx_
+
+WIRNSBERGER 0001 K3 30.08.UM 17:48                                        30.08.2010          46,40- EUR         Bx_
+
+Buchungsdatum: 31.08.2010                         Alter Saldo                               397,25-
+AT    31,50 POS 28.08.10 13:04 K3                                         28.08.2010          31,50- EUR         Bx_
+DER jung WIRT Goettlesbrunn    2464
+Buchungsdatum: 01.09.2010                         Alter Saldo                               428,75-
+AUTOMAT 10717 KARTE3 31.08.UM 20:35                                       31.08.2010          30,00- EUR         Bx_
+
+Gutschrift     IHRE PERSONA                                               28.08.2010        4.507,16 EUR         Bx_
+ERSTE GROUP BANK AG
+I109065-4                                                                 01.09.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+AT   105,66 POS 28.08.10 15:18 K3                                         28.08.2010         105,66- EUR         Bx_
+INTERSPAR DANKT 1110 WIEN         01110
+ZIELPUNKT     1476P K3 31.08.UM 11.53                                     31.08.2010           6,60- EUR         Bx_
+
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.09.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+Buchungsdatum: 02.09.2010                         Alter Saldo                              3.806,63
+Miete Prozellang. 32/11                                                   02.09.2010         657,90- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.09.2010         125,62- EUR         G__
+IG Immobilien Invest Gmbh
+SPAR DANKT 4113P K3 01.09.UM 12.43                                        01.09.2010          10,19- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 02.09/11:28                                   02.09.2010          40,00- EUR         Bx_
+
+AT000KAPSCH9 DIVIDENDE 0,75 EUR                                           09.09.2010          34,87 EUR          Bx_
+Erste Bank Hauptanstalt
+HOFER DANKT 0515 K3 02.09.UM 16:07                                        02.09.2010           5,73- EUR         Bx_
+
+Buchungsdatum: 03.09.2010                         Alter Saldo                              3.002,06
+BIPA 1090   0984 K3 02.09.UM 19:10                                        02.09.2010          21,21- EUR         Bx_
+
+AT   7,00 POS 01.09.10 12:23 K3                                           01.09.2010           7,00- EUR         Bx_
+NESPRESSO AM GRABEN 1010 WIEN             01010
+SPAR DANKT 4823P K3 02.09.UM 19.06                                        02.09.2010           8,35- EUR         Bx_
+
+Buchungsdatum: 06.09.2010                         Alter Saldo                              2.965,50
+MERKUR 3400 3357 K3 04.09.UM 13:09                                        04.09.2010          83,48- EUR         Bx_
+
+BANKOMAT 04011 KARTE3 05.09.UM 18:20                                      05.09.2010          80,00- EUR         Bx_
+
+Kredit 284-285-532/08                                                     05.09.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+s Kreditkartenrechnung per 06.09.2010                                     06.09.2010         926,43- EUR         Bx_
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 19/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag          SKZ
+
+CB Fit 09/2010          000100001586                                      06.09.2010          69,00- EUR          Bx_
+Stars Fitness Bet
+Buchungsdatum: 09.09.2010                         Alter Saldo                              1.685,47
+SB-Auszahlung       K3 S30101 09.09/11:35                                 09.09.2010          50,00- EUR          Bx_
+
+Buchungsdatum: 10.09.2010                         Alter Saldo                              1.635,47
+SERVITENGAR. 0001 K3 10.09.UM 11:42                                       10.09.2010          53,00- EUR          Bx_
+
+SPAR DANKT 4363 K3 10.09.UM 14:29                                         10.09.2010          62,59- EUR          Bx_
+
+Buchungsdatum: 13.09.2010                         Alter Saldo                              1.519,88
+AT     26,00 POS 09.09.10 10:24 K3                                        09.09.2010          26,00- EUR          Bx_
+T.aerzte Koenig Zec Wien      1090
+BIPA 1090    0984P K3 10.09.UM 10.12                                      10.09.2010          29,37- EUR          Bx_
+
+SPAR DANKT 4823P K3 10.09.UM 10.24                                        10.09.2010          20,70- EUR          Bx_
+
+Buchungsdatum: 14.09.2010                         Alter Saldo                              1.443,81
+HOFER DANKT 0530P K3 13.09.UM 17.52                                       13.09.2010          10,69- EUR          Bx_
+
+Buchungsdatum: 15.09.2010                         Alter Saldo                              1.433,12
+BANKOMAT 04011 KARTE3 14.09.UM 18:57                                      14.09.2010          30,00- EUR          Bx_
+
+ESSO 3400      2530 K3 15.09.UM 08:27                                     15.09.2010          34,99- EUR          Bx_
+
+BILLA DANKT 0921P K3 14.09.UM 18.52                                       14.09.2010          18,82- EUR          Bx_
+
+BIPA 1090    0984P K3 14.09.UM 19.03                                      14.09.2010          21,36- EUR          Bx_
+
+Buchungsdatum: 16.09.2010                         Alter Saldo                              1.327,95
+CHAOS       0001 K3 16.09.UM 18:32                                        16.09.2010          78,00- EUR          Bx_
+
+Buchungsdatum: 17.09.2010                         Alter Saldo                              1.249,95
+BANKOMAT 42621 KARTE3 16.09.UM 18:59                                      16.09.2010          40,00- EUR          Bx_
+
+Buchungsdatum: 20.09.2010                         Alter Saldo                              1.209,95
+BANKOMAT 43441 KARTE3 18.09.UM 01:19                                      18.09.2010          30,00- EUR          Bx_
+
+FRESSNAPF       0448 K3 18.09.UM 14:16                                    18.09.2010          41,30- EUR          Bx_
+
+AUTOMAT 10717 KARTE3 19.09.UM 17:52                                       19.09.2010         100,00- EUR          Bx_
+
+VINDOBONA       0001P K3 17.09.UM 17.05                                   17.09.2010          17,90- EUR          Bx_
+
+MUELLER        0001 K3 20.09.UM 10:39                                     20.09.2010          53,00- EUR          Bx_
+
+Rg-Nr. 97959                                                              20.09.2010        1.353,00- EUR         G__
+Fefa Reisen
+Buchungsdatum: 21.09.2010                         Alter Saldo                               385,25-
+BIPA 1090    0984P K3 20.09.UM 10.53                                      20.09.2010          17,55- EUR          Bx_
+
+Buchungsdatum: 22.09.2010                         Alter Saldo                               402,80-
+Kdnr. 1.17332995                                                          22.09.2010         104,50- EUR          Bx_
+T-MOBILE AUSTRIA GMBH
+AT   38,50 POS 18.09.10 15:26 K3                                          18.09.2010          38,50- EUR          Bx_
+INTERSPAR DANKT 1190 WIEN        01190
+Buchungsdatum: 23.09.2010                         Alter Saldo                               545,80-
+SPAR DANKT 4113P K3 22.09.UM 11.58                                        22.09.2010           5,23- EUR          Bx_
+
+SB-Auszahlung       K3 S30101 23.09/17:14                                 23.09.2010          20,00- EUR          Bx_
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                     Seite 20/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 24.09.2010                         Alter Saldo                               571,03-
+VINDOBONA       0001 K3 24.09.UM 14:07                                    24.09.2010          11,00- EUR         Bx_
+
+RALPH LAUREN 0001 K3 24.09.UM 17:06                                       24.09.2010         174,97- EUR         Bx_
+
+DIESEL       0006 K3 24.09.UM 17:40                                       24.09.2010          74,00- EUR         Bx_
+
+Buchungsdatum: 27.09.2010                         Alter Saldo                               831,00-
+INTIMISSIMI 0027 K3 25.09.UM 11:44                                        25.09.2010          42,80- EUR         Bx_
+
+THALIA       6720 K3 25.09.UM 12:04                                       25.09.2010          49,52- EUR         Bx_
+
+BANKOMAT 29251 KARTE3 25.09.UM 23:24                                      25.09.2010         100,00- EUR         Bx_
+
+AT   19,00 POS 24.09.10 15:56 K3                                          24.09.2010          19,00- EUR         Bx_
+BURTON OUTLET STORE 7111 PARNDOR 07111
+NIKE        0001P K3 24.09.UM 16.26                                       24.09.2010          30,00- EUR         Bx_
+
+SPAR DANKT 4823 K3 27.09.UM 18:31                                         27.09.2010          35,33- EUR         Bx_
+
+Buchungsdatum: 28.09.2010                         Alter Saldo                              1.107,65-
+AT   38,50 POS 25.09.10 11:35 K3                                          25.09.2010          38,50- EUR         Bx_
+FIELMANN 0722 WIEN
+BANKOMAT 06161 KARTE3 28.09.UM 16:58                                      28.09.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 29.09.2010                         Alter Saldo                              1.196,15-
+AT   56,50 POS 25.09.10 12:34 K3                                          25.09.2010          56,50- EUR         Bx_
+INTERSPAR DANKT 1190 WIEN        01190
+SPAR DANKT 4822P K3 28.09.UM 12.24                                        28.09.2010           6,67- EUR         Bx_
+
+Buchungsdatum: 30.09.2010                         Alter Saldo                              1.259,32-
+KOKON        0002P K3 29.09.UM 12.15                                      29.09.2010          32,60- EUR         Bx_
+
+INTIMISSIMI 0134 K3 30.09.UM 13:57                                        30.09.2010          51,70- EUR         Bx_
+
+Buchungsdatum: 01.10.2010                         Alter Saldo                              1.343,62-
+Gutschrift     IHRE PERSONA                                               28.09.2010        3.361,26 EUR         Bx_
+ERSTE GROUP BANK AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.10.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+I109065-4                                                                 01.10.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+AT   30,08 POS 29.09.10 17:46 K3                                          29.09.2010          30,08- EUR         Bx_
+BAUMAX FIL 798 3400 KLOSTERN           03400
+MOHREN         0001P K3 30.09.UM 13.37                                    30.09.2010          10,00- EUR         Bx_
+
+CB Fit 10/2010          000100001586                                      01.10.2010          69,00- EUR         Bx_
+Stars Fitness Bet
+BANKOMAT 42621 KARTE3 01.10.UM 12:29                                      01.10.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 04.10.2010                         Alter Saldo                              1.749,04
+SB-Auszahlung       K3 S30101 01.10/18:55                                 01.10.2010          40,00- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 01.10/18:56                                 01.10.2010         300,00- EUR         Bx_
+
+BIPA 1090     0984 K3 02.10.UM 17:18                                      02.10.2010          13,06- EUR         Bx_
+
+BANKOMAT 37081 KARTE3 03.10.UM 08:09                                      03.10.2010         100,00- EUR         Bx_
+
+Miete Prozellang. 32/11                                                   04.10.2010         657,90- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  04.10.2010         125,62- EUR         G__
+IG Immobilien Invest Gmbh
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 21/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+THALIA     6720P K3 02.10.UM 12.49                                        02.10.2010          24,87- EUR         Bx_
+
+Buchungsdatum: 05.10.2010                         Alter Saldo                               487,59
+Kredit 284-285-532/08                                                     05.10.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+s Kreditkartenrechnung per 05.10.2010                                     05.10.2010         393,25- EUR         Bx_
+
+Buchungsdatum: 06.10.2010                         Alter Saldo                                26,78-
+AT   25,16 POS 02.10.10 13:05 K3                                          02.10.2010          25,16- EUR         Bx_
+INTERSPAR DANKT 1190 WIEN        01190
+Buchungsdatum: 11.10.2010                         Alter Saldo                                51,94-
+Strom Abrechnung 143001844225                                             11.10.2010          80,35- EUR         Bx_
+WIENSTROM GMBH
+Knr.8390101002, sep/okt 10 030001213713                                   11.10.2010          76,00- EUR         G__
+Energie Comfort
+Buchungsdatum: 12.10.2010                         Alter Saldo                               208,29-
+DEPOTGEB: 28428553201 FÜR 010710-300910                                   12.10.2010           9,55- EUR         B__
+
+BANKOMAT 40571 KARTE3 12.10.UM 12:24                                      12.10.2010          20,00- EUR         Bx_
+
+Buchungsdatum: 13.10.2010                         Alter Saldo                               237,84-
+DOUGLAS 1010 0005 K3 12.10.UM 18:51                                       12.10.2010          44,00- EUR         Bx_
+
+SPAR DANKT 4113P K3 12.10.UM 12.03                                        12.10.2010           2,88- EUR         Bx_
+
+SB-Auszahlung     K3 S30101 13.10/17:23                                   13.10.2010         130,00- EUR         Bx_
+
+Buchungsdatum: 15.10.2010                         Alter Saldo                               414,72-
+SB-Auszahlung     K3 S30105 15.10/11:44                                   15.10.2010          20,00- EUR         Bx_
+
+Buchungsdatum: 18.10.2010                         Alter Saldo                               434,72-
+THALIA     6720P K3 16.10.UM 14.13                                        16.10.2010          19,89- EUR         Bx_
+
+DM-FIL. 0149 0149P K3 16.10.UM 14.22                                      16.10.2010          21,30- EUR         Bx_
+
+Buchungsdatum: 19.10.2010                         Alter Saldo                               475,91-
+AT   144,50 POS 16.10.10 14:01 K3                                         16.10.2010         144,50- EUR         Bx_
+FIELMANN 0722 WIEN
+Buchungsdatum: 20.10.2010                         Alter Saldo                               620,41-
+AUTOMAT 10717 KARTE3 19.10.UM 19:31                                       19.10.2010          50,00- EUR         Bx_
+
+Kdnr. 1.17332995                                                          20.10.2010         112,01- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+AT   140,61 POS 16.10.10 15:01 K3                                         16.10.2010         140,61- EUR         Bx_
+INTERSPAR DANKT 1190 WIEN         01190
+ZIELPUNKT     1476P K3 19.10.UM 11.00                                     19.10.2010          11,31- EUR         Bx_
+
+BANKOMAT 40571 KARTE3 20.10.UM 11:57                                      20.10.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 22.10.2010                         Alter Saldo                               964,34-
+AT   61,20 POS 20.10.10 12:44 K3                                          20.10.2010          61,20- EUR         Bx_
+PARFUMERIE HUBER 1010 WIEN              01010
+SPAR DANKT 4113P K3 21.10.UM 12.24                                        21.10.2010           5,47- EUR         Bx_
+
+SPAR DANKT 4822P K3 21.10.UM 19.31                                        21.10.2010          14,00- EUR         Bx_
+
+BANKOMAT 40571 KARTE3 22.10.UM 12:11                                      22.10.2010         150,00- EUR         Bx_
+
+MUELLER      0001 K3 22.10.UM 16:42                                       22.10.2010          24,55- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 22/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 25.10.2010                         Alter Saldo                              1.219,56-
+HOFER 7350 0444 K3 23.10.UM 10:48                                         23.10.2010          69,70- EUR         Bx_
+
+SPAR DANKT 4113P K3 22.10.UM 12.43                                        22.10.2010           3,79- EUR         Bx_
+
+Buchungsdatum: 27.10.2010                         Alter Saldo                              1.293,05-
+HOFER DANKT 0515P K3 25.10.UM 11.46                                       25.10.2010          31,26- EUR         Bx_
+
+Buchungsdatum: 28.10.2010                         Alter Saldo                              1.324,31-
+AT   61,75 POS 26.10.10 11:10 K3                                          26.10.2010          61,75- EUR         Bx_
+BP TANKSTELLE FRANZ JO WIEN             1010
+Buchungsdatum: 29.10.2010                         Alter Saldo                              1.386,06-
+SPAR DANKT 4113P K3 28.10.UM 12.09                                        28.10.2010          10,64- EUR         Bx_
+
+SB-Auszahlung       K3 S30101 29.10/11:53                                 29.10.2010          40,00- EUR         Bx_
+
+SPAR DANKT 4113 K3 29.10.UM 12:32                                         29.10.2010           6,95- EUR         Bx_
+
+Buchungsdatum: 02.11.2010                         Alter Saldo                              1.443,65-
+SPAR DANKT 4240 K3 30.10.UM 13:02                                         30.10.2010          28,57- EUR         Bx_
+
+AUTOMAT 10717 KARTE3 31.10.UM 09:09                                       31.10.2010          60,00- EUR         Bx_
+
+Gutschrift     IHRE PERSONA                                               28.10.2010        3.355,58 EUR         Bx_
+ERSTE GROUP BANK AG
+Miete Prozellang. 32/11                                                   02.11.2010         657,90- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.11.2010         125,62- EUR         G__
+IG Immobilien Invest Gmbh
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  02.11.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+I109065-4                                                                 02.11.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+BIPA 1090    0984P K3 30.10.UM 13.13                                      30.10.2010          11,03- EUR         Bx_
+
+CB Fit 11/2010          000100001586                                      02.11.2010          69,00- EUR         Bx_
+Stars Fitness Bet
+KOKON        0002 K3 02.11.UM 15:28                                       02.11.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 03.11.2010                         Alter Saldo                               800,29
+AUTOMAT 20883 KARTE3 02.11.UM 21:20                                       02.11.2010          30,00- EUR         Bx_
+
+HOFER DANKT 0515P K3 02.11.UM 11.39                                       02.11.2010           9,42- EUR         Bx_
+
+SPAR DANKT 4822P K3 02.11.UM 17.39                                        02.11.2010          27,89- EUR         Bx_
+
+KOKON        0002P K3 02.11.UM 15.27                                      02.11.2010          16,00- EUR         Bx_
+
+Buchungsdatum: 04.11.2010                         Alter Saldo                               716,98
+MERKUR DANKT 3357 K3 03.11.UM 19:21                                       03.11.2010          13,64- EUR         Bx_
+
+s Kreditkartenrechnung per 04.11.2010                                     04.11.2010         202,30- EUR         Bx_
+
+BANKOMAT 40571 KARTE3 04.11.UM 11:37                                      04.11.2010          30,00- EUR         Bx_
+
+DOUGLAS 1010 0005 K3 04.11.UM 18:49                                       04.11.2010          51,00- EUR         Bx_
+
+Buchungsdatum: 05.11.2010                         Alter Saldo                               420,04
+Kredit 284-285-532/08                                                     05.11.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+AT   20,20 POS 03.11.10 08:57 K3                                          03.11.2010          20,20- EUR         Bx_
+TCHIBO/EDUSCHO DANKT WIEN               1010
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 23/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag          SKZ
+
+SPAR DANKT 4113P K3 04.11.UM 12.13                                        04.11.2010           6,57- EUR          Bx_
+
+DOUGLAS 1010 0005P K3 04.11.UM 18.53                                      04.11.2010          18,00- EUR          Bx_
+
+ORTOPROBAN 0002P K3 04.11.UM 12.02                                        04.11.2010           6,50- EUR          Bx_
+
+BIPA 1090    0976 K3 05.11.UM 17:06                                       05.11.2010           7,48- EUR          Bx_
+
+MUELLER       0001 K3 05.11.UM 18:23                                      05.11.2010          90,00- EUR          Bx_
+
+Buchungsdatum: 08.11.2010                         Alter Saldo                               150,17
+BANKOMAT 04011 KARTE3 07.11.UM 16:38                                      07.11.2010          50,00- EUR          Bx_
+
+HOFER DANKT 0530 K3 08.11.UM 10:54                                        08.11.2010         127,33- EUR          Bx_
+
+SPAR DANKT 4113P K3 05.11.UM 12.35                                        05.11.2010          15,01- EUR          Bx_
+
+BIPA 3400    3170P K3 06.11.UM 11.49                                      06.11.2010          23,57- EUR          Bx_
+
+SPAR DANKT 4823P K3 06.11.UM 14.14                                        06.11.2010          18,72- EUR          Bx_
+
+SPAR DANKT 4887P K3 06.11.UM 11.57                                        06.11.2010          13,38- EUR          Bx_
+
+AT0000301916 TILGUNG 66,73 %                                              08.11.2010        1.334,60 EUR          Bx_
+Erste Bank Hauptanstalt
+RALPH LAUREN 0001 K3 08.11.UM 13:40                                       08.11.2010          30,00- EUR          Bx_
+
+Buchungsdatum: 09.11.2010                         Alter Saldo                              1.206,76
+1. Teillieferung, 1090 Wien                                               09.11.2010          75,40- EUR          G__
+Gabriele Glössl
+SB-Auszahlung      K3 S30101 09.11/11:34                                  09.11.2010          20,00- EUR          Bx_
+
+Buchungsdatum: 10.11.2010                         Alter Saldo                              1.111,36
+CHAOS        0001 K3 09.11.UM 19:39                                       09.11.2010          98,60- EUR          Bx_
+
+Strom Teilbetrag 147753019277                                             10.11.2010          30,00- EUR          Bx_
+WIENSTROM GMBH
+AT   31,39 POS 06.11.10 12:23 K3                                          06.11.2010          31,39- EUR          Bx_
+BAUMAX FIL 798 3400 KLOSTERN           03400
+ZIELPUNKT      1476 K3 10.11.UM 09:46                                     10.11.2010           6,42- EUR          Bx_
+
+Buchungsdatum: 11.11.2010                         Alter Saldo                               944,95
+DE   39,95 POS 08.11.10 14:02 K3                                          08.11.2010          39,95- EUR          Bx_
+BREE COLLECTION GMBH PARNDORF              7111
+AT   64,15 POS 08.11.10 19:29 K3                                          08.11.2010          64,15- EUR          Bx_
+OMV 8548/ Gottlesbrunn      2464
+BIPA 1090    0984 K3 11.11.UM 17:49                                       11.11.2010           5,20- EUR          Bx_
+
+AUTOMAT 20883 KARTE3 11.11.UM 17:55                                       11.11.2010          50,00- EUR          Bx_
+
+Buchungsdatum: 12.11.2010                         Alter Saldo                               785,65
+ZIELPUNKT      1476 K3 12.11.UM 12:47                                     12.11.2010           3,39- EUR          Bx_
+
+69955-01                                                                  12.11.2010        1.000,00- EUR         G__
+Alexandra Primetzhofer
+Buchungsdatum: 15.11.2010                         Alter Saldo                               217,74-
+SB-Auszahlung      K3 S30101 12.11/20:47                                  12.11.2010          30,00- EUR          Bx_
+
+SB-Auszahlung      K3 S30101 12.11/23:38                                  12.11.2010          50,00- EUR          Bx_
+
+SPAR DANKT 4823 K3 13.11.UM 13:06                                         13.11.2010          38,50- EUR          Bx_
+
+VINDOBONA       0001P K3 13.11.UM 10.43                                   13.11.2010          12,85- EUR          Bx_
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                     Seite 24/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+BIPA 1090    0984P K3 13.11.UM 13.10                                      13.11.2010          25,77- EUR         Bx_
+
+WIRNSBERGER 0001P K3 12.11.UM 17.31                                       12.11.2010          13,20- EUR         Bx_
+
+BILLA DANKT 0921 K3 15.11.UM 10:06                                        15.11.2010           4,77- EUR         Bx_
+
+Buchungsdatum: 16.11.2010                         Alter Saldo                               392,83-
+SPAR DANKT 4113P K3 15.11.UM 13.43                                        15.11.2010           5,47- EUR         Bx_
+
+HOFER DANKT 0515P K3 15.11.UM 14.02                                       15.11.2010          11,64- EUR         Bx_
+
+SB-Auszahlung      K3 S30105 16.11/11:51                                  16.11.2010          30,00- EUR         Bx_
+
+HOFER DANKT 0530 K3 16.11.UM 17:59                                        16.11.2010          31,93- EUR         Bx_
+
+Buchungsdatum: 17.11.2010                         Alter Saldo                               471,87-
+AT   33,80 POS 15.11.10 13:30 K3                                          15.11.2010          33,80- EUR         Bx_
+BOTANICUS VIENNA WIEN           01010
+2. Teillieferung, 1090 Wien                                               17.11.2010          12,00- EUR         G__
+Gabriele Glössl
+BANKOMAT 40571 KARTE3 17.11.UM 11:47                                      17.11.2010          30,00- EUR         Bx_
+
+WERDERTOR        0001 K3 17.11.UM 15:37                                   17.11.2010          12,91- EUR         Bx_
+
+Buchungsdatum: 18.11.2010                         Alter Saldo                               560,58-
+Kdnr. 1.17332995                                                          18.11.2010          58,80- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+BIPA 1010    0174P K3 17.11.UM 15.28                                      17.11.2010          27,38- EUR         Bx_
+
+SPAR DANKT 4113P K3 17.11.UM 12.24                                        17.11.2010          15,04- EUR         Bx_
+
+Buchungsdatum: 19.11.2010                         Alter Saldo                               661,80-
+SB-Auszahlung      K3 S30101 19.11/12:32                                  19.11.2010          60,00- EUR         Bx_
+
+Buchungsdatum: 22.11.2010                         Alter Saldo                               721,80-
+HOFER 7350 0444 K3 20.11.UM 14:59                                         20.11.2010          69,23- EUR         Bx_
+
+ZARA 3173     3173 K3 22.11.UM 12:57                                      22.11.2010          26,90- EUR         Bx_
+
+Buchungsdatum: 23.11.2010                         Alter Saldo                               817,93-
+SPAR DANKT 4113P K3 22.11.UM 13.30                                        22.11.2010          20,30- EUR         Bx_
+
+SB-Auszahlung      K3 S30101 23.11/14:54                                  23.11.2010          40,00- EUR         Bx_
+
+Buchungsdatum: 24.11.2010                         Alter Saldo                               878,23-
+AT   67,20 POS 22.11.10 12:25 K3                                          22.11.2010          67,20- EUR         Bx_
+PARFUMERIE HUBER WIEN            01010
+SB-Auszahlung      K3 S30120 24.11/11:57                                  24.11.2010          40,00- EUR         Bx_
+
+Buchungsdatum: 25.11.2010                         Alter Saldo                               985,43-
+DOUGLAS 1010 0005 K3 24.11.UM 19:07                                       24.11.2010          55,90- EUR         Bx_
+
+SB-Auszahlung      K3 S30101 25.11/18:01                                  25.11.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 26.11.2010                         Alter Saldo                              1.091,33-
+SPAR DANKT 4113P K3 25.11.UM 12.18                                        25.11.2010           3,58- EUR         Bx_
+
+BANKOMAT 27191 KARTE3 26.11.UM 12:39                                      26.11.2010         100,00- EUR         Bx_
+
+SERVITENGAR. 0001 K3 26.11.UM 13:40                                       26.11.2010          49,00- EUR         Bx_
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 25/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 29.11.2010                         Alter Saldo                              1.243,91-
+BANKOMAT 02141 KARTE3 27.11.UM 18:49                                      27.11.2010          50,00- EUR         Bx_
+
+BANKOMAT 42621 KARTE3 29.11.UM 17:48                                      29.11.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 30.11.2010                         Alter Saldo                              1.323,91-
+MERKUR DANKT 3357P K3 29.11.UM 12.30                                      29.11.2010          23,08- EUR         Bx_
+
+Buchungsdatum: 01.12.2010                         Alter Saldo                              1.346,99-
+Gutschrift     IHRE PERSONA                                               28.11.2010        4.519,27 EUR         Bx_
+ERSTE GROUP BANK AG
+SPARKASSENVERSICHERUNG LEB. 040759400141                                  01.12.2010           9,02- EUR         Bx_
+SPARKASSEN VERSICHERUNG AG
+I109065-4                                                                 01.12.2010         120,50- EUR         Bx_
+DONAU VERSICHERUNG AG
+CB Fit 12/2010          000100001586                                      01.12.2010          72,90- EUR         Bx_
+Stars Fitness Bet
+SB-Auszahlung       K3 S30101 01.12/12:10                                 01.12.2010          40,00- EUR         Bx_
+
+SPAR DANKT 4823P K3 30.11.UM 18.54                                        30.11.2010          18,14- EUR         Bx_
+
+SPAR DANKT 4822P K3 30.11.UM 12.14                                        30.11.2010          22,26- EUR         Bx_
+
+LEDERLEITNER 0001 K3 01.12.UM 13:18                                       01.12.2010          69,30- EUR         Bx_
+
+Buchungsdatum: 02.12.2010                         Alter Saldo                              2.820,16
+SB-Auszahlung       K3 S30130 01.12/18:40                                 01.12.2010          50,00- EUR         Bx_
+
+Miete Prozellang. 32/11                                                   02.12.2010         657,90- EUR         G__
+IG Immobilien Invest Gmbh
+Garage Porzellang. 32/11                                                  02.12.2010         125,62- EUR         G__
+IG Immobilien Invest Gmbh
+Buchungsdatum: 03.12.2010                         Alter Saldo                              1.986,64
+SB-Auszahlung       K3 S30138 02.12/21:28                                 02.12.2010          80,00- EUR         Bx_
+
+AT   38,40 POS 01.12.10 12:42 K3                                          01.12.2010          38,40- EUR         Bx_
+PARFUMERIE HUBER WIEN            01010
+LIBRO 1090 0943P K3 02.12.UM 12.43                                        02.12.2010          13,77- EUR         Bx_
+
+Buchungsdatum: 06.12.2010                         Alter Saldo                              1.854,47
+THALIA      6720 K3 04.12.UM 12:58                                        04.12.2010          26,00- EUR         Bx_
+
+AUTOMAT 13147 KARTE3 04.12.UM 18:48                                       04.12.2010          50,00- EUR         Bx_
+
+Kredit 284-285-532/08                                                     05.12.2010         121,12- EUR         Bx_
+DI Alexandra Primetzhofer
+s Kreditkartenrechnung per 06.12.2010                                     06.12.2010         131,36- EUR         Bx_
+
+ZIELPUNKT     1476P K3 03.12.UM 12.31                                     03.12.2010          16,70- EUR         Bx_
+
+Buchungsdatum: 07.12.2010                         Alter Saldo                              1.509,29
+AT   29,51 POS 04.12.10 13:13 K3                                          04.12.2010          29,51- EUR         Bx_
+DEPOT WIEN 7001 WIEN          1190
+BANKOMAT 04011 KARTE3 07.12.UM 15:56                                      07.12.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 09.12.2010                         Alter Saldo                              1.429,78
+AT   53,73 POS 04.12.10 13:32 K3                                          04.12.2010          53,73- EUR         Bx_
+INTERSPAR DANKT WIEN           01190
+CHAOS       0001 K3 08.12.UM 19:17                                        08.12.2010         149,40- EUR         Bx_
+
+Knr.8390101002, nov/dec 10 040001114080                                   09.12.2010          76,00- EUR         G__
+Energie Comfort
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 26/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+SPAR DANKT 4240P K3 07.12.UM 16.24                                        07.12.2010          57,06- EUR         Bx_
+
+Rechnungsnr. 007564                                                       09.12.2010          22,50- EUR         G__
+Carolin Crull
+Rnr. 18936                                                                09.12.2010          44,70- EUR         G__
+flip*flop GmbH
+Rnr. 007564                                                               09.12.2010          13,10- EUR         G__
+Carolin Crull
+Buchungsdatum: 10.12.2010                          Alter Saldo                             1.013,29
+Strom Teilbetrag 146253454534                                             10.12.2010          30,00- EUR         Bx_
+WIENSTROM GMBH
+SPAR DANKT 4113P K3 09.12.UM 12.09                                        09.12.2010          11,27- EUR         Bx_
+
+SB-Auszahlung        K3 S30119 10.12/13:01                                10.12.2010         150,00- EUR         Bx_
+
+Buchungsdatum: 13.12.2010                          Alter Saldo                              822,02
+AUTOMAT 13147 KARTE3 10.12.UM 19:31                                       10.12.2010          70,00- EUR         Bx_
+
+MERKUR DANKT 3357 K3 11.12.UM 15:01                                       11.12.2010          87,18- EUR         Bx_
+
+ZIELPUNKT        1476P K3 10.12.UM 10.21                                  10.12.2010           9,64- EUR         Bx_
+
+Buchungsdatum: 14.12.2010                          Alter Saldo                              655,20
+DOUGLAS 1010 0005 K3 13.12.UM 19:01                                       13.12.2010          82,50- EUR         Bx_
+
+AUTOMAT 21483 KARTE3 14.12.UM 17:55                                       14.12.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 15.12.2010                          Alter Saldo                              522,70
+AT   67,27 POS 11.12.10 14:11 K3                                          11.12.2010          67,27- EUR         Bx_
+BAUMAX FIL 798 KLOSTERNEUBUR               03400
+Buchungsdatum: 16.12.2010                          Alter Saldo                              455,43
+BANNERT          0002P K3 15.12.UM 15.08                                  15.12.2010          28,59- EUR         Bx_
+
+MUELLER          0001P K3 15.12.UM 18.00                                  15.12.2010          33,50- EUR         Bx_
+
+SPAR DANKT 4113 K3 16.12.UM 12:22                                         16.12.2010           6,87- EUR         Bx_
+
+BANKOMAT 42621 KARTE3 16.12.UM 17:21                                      16.12.2010          30,00- EUR         Bx_
+
+Buchungsdatum: 17.12.2010                          Alter Saldo                              356,47
+KOKON           0002 K3 17.12.UM 12:35                                    17.12.2010          42,00- EUR         Bx_
+
+Buchungsdatum: 20.12.2010                          Alter Saldo                              314,47
+AUTOMAT 50835 KARTE3 17.12.UM 21:14                                       17.12.2010          50,00- EUR         Bx_
+
+AT   66,00 POS 16.12.10 14:40 K3                                          16.12.2010          66,00- EUR         Bx_
+BOTANICUS VIENNA WIEN           01010
+HOFER DANKT 0530 K3 18.12.UM 16:01                                        18.12.2010          55,93- EUR         Bx_
+
+HOFER DANKT 0515P K3 17.12.UM 12.53                                       17.12.2010          16,21- EUR         Bx_
+
+AUTOMAT 50014 KARTE3 20.12.UM 14:21                                       20.12.2010          40,00- EUR         Bx_
+
+Buchungsdatum: 21.12.2010                          Alter Saldo                               86,33
+SPAR DANKT 4113P K3 20.12.UM 14.32                                        20.12.2010          44,87- EUR         Bx_
+
+MEINL       1000P K3 20.12.UM 14.13                                       20.12.2010          10,85- EUR         Bx_
+
+BANKOMAT 40571 KARTE3 21.12.UM 13:05                                      21.12.2010          30,00- EUR         Bx_
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 27/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+Buchungstext                                                              Valuta       Gebuchter Betrag         SKZ
+
+Buchungsdatum: 22.12.2010                          Alter Saldo                                0,61
+Kdnr. 1.17332995                                                          22.12.2010          55,19- EUR         Bx_
+T-MOBILE AUSTRIA GMBH
+SB-Auszahlung      K3 S30101 22.12/17:26                                  22.12.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 23.12.2010                          Alter Saldo                              104,58-
+AT   62,53 POS 20.12.10 18:55 K3                                          20.12.2010          62,53- EUR         Bx_
+OMV 8575/ Klosterneub       3400
+NABER        0001P K3 22.12.UM 12.45                                      22.12.2010          26,39- EUR         Bx_
+
+SB-Auszahlung      K3 S30101 23.12/12:30                                  23.12.2010          50,00- EUR         Bx_
+
+DOUGLAS 1010 0005 K3 23.12.UM 13:16                                       23.12.2010         160,00- EUR         Bx_
+
+Buchungsdatum: 27.12.2010                          Alter Saldo                              403,50-
+SPAR DANKT 4279P K3 24.12.UM 11.07                                        24.12.2010          29,41- EUR         Bx_
+
+FORSTINGER 0099P K3 24.12.UM 10.51                                        24.12.2010          21,98- EUR         Bx_
+
+PRO SPORT       0001 K3 27.12.UM 12:17                                    27.12.2010          89,99- EUR         Bx_
+
+Buchungsdatum: 29.12.2010                          Alter Saldo                              544,88-
+AT   61,80 POS 26.12.10 15:45 K3                                          26.12.2010          61,80- EUR         Bx_
+SHELL STRENGBERG STRENGBERG                03314
+Eigenerlag                                                                29.12.2010         700,00 EUR          Bx_
+
+Buchungsdatum: 30.12.2010                          Alter Saldo                               93,32
+BANKOMAT 06661 KARTE3 30.12.UM 00:36                                      30.12.2010          50,00- EUR         Bx_
+
+ZIELPUNKT      1476P K3 29.12.UM 11.17                                    29.12.2010          14,30- EUR         Bx_
+
+BANKOMAT 40571 KARTE3 30.12.UM 11:39                                      30.12.2010          50,00- EUR         Bx_
+
+Buchungsdatum: 31.12.2010                          Alter Saldo                               20,98-
+DOUGLAS 1010 0005 K3 30.12.UM 19:03                                       30.12.2010          48,45- EUR         Bx_
+
+*** Abschlussbuchung per 31.12.2010 ****                                  31.12.2010           0,00 EUR          B__
+Reklamationen bitte binnen 2 Monaten
+Sollzinsen                                                                31.12.2010          15,95- EUR         B__
+
+Habenzinsen                                                               31.12.2010           2,39 EUR          B__
+
+Kest                                                                      31.12.2010           0,60- EUR         B__
+
+Kartenentgelt s Kreditkarte                                               31.12.2010          54,48- EUR         B__
+
+Buchungsdatum: 31.12.2010                          Neuer Saldo                              138,07-
+
+
+
+
+Kontonummer: 28428553200 BLZ: 00020111                   Kontoübersicht                                    Seite 28/28
+Benutzer: A98S4FC, erstellt am: 07.02.2012 um 14:15:40
+
