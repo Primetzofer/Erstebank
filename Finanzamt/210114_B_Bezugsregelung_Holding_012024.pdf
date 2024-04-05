@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv='X-UA-Compatible' content='IE=11'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes'/>
+<script src='https://idp-p.alfa.s-mxs.net/kerberoslogin/alfa-4.1-filter-loader.min.js'></script>
+<script type='text/javascript' nonce='sGlZzDXB3cHea3r5ExI1NL8k/sHEXpomwZYIF9+jGPQ='>
+  function alfaLogin() {
+    var wrongenvdiv = this.document.getElementById('wrongenvdiv');
+    var form = this.document.getElementById('submitform');
+    form.action = form.action + window.location.hash;
+    Alfa.initializeEx('EON','app-filter')
+        .then(function (auth) {
+          var inst = auth.alfaContext.tenant;
+          form.elements['alfainst'].value = inst;
+          if(inst==195) {
+            form.elements['exception'].value = 'excluded institut: '+inst;
+            doSubmit(form);
+            return;
+          }
+          var env = auth.alfaContext.environmentCode;
+          form.elements['alfaenv'].value = env;
+          if(env!='P') {
+            form.elements['exception'].value = 'wrong environment: '+env;
+            doSubmit(form);
+          } else {
+            alfaLoginDo(auth,form);
+          }
+        })
+        .catch(function (error) {
+            form.elements['exception'].value = error.errorCode+' '+error.errorText;
+            doSubmit(form);
+        });
+  }
+  function alfaLoginDo(auth,form) {
+      auth.getAccessToken('INT341IH',2,0)
+          .then(function (tokenContainer) {
+              var alfaTicket = tokenContainer.accessToken;
+              form.elements['alfaticket'].value = alfaTicket;
+              form.elements['alfacert'].value = auth.hostCert;
+              doSubmit(form);
+          })
+          .catch(function (error) {
+              form.elements['exception'].value = error.errorCode+' '+error.errorText;
+              doSubmit(form);
+          });
+    }
+</script>
+<script type='text/javascript' nonce='sGlZzDXB3cHea3r5ExI1NL8k/sHEXpomwZYIF9+jGPQ='>
+var isSubmitted=false;
+function doSubmit(form) {
+   isSubmitted=true;
+   form.submit();
+}
+function showWait() {
+   var wrongenvdiv = this.document.getElementById('wrongenvdiv');
+   if(wrongenvdiv.style.display!='block') {
+      this.document.getElementById('wrongenvmsg').style.display='none';
+      this.document.getElementById('wrongenvdiv').style.display='block';
+      if(isSubmitted==false) {
+         this.document.getElementById('wait').style.display='block';
+      } else {
+         this.document.getElementById('cancel').style.display='none';
+         this.document.getElementById('waitsubmit').style.display='block';
+      }
+   }
+}
+window.setTimeout(showWait,5000);
+</script>
+<style nonce='sGlZzDXB3cHea3r5ExI1NL8k/sHEXpomwZYIF9+jGPQ='>.hidden { display:none; }</style>
+<title>ALFA Authentication</title>
+</head>
+<body class=''>
+  <form id='submitform' action='210114_B_Bezugsregelung_Holding_012024.pdf' method='post'>
+    <p />
+    <div id='noscriptdiv'>
+      <h2 class=''>ALFA Authentication</h2>
+      <p>In Ihrem Browser ist JavaScript deaktiviert. Alfa Single Sign On funktioniert nur mit JavaScript.</p>
+      <input type='submit' class='' value='Weiter ohne Alfa SSO'/>
+      <script type='text/javascript' nonce='sGlZzDXB3cHea3r5ExI1NL8k/sHEXpomwZYIF9+jGPQ='>
+        this.document.getElementById('noscriptdiv').style.display='none';
+      </script>
+    </div>
+    <div id='wrongenvdiv' class='hidden'>
+      <h2 class=''>ALFA Authentication</h2>
+    <div id='wrongenvmsg'>
+      <p>Die Anwendung benötigt ein Login in PRODUKTION.<br/>
+      Bitte wechseln Sie die Umgebung in ALFA Berechtigungs Tray oder brechen den Login ab.</p>
+    </div>
+      <p id='wait' class='hidden'>Diese Seite ermittelt ihre Anmeldeinformation von der lokalen ALFA Installation. Wenn Sie nicht im ALFA Berechtigungs Tray angemeldet sind, melden Sie sich bitte an.</p>      <p id='waitsubmit' class='hidden'>Warte auf Anwort vom Server.</p>      <input type='submit' id='cancel' name='cancel' class='' value='Abbrechen'/>
+    </div>
+    <input type='hidden' name='alfaenv'/>
+    <input type='hidden' name='alfainst'/>
+    <input type='hidden' name='alfacert' value='undefined'/>
+    <input type='hidden' name='alfaticket' value='none'/>
+    <input type='hidden' name='exception'/>
+  </form>
+<script type='text/javascript' nonce='sGlZzDXB3cHea3r5ExI1NL8k/sHEXpomwZYIF9+jGPQ='>alfaLogin();</script>
+</body>
+</html>
